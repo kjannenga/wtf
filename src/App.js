@@ -4,6 +4,7 @@ import Home from './Home'
 import CriteriaSelector from './Criteria'
 import Results from './Results'
 import Group from './Group'
+import './App.css'
 
 
 export default React.createClass ({
