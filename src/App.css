@@ -1,0 +1,17 @@
+html {
+box-sizing:border-box;
+}
+*, *:before, *:after {
+box-sizing:inherit;
+}
+
+.warningHeader {
+height: 350px;
+background:black;
+margin: auto;
+display: flex;
+justify-content: center;
+}
+
+.mainBody {
+}
