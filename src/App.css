@@ -14,7 +14,9 @@ display: flex;
 justify-content: center;
 }
 
-.mainBody {
+.warningContent {
+	width:200px;
+	height:200px;
 }
 
 .budget{
