@@ -1,6 +1,7 @@
 import React from 'react'
 import {getRestaurant} from '../api/wtf'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 
 const Restaurant = React.createClass({
@@ -8,20 +9,16 @@ const Restaurant = React.createClass({
 		getRestaurant()
 	},
 	render(){
-		return(
-			<h1>hello world</h1>
-		//console.log(this.props)
-		/*return(
-			<div className='leftContainer'>
-				<div className='loginInfo'>
-					<div className='name'>{this.props.name}</div>
-					<div className='login'>{this.props.login}</div> 
-					<div className='bio'>Add a bio</div>
-				</div>
-				<div className='location'>{this.props.location} </div>
-			</div>*/
+    return (
+    	<div>
+      	<h1> results </h1>
+      	<div>google Map</div>
+      	<div>restraurant info</div>
+    		<Link to='/yesresult'><button>Fuck Yes</button></Link>
+    		<button>Fuck No</button>
+      </div>
+    )
 		
-		)
 	}
 })
 
@@ -34,15 +31,6 @@ export default connect(mapStateToProps)(Restaurant)
 
 
 /*export default React.createClass ({
-  render() {
-    return (
-    	<div>
-      	<h1> results </h1>
-      	<div>google Map</div>
-      	<div>restraurant info</div>
-    		<button>Fuck Yes</button>
-    		<button>Fuck No</button>
-      </div>
-    );
+  
   }
 })*/ 
