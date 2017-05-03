@@ -4,12 +4,15 @@ import Home from './Home'
 import CriteriaSelector from './Criteria'
 import Results from './Results'
 import Group from './Group'
-import './App.css'
+import {Provider} from 'react-redux'
+import store from '../store'
+import '../App.css'
 
 
 export default React.createClass ({
   render() {
     return (
+      <Provider store={store}>
       <BrowserRouter>
         <div>
           <Route exact={true} path='/' component={Home} />
@@ -18,6 +21,7 @@ export default React.createClass ({
           <Route path='/group' component={Group} />          
         </div>
       </BrowserRouter>
+      </Provider>
     );
   }
 })
