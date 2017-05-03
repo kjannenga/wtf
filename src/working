@@ -1,7 +1,0 @@
-      <Route path='/criteria' component={CriteriaSelector} />
-          <Route path='/results' component={Results} />
-          <Route path='/group' component={Group} />
-
-          import CriteriaSelector from './Criteria'
-import Reults from './Results'
-import Group from './Group'
