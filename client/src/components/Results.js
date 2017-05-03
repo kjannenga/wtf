@@ -8,6 +8,8 @@ const Restaurant = React.createClass({
 		getRestaurant()
 	},
 	render(){
+		return(
+			<h1>hello world</h1>
 		//console.log(this.props)
 		/*return(
 			<div className='leftContainer'>
@@ -17,9 +19,9 @@ const Restaurant = React.createClass({
 					<div className='bio'>Add a bio</div>
 				</div>
 				<div className='location'>{this.props.location} </div>
-			</div>
+			</div>*/
 		
-		)*/
+		)
 	}
 })
 
