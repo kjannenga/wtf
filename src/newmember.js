@@ -1,6 +1,4 @@
-import {Link} from 'react-router-dom'
-import React from 'react'
-import Newmember from './newmember'
+import React from 'react';
 
 export default React.createClass({
   getInitialState: function(){
@@ -55,31 +53,25 @@ deleteList: function (index){
 
   render (){
     return (
-    <div>
-    <div classname="new">
-    	<Newmember />
-    </div>
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="Enter Restaraunt Names" />
+          <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="add members here" />
         </form>
       <div>
         <ul>
             {this.state.list.map(function(list, i){
-              var color = list.complete ? 'red' : 'blue';
+              var color = list.complete ? 'purple' : 'green';
 
             return <li key={i} style={{color:color}}>
             {list.text}
-                    <button onClick={() => this.handleComplete(i)}>Fuck this one</button>
-                    <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
+                    <button onClick={() => this.handleComplete(i)}>Click after making selection</button>
+                    <button onClick={() => this.deleteList(i)}>Nah get outta the group</button>
                   </li>
           }.bind(this))}
         </ul>
       </div>
       </div>
-    
-      	<Link to='/results'><div>last one links to results page</div></Link>
-     </div>
-    );
+    )
   }
 })
+
