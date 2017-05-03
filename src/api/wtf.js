@@ -1,5 +1,6 @@
 import axios from 'axios'
 import store from '../store'
+import $ from 'jQuery'
 
 /*var config = {
 	headers:{'access_token': 'SL6alfUTxepXGG38qBlJoVlmTKkhG4H2g07wQ8myZTngUdlIoOdqkaJ1eu2CzbN5KvaqDpgjO9tQfmwJqSQNqJcHCvktf_qryrHb9g5Q9pPWP16BsNc_-L2vPQIIWXYx',
@@ -41,4 +42,21 @@ export function getRestaurant() {
 		store.dispatch({
 		})
 	})
+};
+
+
+	
+
+export function getRestauran() {
+
+
+  $.getJSON('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=AIzaSyA_XPfoP35uptAsEODM_OORm85p4u83x2k', function(data){
+     console.log('hello', data.results)
+    store.dispatch({
+
+      type: 'GET_DATA',
+      action: data.results
+      
+    })
+  })
 }

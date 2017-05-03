@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import React from 'react'
-import Newmember from '../newmember'
+import Newmember from './newmember'
 
 export default React.createClass({
   getInitialState: function(){
