@@ -1,0 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.hrstyle{
+	border-top: 4px solid #C30D32;
+}

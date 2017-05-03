@@ -1,9 +1,18 @@
 import React from 'react'
 import logo from '../assets/logo.png'
+import '../css/yesresult.css'
 
 //main is 75% of page on the right, side is 25% on the left//
 
 export default React.createClass ({
+
+
+  handleBack(e){
+    e.preventDefault()
+    this.props.history.goBack()
+  },
+
+
   render() {
   	return(
 
@@ -13,6 +22,7 @@ export default React.createClass ({
   				<div>
   					Name of Rest. Here
   				</div>
+  				<hr className="hrstyle"/>
   			</header>
 
   			<body className="main">
@@ -57,7 +67,7 @@ export default React.createClass ({
   				</div>
 
   				<div>
-  					<button type="button">Hmmmmmmmm<br/> nevermind</button>
+  					<button type="button" onClick={this.handleBack}>Hmmmmmmmm<br/> nevermind</button>
   				</div>
 
   				<div>
