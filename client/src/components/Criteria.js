@@ -20,15 +20,15 @@ export default React.createClass ({
 	      </div>
 	      <div>Tell me whatcha want.....Whatcha really really want</div> 
 	      <div>
-	      	<input type='checkbox' id='random'/><label htmlFor='random'>Just fuck me up</label><br/>
-	      	<input type='checkbox' id='diet'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
-	      	<input type='checkbox' id='taco'/><label htmlFor='taco'>I need a fuckin taco</label><br/>
-	      	<input type='checkbox' id='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
-	      	<input type='checkbox' id='gluten'/><label htmlFor='gluten'>Fuck gluten</label><br/>
+	      	<input type='radio' name="type" id='random'/><label htmlFor='random'>Just fuck me up</label><br/>
+	      	<input type='radio' name="type" id='diet'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
+	      	<input type='radio' name="type" id='taco'/><label htmlFor='taco'>I need a fuckin taco</label><br/>
+	      	<input type='radio' name="type" id='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
+	      	<input type='radio' name="type" id='gluten'/><label htmlFor='gluten'>Fuck gluten</label><br/>
 	      </div>
 	      <div>
-	      	<input type='checkbox' id='deliver'/><label htmlFor='deliver'>Fuckin bring that shit to me</label><br/>
-	      	<input type='checkbox' id='pickup'/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
+	      	<input type='radio' name="where" id='deliver'/><label htmlFor='deliver'>Fuckin bring that shit to me</label><br/>
+	      	<input type='radio' name="where" id='pickup'/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
 	      </div>
 	      <Link to='/results'><button>Let's Go</button></Link>
 	      <Link to='/group'><button>Group</button></Link>
