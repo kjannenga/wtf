@@ -1,0 +1,33 @@
+{
+  "name": "wtf-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.1",
+    "body-parser": "^1.17.1",
+    "bufferutil": "^3.0.0",
+    "concurrently": "^3.4.0",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1",
+    "nodemon": "^1.11.0",
+    "rapidapi-connect": "0.0.4",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router-dom": "next",
+    "redux": "^3.6.0",
+    "socket.io": "^1.7.3",
+    "socket.io-client": "^1.7.3",
+    "utf-8-validate": "^3.0.1"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001"
+}
