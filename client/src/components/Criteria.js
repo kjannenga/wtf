@@ -1,23 +1,30 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import logo from '../assets/logo.png'
+import '../index.css'
 
 
 export default React.createClass ({
   render() {
     return (
     	<div>
-	      <h1> WTF </h1>
-	      <div>So...How much you wanna fuckin spend</div>
-	      <div className='budget'>
-	      	<button id='oneDollar'>$</button>
-	      	<label htmlFor='oneDollar'>Cheap ass</label>
-	      	<button id='twoDollar'>$$</button>
-	      	<label htmlFor='twoDollar'>Ballin on a budget</label>
-	      	<button id="threeDollar">$$$</button>
-	      	<label htmlFor='threeDollar'>Big spenda</label>
-	      	<button id='fourDollar'>$$$$</button>
-	      	<label htmlFor='fourDollar'>Money aint a thing</label>
+    		<div className="logoContainer">
+	      	<img className="criteriaLogo" src={logo} alt="logo" />
 	      </div>
+	      <div className='mainContainer'>
+		      <div className='budgetHeader'>
+		      	<p className='wordHilight'>So... </p> <p> How much you wanna </p> <p className='wordHilight'> fuckin </p> <p> spend </p>
+		      </div>
+		      <div className='budget'>
+		      	<button id='oneDollar'>$</button>
+		      	<label htmlFor='oneDollar'>Cheap ass</label>
+		      	<button id='twoDollar'>$$</button>
+		      	<label htmlFor='twoDollar'>Ballin on a budget</label>
+		      	<button id="threeDollar">$$$</button>
+		      	<label htmlFor='threeDollar'>Big spenda</label>
+		      	<button id='fourDollar'>$$$$</button>
+		      	<label htmlFor='fourDollar'>Money aint a thing</label>
+		      </div>
 	      <div>Tell me whatcha want.....Whatcha really really want</div> 
 	      <div>
 	      	<input type='radio' name="type" id='random'/><label htmlFor='random'>Just fuck me up</label><br/>
@@ -32,6 +39,7 @@ export default React.createClass ({
 	      </div>
 	      <Link to='/results'><button>Let's Go</button></Link>
 	      <Link to='/group'><button>Group</button></Link>
+
     	</div>
     );
   }
