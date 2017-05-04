@@ -4706,7 +4706,7 @@ range-parser@^1.0.3, range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
 
-rapidapi-connect@0.0.4:
+rapidapi-connect@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/rapidapi-connect/-/rapidapi-connect-0.0.4.tgz#169412f6264d862e8c84c7fdf20f4c4feb94e2d9"
   dependencies:

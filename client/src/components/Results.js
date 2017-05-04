@@ -27,7 +27,7 @@ const Restaurant = React.createClass({
           })}
         </ul> 
         </div>
-    		<Link to='/yesresult'><button>Fuck Yes</button></Link>
+    		<Link to='/yes'><button>Fuck Yes</button></Link>
     		<button>Fuck No</button>
       </div>
     )
