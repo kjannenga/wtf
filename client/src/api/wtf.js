@@ -1,4 +1,5 @@
 import axios from 'axios'
+import store from '../store'
 
 
 /*var config = {
@@ -41,8 +42,15 @@ export function getRestaurant(searchObj) {
 	// })
 	axios.get(`/yelpstuff?term=${searchObj.term}&location=${searchObj.location}`).then(function(response){
 		console.log(response.data)
+		store.dispatch({
+			type: 'GET_RESTAURANT',
+			info: response.data
+		})
 	})
 }
+
+
+
 
 // export function getRest() {
 // 	axios.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670,151.1957&radius=500&types=food&name=cruise&key=AIzaSyA_XPfoP35uptAsEODM_OORm85p4u83x2k').then(user=>{

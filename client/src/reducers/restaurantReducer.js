@@ -1,5 +1,9 @@
 
 const initialState = {
+	info:{
+		businesses:[]
+
+	}
 } 
 
 //users is coming in as object if want to stick with user and not individual pieces of info initialState needs to be 
@@ -14,10 +18,7 @@ export default function (state=initialState, action) {
 	switch (action.type) {
 		case 'GET_RESTAURANT':
 			//console.log(action.name)
-			return {...state}
-		case 'GET_INFO':
-			//console.log(action.info)
-			return{...state}
+			return {...state, info:action.info}
 		default:
 			return state
 	}
