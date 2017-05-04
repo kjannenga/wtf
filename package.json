@@ -10,6 +10,7 @@
     "concurrently": "^3.4.0",
     "express": "^4.15.2",
     "nodemon": "^1.11.0",
+    "rapidapi-connect": "^0.0.4",
     "request": "^2.81.0"
   },
   "scripts": {

@@ -20,10 +20,11 @@ app.post('/proxy', function(req, res){
 
 
 app.get('/yelpstuff', function(req, res){
+	console.log()
 	rapid.call('YelpAPI', 'getBusinesses', { 
 	'accessToken': 'SL6alfUTxepXGG38qBlJoVlmTKkhG4H2g07wQ8myZTngUdlIoOdqkaJ1eu2CzbN5KvaqDpgjO9tQfmwJqSQNqJcHCvktf_qryrHb9g5Q9pPWP16BsNc_-L2vPQIIWXYx',
-	'term': 'restaurant',
-	'location': '89052',
+	'term': req.query.term,
+	'location': req.query.location,
 	'latitude': '',
 	'longitude': '',
 	'radius': '',
@@ -37,11 +38,14 @@ app.get('/yelpstuff', function(req, res){
 	'openAt': '',
 	'attributes': ''
  
-}).on('success', (payload)=>{
-	 console.log('success')
-}).on('error', (payload)=>{
-	 /*YOUR CODE GOES HERE*/ 
-});
+	}).on('success', (payload)=>{
+		 res.json(payload)
+	}).on('error', (payload)=>{
+		 /*YOUR CODE GOES HERE*/ 
+		 res.json({
+		 	error:true
+		 })
+	});
 })
 
 app.listen(3001, function(){

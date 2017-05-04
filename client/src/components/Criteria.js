@@ -39,8 +39,8 @@ export default React.createClass ({
 	      </div>
 	      <Link to='/results'><button>Let's Go</button></Link>
 	      <Link to='/group'><button>Group</button></Link>
-
-    	</div>
-    );
+	    </div>
+	   </div>
+    )
   }
 }) 

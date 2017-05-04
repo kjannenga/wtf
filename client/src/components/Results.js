@@ -6,14 +6,19 @@ import {Link} from 'react-router-dom'
 
 const Restaurant = React.createClass({
 	componentWillMount() {
-		getRestaurant()
+		getRestaurant({
+      term: 'restaurant',
+      location: '89052'
+    })
 	},
+
 	render(){
+    console.log(this.props, 'hello')
     return (
     	<div>
       	<h1> results </h1>
       	<div>google Map</div>
-      	<div>restraurant info</div>
+      	<div></div>
     		<Link to='/yesresult'><button>Fuck Yes</button></Link>
     		<button>Fuck No</button>
       </div>
