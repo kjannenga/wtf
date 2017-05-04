@@ -20,28 +20,27 @@ app.post('/proxy', function(req, res){
 
 
 app.get('/yelpstuff', function(req, res){
-	console.log()
+	//console.log(res, 'server')
 	rapid.call('YelpAPI', 'getBusinesses', { 
 	'accessToken': 'SL6alfUTxepXGG38qBlJoVlmTKkhG4H2g07wQ8myZTngUdlIoOdqkaJ1eu2CzbN5KvaqDpgjO9tQfmwJqSQNqJcHCvktf_qryrHb9g5Q9pPWP16BsNc_-L2vPQIIWXYx',
 	'term': req.query.term,
 	'location': req.query.location,
 	'latitude': '',
 	'longitude': '',
-	'radius': '',
+	'radius': '8046',
 	'categories': '',
 	'locale': '',
 	'limit': '',
 	'offset': '',
 	'sortBy': '',
-	'price': '',
-	'openNow': '',
+	'price': req.query.price,
+	'openNow': 'true',
 	'openAt': '',
 	'attributes': ''
  
 	}).on('success', (payload)=>{
 		 res.json(payload)
 	}).on('error', (payload)=>{
-		 /*YOUR CODE GOES HERE*/ 
 		 res.json({
 		 	error:true
 		 })

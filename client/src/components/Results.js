@@ -1,19 +1,12 @@
 import React from 'react'
-import {getRestaurant} from '../api/wtf'
+//import {getRestaurant} from '../api/wtf'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 
 const Restaurant = React.createClass({
-	componentWillMount() {
-		getRestaurant({
-      term: 'restaurant',
-      location: '89052'
-    })
-	},
-
 	render(){
-    console.log(this.props.info, 'hello')
+    console.log(this.props.info.businesses.name, 'hello')
     return (
     	<div>
       	<h1> results </h1>
@@ -36,7 +29,7 @@ const Restaurant = React.createClass({
 })
 
 function mapStateToProps(state){
-	//console.log(state.userReducer)
+	//console.log(state.restaurantReducer)
 	return {...state.restaurantReducer}
 }
 
