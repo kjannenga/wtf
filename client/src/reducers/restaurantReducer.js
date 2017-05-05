@@ -17,11 +17,11 @@ export default function (state=initialState, action) {
 	}
 }
 
-export default function (state=initialState, action) {
-	switch (action.type) {
-		case 'NEW_USER':
-			return {...state, username: action.username}
-		default:
-			return state 
-	}
-}
+// export default function (state=initialState, action) {
+// 	switch (action.type) {
+// 		case 'NEW_USER':
+// 			return {...state, username: action.username}
+// 		default:
+// 			return state 
+// 	}
+// }
