@@ -4,7 +4,7 @@ import Home from './Home'
 import CriteriaSelector from './Criteria'
 import Results from './Results'
 import Group from './Group'
-import yesresult from './yesresult'
+import Yes from './yes'
 import {Provider} from 'react-redux'
 import store from '../store'
 
@@ -18,8 +18,8 @@ export default React.createClass ({
           <Route exact={true} path='/' component={Home} />
           <Route path='/criteria' component={CriteriaSelector} />
           <Route path='/results' component={Results} />
-          <Route path='/group' component={Group} />     
-          <Route path='/yesresult' component={yesresult} />    
+          <Route path='/group' component={Group} />  
+          <Route path='/yes' compontent={Yes}  />      
         </div>
       </BrowserRouter>
       </Provider>
