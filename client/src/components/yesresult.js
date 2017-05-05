@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import '../css/yesresult.css'
+import '../components/css/yesresult.css'
 
 //main is 75% of page on the right, side is 25% on the left//
 

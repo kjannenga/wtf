@@ -1,8 +1,8 @@
 import React from 'react'
-//import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-import {getRestaurant} from '../api/wtf.js'
+import {getRestaurant} from '../api/wtf'
 import '../index.css'
 
 
@@ -33,16 +33,17 @@ const Selections = React.createClass ({
 			this.setState({[e.target.name]: e.target.value})
 		},
 
-		handleSubmit(e){
-			e.preventDefault()
-			console.log(this.state)
+		handleSubmit() {
+			console.log('click')
+			//e.preventDefault()
+			console.log(this.state, 'criteria')
 			getRestaurant({
 				term: this.state.term,
 				location: this.state.location,
 				price: this.state.price
 			})
 
-			this.props.history.push('/results')
+			//this.props.history.push('/results')
 
 		},
 
@@ -83,8 +84,21 @@ const Selections = React.createClass ({
 		      	<input type='radio' name="where" id='deliver'/><label htmlFor='deliver'>Fuckin bring that shit to me</label><br/>
 		      	<input type='radio' name="where" id='pickup'/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
 		      </div>
-		      <button type="submit">Let's Go</button>
-		      <button type="submit">Group</button>
+
+		      <Link to='/results/'>
+		      	<div 
+		      		onClick={this.handleSubmit}>
+		      		Let's Go
+		      	</div>
+		      </Link>
+
+		      <Link to='/group/'>
+		      	<div 
+		      		onClick={this.handleSubmit}>
+		      		Group
+		      	</div>
+		      </Link>
+
 		    </div>
 	    </form>
 	   </div>
