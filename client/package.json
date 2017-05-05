@@ -10,7 +10,7 @@
     "express": "^4.15.2",
     "jquery": "^3.2.1",
     "nodemon": "^1.11.0",
-    "rapidapi-connect": "0.0.4",
+    "rapidapi-connect": "^0.0.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
