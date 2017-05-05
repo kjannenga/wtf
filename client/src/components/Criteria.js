@@ -38,7 +38,7 @@ export default React.createClass ({
 	      	<input type='radio' name="where" id='pickup'/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
 	      </div>
 	      <Link to='/results'><button>Let's Go</button></Link>
-	      <Link to='/group'><button>Group</button></Link>
+	      <Link to='/Login'><button>Group</button></Link>
 	    </div>
 	   </div>
     )
