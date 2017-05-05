@@ -1,7 +1,8 @@
 
 const initialState = {
 	info:{
-		businesses:[]
+		businesses:[],
+		username: ''
 
 	}
 } 
@@ -13,5 +14,14 @@ export default function (state=initialState, action) {
 			return {...state, info:action.info}
 		default:
 			return state
+	}
+}
+
+export default function (state=initialState, action) {
+	switch (action.type) {
+		case 'NEW_USER':
+			return {...state, username: action.username}
+		default:
+			return state 
 	}
 }

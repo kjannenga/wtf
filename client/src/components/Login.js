@@ -29,7 +29,7 @@ class Login extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input onChange={this.handleChange} type="text" name="username" value={this.state.username} placeholder="WTF is your name?" autoComplete="off" />
+                    <input className="userID" onChange={this.handleChange} type="text" name="username" value={this.state.username} placeholder="WTF is your name?" autoComplete="off" />
                 </form>
             </div>
         )
