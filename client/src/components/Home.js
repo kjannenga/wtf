@@ -19,7 +19,7 @@ export default React.createClass ({
             </div>
           </div>
             
-          <img className="warningImg" src="https://s-media-cache-ak0.pinimg.com/originals/62/8d/fc/628dfcb24f7806d30b159a50c10675e2.jpg" alt="explicit-content" height='450'/>
+          <img className="warningImg" src="http://i.imgur.com/29Bnqcb.png" alt="explicit-content" height='450'/>
           
           <div className="linkButtons">
             <div id="clean">

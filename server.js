@@ -1,7 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
-
 const RapidAPI = require('rapidapi-connect');
 const rapid = new RapidAPI("wtfshouldieat", "ea9f89e6-2eb3-4c7e-a6f8-7050295d7ab5");
 

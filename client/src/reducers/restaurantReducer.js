@@ -12,16 +12,18 @@ export default function (state=initialState, action) {
 		case 'GET_RESTAURANT':
 			//console.log(action.name)
 			return {...state, info:action.info}
+		case 'NEW_USER':
+			return {...state, username: action.username}
 		default:
 			return state
 	}
 }
 
-export default function (state=initialState, action) {
+/*export default function (state=initialState, action) {
 	switch (action.type) {
 		case 'NEW_USER':
 			return {...state, username: action.username}
 		default:
 			return state 
 	}
-}
+}*/
