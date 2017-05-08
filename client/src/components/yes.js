@@ -6,8 +6,7 @@ import '../components/css/yesresult.css'
 //main is 75% of page on the right, side is 25% on the left//
 
 const Yes = React.createClass({
-  handleBack(e){
-    e.preventDefault()
+  handleBack(){
     this.props.history.goBack()
   },
   render(){
@@ -67,9 +66,6 @@ const Yes = React.createClass({
         <div>
           img here of rest.
         </div>
-
-
-
 
       </div>
     </div>

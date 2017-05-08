@@ -3,14 +3,36 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 //import {getRestaurant} from '../api/wtf'
+import store from '../store'
 
-
-
+//var businessInfo = []
 const Restaurant = React.createClass({
 
+/*    getInitialState() {
+
+    return {
+
+     businessInfo: []
+
+    }
+  },
+
+    componentWillMount() {
+      store.subscribe(() => {
+
+      const appState = store.getRestaurants()
+
+
+      this.setState({
+
+        businessInfo: this.props.info.businessess
+
+      })
+    })
+  },*/
 
 	render(){
-    console.log(this.props.info.businesses, 'hello')
+    console.log( 'hello')
     return (
     	<div>
       	<h1> results </h1>
