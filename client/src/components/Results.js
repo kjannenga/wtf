@@ -1,55 +1,46 @@
 import React from 'react'
-//import {getRestaurants} from '../api/wtf'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-//import {getRestaurant} from '../api/wtf'
 import store from '../store'
 
-//var businessInfo = []
+
 const Restaurant = React.createClass({
 
-/*    getInitialState() {
-
-    return {
-
-     businessInfo: []
-
+getInitialState(){
+  return {
+      restaurant: []
     }
   },
 
-    componentWillMount() {
-      store.subscribe(() => {
+componentWillMount() {
 
-      const appState = store.getRestaurants()
+    store.subscribe(() => {
 
-
+      const appState = store.getState()
+      console.log(appState.restaurantReducer.info.businesses[0], 'from')
       this.setState({
 
-        businessInfo: this.props.info.businessess
+        restaurant: appState.restaurantReducer.info.businesses[0]
 
       })
     })
-  },*/
+  },
 
-	render(){
-    console.log( 'hello')
+componentWillUnmount(){
+
+    store.unsubscribe
+
+  },
+
+
+render(){
     return (
     	<div>
       	<h1> results </h1>
       	<div>google Map</div>
       	<div>
-         <ul>
-          {this.props.info.businesses.map(function(value){
-            return <li key={value.id}>
-                      <div>{value.name + ' ' + value.price}</div>
-                      <img className='restImage' src={value.image_url} alt='#'></img>
-                      <a href={value.url}>test</a>
-
-                      <div>{value.rating + '/5'}</div>
-
-                   </li>
-          })}
-        </ul> 
+          <div>{this.state.restaurant.name + ' ' + this.state.restaurant.price}</div>
+          <div>{'rating' + ' ' + this.state.restaurant.rating + '/5'}</div>
         </div>
     		<Link to='/yes'><button>Fuck Yes</button></Link>
     		<button>Fuck No</button>
@@ -60,11 +51,20 @@ const Restaurant = React.createClass({
 })
 
 function mapStateToProps(state){
-	//console.log(state.restaurantReducer)
 	return {...state.restaurantReducer}
 }
 
 export default connect(mapStateToProps)(Restaurant)
+
+/*{this.state.businesses.map(function(value){
+            return <li key={value.id}>
+                      <div>{value.name + ' ' + value.price}</div>
+                      <img className='restImage' src={value.image_url} alt='#'></img>
+
+                      <div>{value.rating + '/5'}</div>
+
+                   </li>
+          })}*/
 
 /*<div id="app">
 

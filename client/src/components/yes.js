@@ -7,8 +7,10 @@ import '../components/css/yesresult.css'
  
 export default React.createClass ({
 
+
  handleBack(e){
     e.preventDefault()
+
     this.props.history.goBack()
   },
 
@@ -94,4 +96,5 @@ export default React.createClass ({
       </div>
 
   )}})
+
 
