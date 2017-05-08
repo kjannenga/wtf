@@ -1,38 +1,13 @@
 import React from 'react'
-//import {getRestaurants} from '../api/wtf'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-//import {getRestaurant} from '../api/wtf'
-import store from '../store'
 
-//var businessInfo = []
 const Restaurant = React.createClass({
 
-/*    getInitialState() {
 
-    return {
-
-     businessInfo: []
-
-    }
-  },
-
-    componentWillMount() {
-      store.subscribe(() => {
-
-      const appState = store.getRestaurants()
-
-
-      this.setState({
-
-        businessInfo: this.props.info.businessess
-
-      })
-    })
-  },*/
-
-	render(){
-    console.log( 'hello')
+render(){
+  console.log(this.props.info.businesses, 'a')
+  console.log(this.props.info.businesses[0], 'b')
     return (
     	<div>
       	<h1> results </h1>
@@ -40,10 +15,10 @@ const Restaurant = React.createClass({
       	<div>
          <ul>
           {this.props.info.businesses.map(function(value){
+            console.log(value.name, 'c')
             return <li key={value.id}>
                       <div>{value.name + ' ' + value.price}</div>
                       <img className='restImage' src={value.image_url} alt='#'></img>
-                      <a href={value.url}>test</a>
 
                       <div>{value.rating + '/5'}</div>
 
@@ -60,7 +35,6 @@ const Restaurant = React.createClass({
 })
 
 function mapStateToProps(state){
-	//console.log(state.restaurantReducer)
 	return {...state.restaurantReducer}
 }
 

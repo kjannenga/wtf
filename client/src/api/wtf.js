@@ -14,7 +14,7 @@ export function getRestaurants(searchObj) {
 
 export function getRestaurant(searchObj) {
 	axios.get(`/yelprest?bussinessId=kits-kitchen-henderson`).then(function(response){
-		//console.log(response.data, searchObj, 'a')
+		console.log(response.data, searchObj, 'a')
 		store.dispatch({
 			type: 'GET_RESTAURANT',
 			info: response.data
