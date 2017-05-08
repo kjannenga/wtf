@@ -5,7 +5,10 @@ import '../components/css/yesresult.css'
 
 //main is 75% of page on the right, side is 25% on the left//
 
+
 const Yes = React.createClass({
+  
+
   handleBack(){
     this.props.history.goBack()
   },
@@ -75,27 +78,7 @@ const Yes = React.createClass({
 })
 
 function mapStateToProps(state){
-  //console.log(state.restaurantReducer)
   return {...state.restaurantReducer}
 }
 
 export default connect(mapStateToProps)(Yes)
-
-/*<div id="app">
-
-    {
-      this.state.etsyData.map((value, i) => {
-
-        return (
-
-          <div key={'id' + i} className="desc">
-              
-            <img src={value.Images[0].url_170x135} />
-            
-            <p>{value.title}</p> <p>{value.Shop.shop_name + ' $' + value.price }</p>
-          
-          </div>
-/*export default React.createClass ({
-  
-  }
-})*/ 
