@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-import {getRestaurant} from '../api/wtf'
+import {getRestaurants, getRestaurant} from '../api/wtf'
 import '../index.css'
 
 
@@ -11,7 +11,8 @@ const Selections = React.createClass ({
 			return{
 				term: '',
 				location: '',
-				price: ''
+				price: '',
+				bussinessId: ''
 			}
 		}, 
 
@@ -34,13 +35,13 @@ const Selections = React.createClass ({
 		},
 
 		handleSubmit() {
-			console.log('click')
-			//e.preventDefault()
-			console.log(this.state, 'criteria')
-			getRestaurant({
+			getRestaurants({
 				term: this.state.term,
 				location: this.state.location,
 				price: this.state.price
+			})
+			getRestaurant({
+				bussinessId: this.state.bussinessId
 			})
 
 			//this.props.history.push('/results')
@@ -85,14 +86,14 @@ const Selections = React.createClass ({
 		      	<input type='radio' name="where" id='pickup'/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
 		      </div>
 
-		      <Link to='/results/'>
+		      <Link to='/results'>
 		      	<div 
 		      		onClick={this.handleSubmit}>
 		      		Let's Go
 		      	</div>
 		      </Link>
 
-		      <Link to='/group/'>
+		      <Link to='/group'>
 		      	<div 
 		      		onClick={this.handleSubmit}>
 		      		Group

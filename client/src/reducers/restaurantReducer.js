@@ -19,7 +19,6 @@ export default function (state=initialState, action) {
 	}
 }
 
-<<<<<<< HEAD
 /*export default function (state=initialState, action) {
 	switch (action.type) {
 		case 'NEW_USER':
@@ -28,13 +27,5 @@ export default function (state=initialState, action) {
 			return state 
 	}
 }*/
-=======
-// export default function (state=initialState, action) {
-// 	switch (action.type) {
-// 		case 'NEW_USER':
-// 			return {...state, username: action.username}
-// 		default:
-// 			return state 
-// 	}
-// }
->>>>>>> e4a89b162aea45702349effc3eb9868af107fdb8
+
+

@@ -1,101 +1,105 @@
 import React from 'react'
 import logo from '../assets/logo.png'
+import {connect} from 'react-redux'
 import '../components/css/yesresult.css'
-  
-export default React.createClass ({
 
-	handleBack(e){
+//main is 75% of page on the right, side is 25% on the left//
+
+const Yes = React.createClass({
+  handleBack(e){
     e.preventDefault()
     this.props.history.goBack()
   },
-
-  render() {
+  render(){
     return (
-    	
-    	<div>
-    		<div className="logoContainer">
-	      	<img className="yesLogo" src={logo} alt="logo" />
-	      </div>
+      <div>
+        <div className="logoContainer">
+          <img className="yesLogo" src={logo} alt="logo" />
+        </div>
 
-  		<div>
+        <div>
+           Name of Rest. Here
+        </div>
+        <hr className="hrstyle"/>
+        <div>
+          pull in map here 33% height of screen
+        </div>
 
-  			<header >
-  				<div>
-  					Name of Rest. Here
-  				</div>
-  				<hr className="hrstyle"/>
-  			</header>
+        <div className="three-parts">
+          <div className="third-box">
+            <h3>Menu</h3>
 
-  			<body>
-  				<div>
-  					pull in map here 33% height of screen
-  				</div>
+            <div>
+              menu populates here
+            </div>
 
-  				<div className="three-parts">
-  					<div className="third-box">
-  						<h3>Menu</h3>
+          </div>
 
-  						<div>
-  							menu populates here
-  						</div>
+          <div className="third-box">
+            <h3>Directions</h3>
 
-  					</div>
+            <div>
+              directions populate here
+            </div>
 
-  					<div className="third-box">
-  						<h3>Directions</h3>
+          </div>
 
-  						<div>
-  							directions populate here
-  						</div>
+          <div className="third-box">
+            <h3>Contact</h3>
 
-  					</div>
+            <div>
+              contact populates here
+            </div>
 
-  					<div className="third-box">
-  						<h3>Contact</h3>
+          </div>
+        </div>
 
-  						<div>
-  							contact populates here
-  						</div>
+      <div className="side">
 
-  					</div>
-  				</div>
-  			</body>
+        <div className="logotop">
+          <img className="logo" src={logo} alt="logo" />
+        </div>
 
-  			<div className="side">
+        <div>
+          <button type="button" onClick={this.handleBack}>Hmmmmmmmm nevermind</button>
+        </div>
 
-  				<div className="logotop">
-  					<img className="logo" src={logo} alt="logo" />
-  				</div>
-
-  				<div>
-  					<button type="button" onClick={this.handleBack}>Hmmmmmmmm nevermind</button>
-  				</div>
-
-  				<div>
-  					img here of rest.
-  				</div>
+        <div>
+          img here of rest.
+        </div>
 
 
 
 
-  			</div>
+      </div>
+    </div>
+    )
+    
+  }
+})
 
+function mapStateToProps(state){
+  //console.log(state.restaurantReducer)
+  return {...state.restaurantReducer}
+}
 
+export default connect(mapStateToProps)(Yes)
 
+/*<div id="app">
 
+    {
+      this.state.etsyData.map((value, i) => {
 
+        return (
 
-
-
-  		</div>
-  		</div>
-
-
-
-
-
-
-
-
-
-  )}})
+          <div key={'id' + i} className="desc">
+              
+            <img src={value.Images[0].url_170x135} />
+            
+            <p>{value.title}</p> <p>{value.Shop.shop_name + ' $' + value.price }</p>
+          
+          </div>
+/*export default React.createClass ({
+  
+  }
+})*/ 

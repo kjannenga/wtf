@@ -1,12 +1,16 @@
 import React from 'react'
-//import {getRestaurant} from '../api/wtf'
+//import {getRestaurants} from '../api/wtf'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+//import {getRestaurant} from '../api/wtf'
+
 
 
 const Restaurant = React.createClass({
+
+
 	render(){
-    console.log(this.props.info.businesses.name, 'hello')
+    console.log(this.props.info.businesses, 'hello')
     return (
     	<div>
       	<h1> results </h1>
@@ -15,7 +19,12 @@ const Restaurant = React.createClass({
          <ul>
           {this.props.info.businesses.map(function(value){
             return <li key={value.id}>
-                      <div>{value.name}</div>
+                      <div>{value.name + ' ' + value.price}</div>
+                      <img className='restImage' src={value.image_url} alt='#'></img>
+                      <a href={value.url}>test</a>
+
+                      <div>{value.rating + '/5'}</div>
+
                    </li>
           })}
         </ul> 
