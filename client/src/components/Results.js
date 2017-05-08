@@ -1,14 +1,14 @@
 import React from 'react'
-import {getRestaurants} from '../api/wtf'
+//import {getRestaurants} from '../api/wtf'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 //import {getRestaurant} from '../api/wtf'
 import store from '../store'
 
-var businessInfo = []
+//var businessInfo = []
 const Restaurant = React.createClass({
 
-    getInitialState() {
+/*    getInitialState() {
 
     return {
 
@@ -29,10 +29,10 @@ const Restaurant = React.createClass({
 
       })
     })
-  },
+  },*/
 
 	render(){
-    console.log(businessInfo, 'hello')
+    console.log( 'hello')
     return (
     	<div>
       	<h1> results </h1>
