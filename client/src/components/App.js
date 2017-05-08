@@ -19,7 +19,7 @@ export default React.createClass ({
           <Route path='/criteria' component={CriteriaSelector} />
           <Route path='/results' component={Results} />
           <Route path='/group' component={Group} />  
-          <Route path='/yes' compontent={Yes}  />      
+          <Route path='/yes' component={Yes}  />      
         </div>
       </BrowserRouter>
       </Provider>
