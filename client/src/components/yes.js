@@ -16,7 +16,7 @@ const Yes = React.createClass({
    this.props.history.goBack()
  },
  render(){
-  //console.log(this.props,  'a')
+  console.log(this.props,  'b')
    return (
      <div>
        <div className="logoContainer">
