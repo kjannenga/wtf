@@ -32,8 +32,8 @@ handleClick(e) {
 
        <div className="bottomGraphic">
          <div className="buttonDiv">
-           <div className="dirtyDiv">
-               <Link onClick={this.handleClick} id="dirty" to='/criteria'>dirty</Link>
+           <div>
+               <Link className="dirtyDiv" onClick={this.handleClick} id="dirty" to='/criteria'>dirty</Link>
            </div>
              <img className="warningImg" src="https://s-media-cache-ak0.pinimg.com/originals/62/8d/fc/628dfcb24f7806d30b159a50c10675e2.jpg" alt="explicit-content" height='450'/>
            <div className="cleanDiv">
