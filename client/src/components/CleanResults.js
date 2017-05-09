@@ -62,8 +62,8 @@ render(){
                      </li>
              })}
           </ul>
-    		<Link to='/yes'><button>Fuck Yes</button></Link>
-    		<button type='submit' onClick={this.handleClick}>Fuck this</button>
+    		<Link to='/yes'><button>F Yes</button></Link>
+    		<button type='submit' onClick={this.handleClick}>F this</button>
       </div>
     )
 		

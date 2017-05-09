@@ -14,6 +14,7 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 });
 
+
 app.get('/yelpstuff', function(req, res){
 	//console.log(res, 'server')
 	rapid.call('YelpAPI', 'getBusinesses', { 
