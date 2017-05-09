@@ -3,6 +3,7 @@ import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
 import Maps from './Map'
 import '../components/css/yesresult.css'
+// import Iframe from 'react-iframe'
 
 
 
@@ -20,16 +21,20 @@ const Yes = React.createClass({
   //console.log(this.props,  'a')
    return (
      <div>
+
        <div className="logoContainer">
          <img className="yesLogo" src={logo} alt="logo" />
        </div>
-
+        <Maps />
        <div>
           {this.props.restInfo.name}
        </div>
        <hr className="hrstyle"/>
        <div>
-        <div id="map"></div>
+<Maps />
+
+
+
        </div>
 
        <div className="three-parts">
