@@ -65,10 +65,7 @@ const Selections = React.createClass ({
 			      <div className='budget'>
 
 			   
-		      <div className="options"><h2>Tell us whatcha want.....Whatcha really really want</h2></div>
-		      <div className="radios">
-		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant'/><label htmlFor='random'>Just fuck me up</label>
-
+		   
 			      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>$<br/>
 			      	<label htmlFor='oneDollar'>Cheap ass</label><br/>
 			      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>$$<br/>
@@ -83,7 +80,7 @@ const Selections = React.createClass ({
 		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Just fuck me up</label><br/>
 
 		      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
-		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label>
+		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>Fuck gluten</label><br/>
 
@@ -113,6 +110,7 @@ const Selections = React.createClass ({
 		      </Link>
 
 		    </div>
+
 		    </div>
 	    </form>
 	   </div>
