@@ -16,27 +16,15 @@ getInitialState(){
     }
   },
 
-componentWillMount() {
 
-    store.subscribe(() => {
-
-      
-      const appState = store.getState()
-      //console.log(appState.restaurantReducer.info.businesses[this.state.id].id, 'b')
-      this.setState({
-
-        restaurant: [appState.restaurantReducer.info.businesses[this.state.id]/*appState.restaurantReducer.info.businesses[id]*/],
-      })
-      getRestaurant({
-        restId: appState.restaurantReducer.info.businesses[this.state.id].id
-      })
-    })
-  },
-
-componentWillUnmount(){
-
-    store.unsubscribe
-
+componentWillReceiveProps(props) {
+  console.log(props.info.businesses[this.state.id].id, 'will')
+  this.setState({
+    restaurant: [props.info.businesses[this.state.id]]
+  })
+  getRestaurant({
+      restId: props.info.businesses[this.state.id].id
+   })
   },
 
 handleClick(e) {
@@ -47,7 +35,7 @@ handleClick(e) {
 
 
 render(){
-  //console.log(this.state.id)
+  console.log(this.state.restaurant[0], 'a')
     return (
     	<div>
       	<h1> results </h1>
