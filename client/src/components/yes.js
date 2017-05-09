@@ -11,9 +11,11 @@ const Yes = React.createClass({
  
 
  handleBack(){
+
    this.props.history.goBack()
  },
  render(){
+  //console.log(this.props,  'a')
    return (
      <div>
        <div className="logoContainer">
@@ -21,7 +23,7 @@ const Yes = React.createClass({
        </div>
 
        <div>
-          Name of Rest. Here
+          {this.props.restInfo.name}
        </div>
        <hr className="hrstyle"/>
        <div>
@@ -51,7 +53,6 @@ const Yes = React.createClass({
            <h3>Contact</h3>
 
            <div>
-             contact populates here
            </div>
 
          </div>
@@ -68,7 +69,24 @@ const Yes = React.createClass({
        </div>
 
        <div>
-         img here of rest.
+         <ul>
+            {this.props.restInfo.location.display_address.map(function(value){
+              //console.log(value, 'test')
+              return <li>
+                       <div>{value}</div>
+                     </li>
+             })}
+          </ul>
+       </div>
+       <div>
+        <ul>
+            {this.props.restInfo.photos.map(function(value){
+              //console.log(value, 'test')
+              return <li>
+                       <img className='restImage' src={value}/>
+                     </li>
+             })}
+          </ul>
        </div>
 
      </div>

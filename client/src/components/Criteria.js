@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-import {getRestaurants /*getRestaurant*/} from '../api/wtf'
+import {getRestaurants} from '../api/wtf'
 import '../index.css'
 
 
@@ -10,7 +10,7 @@ const Selections = React.createClass ({
 		getInitialState(){
 			return{
 				term: 'restaurant',
-				location: '',
+				location: 'Las Vegas',
 				price: '1'
 			}
 		}, 
@@ -47,7 +47,7 @@ const Selections = React.createClass ({
 
 	
   render() {
-  	console.log(this.state.price, this.state.term, this.state.location, 'hello')
+  	//console.log(this.state.price, this.state.term, this.state.location, 'hello')
 
     return (
     	<div>
