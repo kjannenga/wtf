@@ -1,0 +1,88 @@
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background:linear-gradient(rgba(0,0,0,25), rgba(0,0,0,0));
+}
+
+.budgetHeader {
+	background: transparent;
+}
+.zipDiv {
+	margin-top:10%;
+}
+.zipBox {
+	position: center;
+	right: 0px;
+	width:auto;
+	padding:10px;
+	border-left:transparent;
+	border-right:transparent;
+	border-top:transparent;
+	border-bottom:transparent;
+	background:#EBEBEB;
+	font-size:14px;
+	background:grey;
+	color:black;
+	       
+}
+
+.zipBox:focus {
+	background:grey;
+	color:black;
+	outline:none;
+
+}
+
+button {
+	background:black;
+	border:black;
+	color:grey;
+	height:30px;
+	width:40px;
+	border-radius:50%;
+	outline:none;
+}
+
+.budget {
+	margin-top:10%;
+	margin-left:10%;
+	width:50%;
+	display:flex;
+	justify-content: space-around;
+
+
+
+}
+.buttonDiv {
+	width:20px;
+}
+.options {
+	margin-top:10%;
+	width:50%;
+	border: 2px solid black;
+
+
+}
+
+.radios {
+	display:flex;
+	flex-direction:column;
+	width:50%;
+	float:left;
+	border: 2px solid black;
+
+}
+
+.radioOptions {
+	display:flex;
+	flex-direction:column;
+	width:50%;
+	float:right;
+	margin-top:-6%;
+	background:transparent;
+	border: 2px solid black;
+}
