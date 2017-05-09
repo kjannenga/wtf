@@ -9,13 +9,13 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
-app.post('/proxy', function(req, res){
+/*app.post('/proxy', function(req, res){
 	var url = req.body.url
 	
 	request(url, function(err, response, body){
 		res.json(body)
 	})
-})
+})*/
 
 
 app.get('/yelpstuff', function(req, res){
