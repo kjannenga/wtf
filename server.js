@@ -46,7 +46,9 @@ app.get('/yelpstuff', function(req, res){
 	})
 }),
 
+
 app.get('/yelprest', function(req, res){
+	//console.log(res, 'server')
 	rapid.call('YelpAPI', 'getSingleBusiness', { 
 		'accessToken': 'SL6alfUTxepXGG38qBlJoVlmTKkhG4H2g07wQ8myZTngUdlIoOdqkaJ1eu2CzbN5KvaqDpgjO9tQfmwJqSQNqJcHCvktf_qryrHb9g5Q9pPWP16BsNc_-L2vPQIIWXYx',
 		'bussinessId': req.query.bussinessId

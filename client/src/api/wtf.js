@@ -4,20 +4,21 @@ import store from '../store'
 
 export function getRestaurants(searchObj) {
 	axios.get(`/yelpstuff?term=${searchObj.term}&location=${searchObj.location}&price=${searchObj.price}`).then(function(response){
-		console.log(response.data, searchObj, 'api')
+		//console.log(response.data, searchObj, 'api')
 		store.dispatch({
-			type: 'GET_RESTAURANT',
+			type: 'GET_RESTAURANTS',
 			info: response.data
 		})
 	})
 }
 
-export function getRestaurant(searchObj) {
-	axios.get(`/yelprest?bussinessId=kits-kitchen-henderson`).then(function(response){
-		//console.log(response.data, searchObj, 'a')
+export function getRestaurant(id) {
+	//console.log(id, 'b')
+	axios.get(`/yelprest?bussinessId=${id.restId}`).then(function(response){
+		//console.log(response.data, id, 'api')
 		store.dispatch({
 			type: 'GET_RESTAURANT',
-			info: response.data
+			restInfo: response.data
 		})
 	})
 }

@@ -2,21 +2,23 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-import {getRestaurants, getRestaurant} from '../api/wtf'
+
+
 import './css/criteria.css'
+
+import {getRestaurants} from '../api/wtf'
 
 
 const Selections = React.createClass ({
 		getInitialState(){
 			return{
-				term: '',
-				location: '',
-				price: '',
-				bussinessId: ''
+				term: 'restaurant',
+				location: 'Las Vegas',
+				price: '1'
 			}
 		}, 
 
-		handleClick(e) {
+		radioPrice(e) {
 			this.setState({
 				price: e.target.value
 			})
@@ -28,9 +30,13 @@ const Selections = React.createClass ({
 			})
 		},
 
-		handleChange(e){
+		radioDelivery(e){
+			this.setState({
+				term: this.state.term + ' ' + e.target.value
+			})
+		},
 
-			
+		handleChange(e){
 			this.setState({[e.target.name]: e.target.value})
 		},
 
@@ -40,12 +46,6 @@ const Selections = React.createClass ({
 				location: this.state.location,
 				price: this.state.price
 			})
-			getRestaurant({
-				bussinessId: this.state.bussinessId
-			})
-
-			//this.props.history.push('/results')
-
 		},
 
 	
@@ -63,32 +63,35 @@ const Selections = React.createClass ({
 			      	<p className='wordHilight'>So, how much you wanna </p> <p className='wordHilight'> fuckin </p> <p> spend </p> 
 			      </div>
 			      <div className='budget'>
-			      	<div className='buttonDiv'><button type="button" onClick={this.handleClick} id='oneDollar' value='1'>$</button><br />
-			      	<label htmlFor='oneDollar'>Cheap ass</label>
-			      	</div>
-			      	<div className='buttonDiv'><button type="button" onClick={this.handleClick} id='twoDollar' value='2'>$$</button><br />
-			      	<label htmlFor='twoDollar'>Ballin on a budget</label>
-			      	</div>
-			      	<div className='buttonDiv'><button type="button" onClick={this.handleClick} id="threeDollar" value='3'>$$$</button><br />
-			      	<label htmlFor='threeDollar'>Big spenda</label>
-			      	</div>
-			      	<div className='buttonDiv'><button type="button" onClick={this.handleClick} id='fourDollar' value='4'>$$$$</button><br />
-			      	<label htmlFor='fourDollar'>Money aint a thing</label>
-			      	</div>
-			      </div>
+
+			   
 		      <div className="options"><h2>Tell us whatcha want.....Whatcha really really want</h2></div>
 		      <div className="radios">
 		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant'/><label htmlFor='random'>Just fuck me up</label>
+
+			      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>$<br/>
+			      	<label htmlFor='oneDollar'>Cheap ass</label><br/>
+			      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>$$<br/>
+			      	<label htmlFor='twoDollar'>Ballin on a budget</label><br/>
+			      	<input type="radio" onClick={this.radioPrice} id="threeDollar" name='price' value='3'/>$$$<br/>
+			      	<label htmlFor='threeDollar'>Big spenda</label><br/>
+			      	<input type="radio" onClick={this.radioPrice} id='fourDollar' name='price' value='4'/>$$$$<br/>
+			      	<label htmlFor='fourDollar'>Money aint a thing</label><br/>
+			      </div>
+		      <div>Tell me whatcha want.....Whatcha really really want</div> 
+		      <div>
+		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Just fuck me up</label><br/>
+
 		      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>Fuck gluten</label><br/>
 
 		      </div>
-		      <div className="radioOptions">
-		      <h2>Tell us how you like it</h2>
-		      	<input type='radio' name="where" id='deliver'/><label htmlFor='deliver'>Fuckin bring that shit to me</label><br/>
-		      	<input type='radio' name="where" id='pickup'/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
+		      <div>
+		      	<input type='radio' name="where" id='pickup' defaultChecked={true}/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
+		      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>Fuckin bring that shit to me</label><br/>
+
 		      </div>
 		      <div className="zipDiv">
 		      <h3>Now tell us where TF you are</h3>
