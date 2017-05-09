@@ -32,7 +32,9 @@ handleClick(e) {
 
        <div className="bottomGraphic">
          <div className="buttonDiv">
+
            <div>
+
 
                <Link className="dirtyDiv" onClick={this.handleClick} id="dirty" to='/criteria'>dirty</Link>
            </div>
