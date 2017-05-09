@@ -3,12 +3,14 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import store from '../store'
 
+var id = 1
 
 const Restaurant = React.createClass({
 
 getInitialState(){
   return {
-      restaurant: []
+      restaurant: [],
+      id: 1
     }
   },
 
@@ -16,11 +18,11 @@ componentWillMount() {
 
     store.subscribe(() => {
 
+      console.log(appState)
       const appState = store.getState()
-      console.log(appState.restaurantReducer.info.businesses[0], 'from')
       this.setState({
 
-        restaurant: appState.restaurantReducer.info.businesses[0]
+        restaurant: [appState.restaurantReducer.info.businesses[this.state.id] /*appState.restaurantReducer.info.businesses[id]*/]
 
       })
     })
@@ -32,18 +34,31 @@ componentWillUnmount(){
 
   },
 
+handleClick(e) {
+    this.setState({
+      id: id += 1,
+    })
+  },
+
 
 render(){
+  console.log(this.state.id)
     return (
     	<div>
       	<h1> results </h1>
       	<div>google Map</div>
-      	<div>
-          <div>{this.state.restaurant.name + ' ' + this.state.restaurant.price}</div>
-          <div>{'rating' + ' ' + this.state.restaurant.rating + '/5'}</div>
-        </div>
+      	<ul>
+            {this.state.restaurant.map(function(value){
+              return <li key={'id' + value.id}>
+                       <div>{value.name + ' ' + value.price}</div>
+                       <div>{value.rating + '/5'}</div>
+                       <img className='restImage' src={value.image_url} alt='restaurant image' />
+                    
+                     </li>
+             })}
+          </ul>
     		<Link to='/yes'><button>Fuck Yes</button></Link>
-    		<button>Fuck No</button>
+    		<button type='submit' onClick={this.handleClick}>Fuck this</button>
       </div>
     )
 		
