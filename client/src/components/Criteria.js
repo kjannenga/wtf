@@ -53,17 +53,9 @@ const Selections = React.createClass ({
 	    // 	groupCode: text
 	    // })
 
-	    var groupInfo = {
-	    	name: this.state.groupName,
-	    	code: text
-	    }
-	    
-	    // createGroup(groupInfo)
-
-	    console.log(text)
-	    console.log(groupInfo)
-
+	    this.props.history.push("/Room/" + text)
 },
+
 
 		handleChange(e){
 			this.setState({[e.target.name]: e.target.value})
