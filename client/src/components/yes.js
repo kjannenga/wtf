@@ -28,7 +28,7 @@ const Yes = React.createClass({
        </div>
        <hr className="hrstyle"/>
        <div>
-        <Maps />
+     
        </div>
 
        <div className="three-parts">
@@ -61,9 +61,7 @@ const Yes = React.createClass({
 
      <div className="side">
 
-       <div className="logotop">
-         <img className="logo" src={logo} alt="logo" />
-       </div>
+       
 
        <div>
          <button type="button" onClick={this.handleBack}>Hmmmmmmmm nevermind</button>
