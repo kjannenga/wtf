@@ -60,14 +60,14 @@ const Selections = React.createClass ({
 	      <form onSubmit={this.handleSubmit} >
 		      <div className='mainContainer'>
 			      <div className='budgetHeader'>
-			      	<p className='wordHilight'>So, how much you wanna </p> <p className='wordHilight'> fuckin </p> <p> spend </p> 
+			      	<p className='wordHilight'>So, how much you wanna </p> <p className='wordHilight'> freakin' </p> <p> spend? </p> 
 			      </div>
 			      <div className='budget'>
 
-			   
-		   
+		      <div className="radios">
+
 			      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>$<br/>
-			      	<label htmlFor='oneDollar'>Cheap ass</label><br/>
+			      	<label htmlFor='oneDollar'>Cheap AF</label><br/>
 			      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>$$<br/>
 			      	<label htmlFor='twoDollar'>Ballin on a budget</label><br/>
 			      	<input type="radio" onClick={this.radioPrice} id="threeDollar" name='price' value='3'/>$$$<br/>
@@ -78,16 +78,15 @@ const Selections = React.createClass ({
 		      <div>Tell me whatcha want.....Whatcha really really want</div> 
 		      <div>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Just fuck me up</label><br/>
-
-		      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
-		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label><br/>
-		      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
+		      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a freakin' diet</label><br/>
+		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a freakin' taco</label>
+		      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>F meat, you savages</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>Fuck gluten</label><br/>
 
 		      </div>
 		      <div>
-		      	<input type='radio' name="where" id='pickup' defaultChecked={true}/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
-		      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>Fuckin bring that shit to me</label><br/>
+		      	<input type='radio' name="where" id='pickup' defaultChecked={true}/><label htmlFor='pickup'>I'll freakin' get it</label><br/>
+		      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>Freakin' bring that shit to me</label><br/>
 
 		      </div>
 		      <div className="zipDiv">
@@ -110,7 +109,6 @@ const Selections = React.createClass ({
 		      </Link>
 
 		    </div>
-
 		    </div>
 	    </form>
 	   </div>
