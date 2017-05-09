@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import Maps from './Map'
 import '../components/css/yesresult.css'
 
+
 //main is 75% of page on the right, side is 25% on the left//
 
 

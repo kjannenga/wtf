@@ -2,8 +2,11 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
+
+
+import './css/criteria.css'
+
 import {getRestaurants} from '../api/wtf'
-import '../index.css'
 
 
 const Selections = React.createClass ({
@@ -56,11 +59,16 @@ const Selections = React.createClass ({
 	      </div>
 	      <form onSubmit={this.handleSubmit} >
 		      <div className='mainContainer'>
-		      	<input onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='zipcode' />
 			      <div className='budgetHeader'>
-			      	<p className='wordHilight'>So... </p> <p> How much you wanna </p> <p className='wordHilight'> fuckin </p> <p> spend </p>
+			      	<p className='wordHilight'>So, how much you wanna </p> <p className='wordHilight'> fuckin </p> <p> spend </p> 
 			      </div>
 			      <div className='budget'>
+
+			   
+		      <div className="options"><h2>Tell us whatcha want.....Whatcha really really want</h2></div>
+		      <div className="radios">
+		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant'/><label htmlFor='random'>Just fuck me up</label>
+
 			      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>$<br/>
 			      	<label htmlFor='oneDollar'>Cheap ass</label><br/>
 			      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>$$<br/>
@@ -73,15 +81,22 @@ const Selections = React.createClass ({
 		      <div>Tell me whatcha want.....Whatcha really really want</div> 
 		      <div>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Just fuck me up</label><br/>
+
 		      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
-		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label><br/>
+		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>Fuck gluten</label><br/>
+
 		      </div>
 		      <div>
 		      	<input type='radio' name="where" id='pickup' defaultChecked={true}/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
 		      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>Fuckin bring that shit to me</label><br/>
+
 		      </div>
+		      <div className="zipDiv">
+		      <h3>Now tell us where TF you are</h3>
+			      	<input className="zipBox" onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
+			      	</div>
 
 		      <Link to='/results'>
 		      	<div 

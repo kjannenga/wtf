@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import '../index.css'
+import './css/Home.css'
 import logo from '../assets/logo.png'
+import './CleanCriteria'
 
 
 export default React.createClass ({
@@ -13,7 +14,7 @@ handleClick(e) {
    {window.location='./Criteria'
    }
     else {
-      window.location='./'
+      window.location='./CleanCriteria'
    }
 
 },
@@ -36,7 +37,7 @@ handleClick(e) {
            </div>
              <img className="warningImg" src="https://s-media-cache-ak0.pinimg.com/originals/62/8d/fc/628dfcb24f7806d30b159a50c10675e2.jpg" alt="explicit-content" height='450'/>
            <div className="cleanDiv">
-             <Link id="clean" to='/criteria'>clean</Link>
+             <Link id="clean" to='/CleanCriteria'>clean</Link>
            </div>
          </div>
        </div>
