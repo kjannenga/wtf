@@ -84,7 +84,7 @@ const Yes = React.createClass({
             {this.props.restInfo.photos.map(function(value){
               //console.log(value, 'test')
               return <li>
-                       <img className='restImage' src={value}/>
+                       <img className='restImage' src={value} alt="restimg"/>
                      </li>
              })}
           </ul>
