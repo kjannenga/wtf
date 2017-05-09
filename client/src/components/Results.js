@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
+import {getRestaurant} from '../api/wtf'
 import store from '../store'
 
 var id = 1
@@ -10,6 +11,7 @@ const Restaurant = React.createClass({
 getInitialState(){
   return {
       restaurant: [],
+      restId: '',
       id: 1
     }
   },
@@ -18,12 +20,15 @@ componentWillMount() {
 
     store.subscribe(() => {
 
-      console.log(appState)
+      
       const appState = store.getState()
+      //console.log(appState.restaurantReducer.info.businesses[this.state.id].id, 'b')
       this.setState({
 
-        restaurant: [appState.restaurantReducer.info.businesses[this.state.id] /*appState.restaurantReducer.info.businesses[id]*/]
-
+        restaurant: [appState.restaurantReducer.info.businesses[this.state.id]/*appState.restaurantReducer.info.businesses[id]*/],
+      })
+      getRestaurant({
+        restId: appState.restaurantReducer.info.businesses[this.state.id].id
       })
     })
   },
@@ -42,7 +47,7 @@ handleClick(e) {
 
 
 render(){
-  console.log(this.state.id)
+  //console.log(this.state.id)
     return (
     	<div>
       	<h1> results </h1>
