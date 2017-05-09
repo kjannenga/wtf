@@ -8,8 +8,8 @@ import './CleanCriteria'
 export default React.createClass ({
 
 handleClick(e) {
+  console.log("test")
   e.preventDefault()
-  ;
    if (confirm("WARNING: This version contains content that is deemed inappropriate for parents, children, and 3/4 the population of Utah. Viewer discretion is advised.") )
    {window.location='./Criteria'
    }
@@ -35,7 +35,6 @@ handleClick(e) {
 
            <div>
 
-           <div >
 
                <Link className="dirtyDiv" onClick={this.handleClick} id="dirty" to='/criteria'>dirty</Link>
            </div>

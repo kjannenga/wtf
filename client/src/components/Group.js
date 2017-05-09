@@ -1,8 +1,9 @@
 import {Link} from 'react-router-dom'
 import React from 'react'
 import Newmember from './newmember'
+import {connect} from 'react-redux'
 
-export default React.createClass({
+const Group = React.createClass({
   getInitialState: function(){
     return {
       list: [],
@@ -54,6 +55,7 @@ deleteList: function (index){
   
 
   render (){
+    console.log(this.props)
     return (
     <div>
     <div classname="new">
@@ -63,6 +65,15 @@ deleteList: function (index){
         <form onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="Enter Restaraunt Names" />
         </form>
+      <div>
+        <ul>
+          {this.props.info.businesses.map(function(value){
+            return<li>
+              <div>{value.name}</div>
+            </li>
+          })}
+        </ul>
+      </div>
       <div>
         <ul>
             {this.state.list.map(function(list, i){
@@ -83,3 +94,9 @@ deleteList: function (index){
     );
   }
 })
+
+function mapStateToProps(state){
+  return {...state.restaurantReducer}
+}
+
+export default connect(mapStateToProps)(Group)

@@ -110,8 +110,6 @@ const Selections = React.createClass ({
 		      </Link>
 
 		    </div>
-
-		    </div>
 	    </form>
 	   </div>
     )
