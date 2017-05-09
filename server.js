@@ -3,20 +3,16 @@ const bodyParser = require('body-parser')
 const request = require('request')
 const RapidAPI = require('rapidapi-connect');
 const rapid = new RapidAPI("wtfshouldieat", "ea9f89e6-2eb3-4c7e-a6f8-7050295d7ab5");
-
-const app = express()
+const app = require('express')()
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
-app.post('/proxy', function(req, res){
-	var url = req.body.url
-	
-	request(url, function(err, response, body){
-		res.json(body)
-	})
-})
-
+app.get('/', function(req, res){
+	res.sendFile(__dirname + '/index.html');
+});
 
 app.get('/yelpstuff', function(req, res){
 	//console.log(res, 'server')
@@ -46,6 +42,20 @@ app.get('/yelpstuff', function(req, res){
 	})
 }),
 
+io.on('connection', function(socket){
+    socket.on('addMessage', function(message){
+        io.emit('newMessage', message)
+    })
+
+    socket.on('login', function(username){
+        io.emit('new user', username)
+    })
+
+    socket.on('newGroup', function(groupInfo){
+    	io.emit('new group', groupInfo)
+    })
+})
+
 
 app.get('/yelprest', function(req, res){
 	//console.log(res, 'server')
@@ -62,7 +72,7 @@ app.get('/yelprest', function(req, res){
 	})
 })
 
-app.listen(3001, function(){
+server.listen(3001, function(){
 	console.log('Server listening on port 3001')
 })
 
