@@ -5,6 +5,7 @@ import Maps from './Map'
 import '../components/css/yesresult.css'
 
 
+
 //main is 75% of page on the right, side is 25% on the left//
 
 
@@ -28,7 +29,7 @@ const Yes = React.createClass({
        </div>
        <hr className="hrstyle"/>
        <div>
-        <Maps />
+        <div id="map"></div>
        </div>
 
        <div className="three-parts">
@@ -61,9 +62,7 @@ const Yes = React.createClass({
 
      <div className="side">
 
-       <div className="logotop">
-         <img className="logo" src={logo} alt="logo" />
-       </div>
+       
 
        <div>
          <button type="button" onClick={this.handleBack}>Hmmmmmmmm nevermind</button>
@@ -84,7 +83,7 @@ const Yes = React.createClass({
             {this.props.restInfo.photos.map(function(value){
               //console.log(value, 'test')
               return <li>
-                       <img className='restImage' src={value} alt="restimg"/>
+                       <img className='restImage' src={value}/>
                      </li>
              })}
           </ul>

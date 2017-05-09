@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Map, Marker, InfoWindow, google} from 'google-maps-react'
+import {Map, Marker, InfoWindow} from 'google-maps-react'
 
 class App extends Component {
   constructor() {
@@ -18,18 +18,14 @@ class App extends Component {
   onInfoWindowClose = (e) => {
 
   }
-    
 
   render() {
     return (
       <Map google={window.google} zoom={14}>
-        <Marker onClick={this.onMarkerClick} name="Rest." />
+        <Marker onClick={this.onMarkerClick} name="Current Location" />
         <InfoWindow onClose={this.onInfoWindowClose}>
           <div>
             <h1>{this.state.selectedPlace.name}</h1>
-         
-      }
-
           </div>
         </InfoWindow>
       </Map>
@@ -40,4 +36,3 @@ class App extends Component {
 
 
 export default App
-
