@@ -1,100 +1,85 @@
 import React from 'react'
 import logo from '../assets/logo.png'
+import {connect} from 'react-redux'
 import Maps from './Map'
 import '../components/css/yesresult.css'
-  
 
+//main is 75% of page on the right, side is 25% on the left//
+
+
+const Yes = React.createClass({
  
-export default React.createClass ({
 
+ handleBack(){
+   this.props.history.goBack()
+ },
+ render(){
+   return (
+     <div>
+       <div className="logoContainer">
+         <img className="yesLogo" src={logo} alt="logo" />
+       </div>
 
- handleBack(e){
-    e.preventDefault()
+       <div>
+          Name of Rest. Here
+       </div>
+       <hr className="hrstyle"/>
+       <div>
+        <Maps />
+       </div>
 
-    this.props.history.goBack()
-  },
+       <div className="three-parts">
+         <div className="third-box">
+           <h3>Menu</h3>
 
-  render() {
-    return (
-      
-      <div>
-        <div className="logoContainer">
-          <img className="yesLogo" src={logo} alt="logo" />
-        </div>
+           <div>
+             menu populates here
+           </div>
 
-      <div>
+         </div>
 
-        <header >
-          <div>
-            Name of Rest. Here
-          </div>
-          <hr className="hrstyle"/>
-        </header>
+         <div className="third-box">
+           <h3>Directions</h3>
 
-        <body>
-          <div>
-            <Maps/>
-          </div>
+           <div>
+             directions populate here
+           </div>
 
-          <div className="three-parts">
-            <div className="third-box">
-              <h3>Menu</h3>
+         </div>
 
-              <div>
-                menu populates here
-              </div>
+         <div className="third-box">
+           <h3>Contact</h3>
 
-            </div>
+           <div>
+             contact populates here
+           </div>
 
-            <div className="third-box">
-              <h3>Directions</h3>
+         </div>
+       </div>
 
-              <div>
-                directions populate here
-              </div>
+     <div className="side">
 
-            </div>
+       <div className="logotop">
+         <img className="logo" src={logo} alt="logo" />
+       </div>
 
-            <div className="third-box">
-              <h3>Contact</h3>
+       <div>
+         <button type="button" onClick={this.handleBack}>Hmmmmmmmm nevermind</button>
+       </div>
 
-              <div>
-                contact populates here
-              </div>
+       <div>
+         img here of rest.
+       </div>
 
-            </div>
-          </div>
-        </body>
+     </div>
+   </div>
+   )
+   
+ }
+})
 
-        <div className="side">
+function mapStateToProps(state){
+ return {...state.restaurantReducer}
+}
 
-          <div className="logotop">
-            <img className="logo" src={logo} alt="logo" />
-          </div>
-
-          <div>
-            <button type="button" onClick={this.handleBack}>Hmmmmmmmm nevermind</button>
-          </div>
-
-          <div>
-            img here of rest.
-          </div>
-
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-      </div>
-      </div>
-
-  )}})
-
-
+export default connect(mapStateToProps)(Yes)
