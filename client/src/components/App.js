@@ -7,11 +7,13 @@ import Group from './Group'
 import Yes from './yes'
 import {Provider} from 'react-redux'
 import store from '../store'
+
 import CleanCriteria from './CleanCriteria'
 import CleanResults from './CleanResults'
 import CleanGroup from './CleanGroup'
 import CleanYes from './CleanYes'
  
+
 
 export default React.createClass ({
   render() {
@@ -22,13 +24,12 @@ export default React.createClass ({
           <Route exact={true} path='/' component={Home} />
           <Route path='/criteria' component={CriteriaSelector} />
           <Route path='/results' component={Results} />
-          <Route path='/group' component={Group} />  
+          <Route path='/group/:roomId' component={Group} />  
           <Route path='/yes' component={Yes}  />  
           <Route path='/Clean/criteria' component={CleanCriteria} />
           <Route path='/Clean/results' component={CleanResults} />
           <Route path='/Clean/group' component={CleanGroup} />  
           <Route path='/Clean/yes' component={CleanYes}  /> 
-
         </div>
       </BrowserRouter>
       </Provider>

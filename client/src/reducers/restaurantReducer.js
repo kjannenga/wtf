@@ -6,7 +6,8 @@ const initialState = {
 	},
 	restInfo:{
 		business:[]
-	}
+	},
+	groups: []
 } 
 
 export default function (state=initialState, action) {
@@ -19,18 +20,13 @@ export default function (state=initialState, action) {
 			return {...state, restInfo:action.restInfo}
 		case 'NEW_USER':
 			return {...state, username: action.username}
+		case 'NEW_GROUP':
+			return {...state, groups: [...state.groups, action.groupInfo]}
 		default:
 			return state
 	}
 }
 
-/*export default function (state=initialState, action) {
-	switch (action.type) {
-		case 'NEW_USER':
-			return {...state, username: action.username}
-		default:
-			return state 
-	}
-}*/
+
 
 
