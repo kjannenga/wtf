@@ -6,6 +6,9 @@
 
 
 
+
+
+
 .logoHeader {
 	height:350px;
 	margin:auto;
@@ -176,6 +179,9 @@ p{
     top: 0px;
     left: 0px;
     z-index: -1; 
+    opacity:.85;
+    background:black;
+
 }
 .cb-slideshow:after { 
     content: '';

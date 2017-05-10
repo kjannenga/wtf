@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './css/Home.css'
 import logo from '../assets/logo.png'
+import warning from '../assets/warning.png'
 
 
 
@@ -34,27 +35,32 @@ handleClick(e) {
             <li><span>Image 06</span></li>
         </ul>
         </div>
+
+        <div >
      
-         <div className="mainBody">
-             <div className="logoHeader">
+         
+          <div className="logoHeader">
            <img className="logo" src={logo} alt="logo" />
-           </div>
-       </div>
+          </div>
+       
 
 
-       <div className="bottomGraphic">
+       
          <div className="buttonDiv">
 
            <div>
-
-
-               <Link className="dirtyDiv" onClick={this.handleClick} id="dirty" to='/criteria'>dirty</Link>
+               <Link className="dirtyDiv" onClick={this.handleClick} id="dirty" to='/criteria'>DIRTY</Link>
            </div>
-             <img className="warningImg" src="https://s-media-cache-ak0.pinimg.com/originals/62/8d/fc/628dfcb24f7806d30b159a50c10675e2.jpg" alt="explicit-content" height='450'/>
+
+            <img className="warningImg" src={warning} alt="explicit-content" height='450'/>
+
            <div className="cleanDiv">
-             <Link id="clean" to='/Clean/criteria'>clean</Link>
+             <Link id="clean" to='/Clean/criteria'>CLEAN</Link>
            </div>
+
          </div>
+       
+
        </div>
  
      </div>
