@@ -35,21 +35,22 @@ handleClick(e) {
 
 
 render(){
-  //console.log(this.state.restaurant[0], 'a')
+  console.log(this.state, 'a')
+  console.log(this.props, 'b')
     return (
     	<div>
       	<h1> results </h1>
-      	<div><div>
-                <img src="https://maps.googleapis.com/maps/api/staticmap?
-                center=The+Iron+Yard,Las+Vegas,NV
-                &zoom=14&size=400x400
-                &markers=color:blue%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
-                &markers=color:red%7Clabel:B%7CStratosphere+Casino,Las+Vegas+NV
-                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU" />
-           </div></div>
       	<ul>
             {this.state.restaurant.map(function(value){
               return <li key={'id' + value.id}>
+                       <div>
+                         <img src={`https://maps.googleapis.com/maps/api/staticmap?
+                                    center=The+Iron+Yard,Las+Vegas,NV
+                                    &zoom=12&size=400x400
+                                    &markers=color:green%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
+                                    &markers=color:red%7Clabel:B%7C${value.coordinates.latitude + ',' + value.coordinates.longitude}
+                                    &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`}/>
+                       </div>
                        <div>{value.name + ' ' + value.price}</div>
                        <div>{value.rating + '/5'}</div>
                        <img className='restImage' src={value.image_url} alt='restaurant image' />

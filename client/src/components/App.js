@@ -7,7 +7,6 @@ import Group from './Group'
 import Yes from './yes'
 import {Provider} from 'react-redux'
 import store from '../store'
-
 import CleanCriteria from './CleanCriteria'
 import CleanResults from './CleanResults'
 import CleanGroup from './CleanGroup'
