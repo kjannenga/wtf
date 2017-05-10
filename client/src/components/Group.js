@@ -55,7 +55,7 @@ import {connect} from 'react-redux'
   
 
    render (){
-     console.log(this.props, 'group')
+     console.log(this.state, 'group')
      return (
      <div>
      <div className="new">
@@ -67,12 +67,16 @@ import {connect} from 'react-redux'
          </form>
        <div>
          <ul>
-           {this.props.info.businesses.map(function(value){
-             return<li>
-               <div>{value.name}</div>
-             </li>
-           })}
-         </ul>
+          {this.props.info.businesses.map(function(value, i){
+             var color = value.complete ? 'red' : 'blue';      
+            return<li style={{color:color}}>
+              <div>{value.name}</div>
+              <button onClick={() => this.handleComplete(i)}>Fuck this one</button>
+              <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
+
+            </li>
+          })}
+        </ul>
        </div>
        <div>
          <ul>
