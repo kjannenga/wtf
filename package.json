@@ -20,9 +20,11 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-google-maps": "^6.3.0",
+
     "react-tap-event-plugin": "^2.0.1",
     "request": "^2.81.0",
     "socket.io": "^1.7.3"
+
   },
   "scripts": {
     "start": "concurrently \"nodemon server\" \"cd client && npm start\""
