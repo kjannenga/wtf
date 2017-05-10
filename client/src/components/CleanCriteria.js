@@ -116,7 +116,7 @@ const Selections = React.createClass ({
 			      	<input className="zipBox" onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
 			      	</div>
 
-		      <Link to='/results'>
+		      <Link to='/Clean/results'>
 		      	<div 
 		      		onClick={this.handleSubmit}>
 		      		Let's Go

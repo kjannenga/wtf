@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import '../components/css/yesresult.css'
 
 
- 
+ //{this.props.restInfo.coordinates.latitude, this.props.restInfo.coordinates.longitude}
 
 //main is 75% of page on the right, side is 25% on the left//
 
@@ -18,7 +18,8 @@ const Yes = React.createClass({
    this.props.history.goBack()
  },
  render(){
-  console.log(this.props,  'b')
+  console.log(this.props,  'a')
+  console.log(this.props.restInfo.coordinates.latitude, this.props.restInfo.coordinates.longitude, 'b')
    return (
      <div>
 
@@ -53,13 +54,15 @@ const Yes = React.createClass({
            <h3>Directions</h3>
 
            <div>
-                <img src="https://maps.googleapis.com/maps/api/staticmap?
+                <img src={`https://maps.googleapis.com/maps/api/staticmap?
                 center=The+Iron+Yard,Las+Vegas,NV
-                &zoom=14&size=400x400
-                &markers=color:blue%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
-                &markers=color:red%7Clabel:B%7CStratosphere+Casino,Las+Vegas+NV
-                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU" />
+                &zoom=12&size=400x400
+                &markers=color:green%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
+                &markers=color:red%7Clabel:B%7C${this.props.restInfo.coordinates.latitude + ',' + this.props.restInfo.coordinates.longitude}
+                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`}/>
            </div>
+
+
 
          </div>
 
