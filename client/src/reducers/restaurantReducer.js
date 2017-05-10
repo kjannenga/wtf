@@ -2,7 +2,7 @@
 const initialState = {
 	info:{
 		businesses:[],
-		username: ''
+		// username: ''
 	},
 	restInfo:{
 		business:[]
@@ -17,9 +17,9 @@ export default function (state=initialState, action) {
 			return {...state, info:action.info}
 		case 'GET_RESTAURANT': 
 			//console.log(action.restInfo, 'restaurant')
-			return {...state, restInfo:action.restInfo}
-		case 'NEW_USER':
-			return {...state, username: action.username}
+		// 	return {...state, restInfo:action.restInfo}
+		// // case 'NEW_USER':
+		// 	return {...state, username: action.username}
 		case 'NEW_GROUP':
 			return {...state, groups: [...state.groups, action.groupInfo]}
 		default:

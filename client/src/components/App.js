@@ -13,6 +13,7 @@ import CleanResults from './CleanResults'
 import CleanGroup from './CleanGroup'
 import CleanYes from './CleanYes'
 import Room from './Room'
+import ChatApp from './ChatApp'
 
 
 export default React.createClass ({
@@ -31,6 +32,7 @@ export default React.createClass ({
           <Route path='/Clean/group' component={CleanGroup} />  
           <Route path='/Clean/yes' component={CleanYes}  /> 
           <Route path="/Room/:roomId" component={Room} />
+          <Route path='/ChatApp' component={ChatApp} />
         </div>
       </BrowserRouter>
       </Provider>
