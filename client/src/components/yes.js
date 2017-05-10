@@ -44,10 +44,7 @@ const Yes = React.createClass({
            <h3>Menu</h3>
 
            <div>
-             <img href="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=500x400&maptype=roadmap
-            &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-            &markers=color:red%7Clabel:C%7C40.718217,-73.998284
-            &key=AIzaSyDpQijowzYSU_U4f44DfX-2qwp1VjEDencnp"/>
+          
            </div>
 
          </div>
@@ -56,7 +53,7 @@ const Yes = React.createClass({
            <h3>Directions</h3>
 
            <div>
-             directions populate here
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=The+Iron+Yard,Las+Vegas,NV&zoom=14&size=400x400&markers=color:blue%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV&markers=color:red%7Clabel:B%7CStratosphere+Casino,Las+Vegas+NV&key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU" />
            </div>
 
          </div>
