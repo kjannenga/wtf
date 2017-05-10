@@ -9,14 +9,14 @@ body {
 }
 
 .roomID {
-	font-size: 36px;
+	font-size: 30px;
 	display:block;
 	border:1px solid black;
-	background:black;
+	background: linear-gradient(40deg, black, white);
 	text-align: center;
 	vertical-align: middle;
-	color:white;
+	color:black;
 	margin-top:10px;
-	font-family: 'Playfair Display SC', serif;
-	font-weight:bold;
+	font-family: 'Playfair Display SC', helvetica;
+	
 }

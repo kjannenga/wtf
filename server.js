@@ -6,6 +6,9 @@ const rapid = new RapidAPI("wtfshouldieat", "ea9f89e6-2eb3-4c7e-a6f8-7050295d7ab
 const app = require('express')()
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
+const cors = require('cors')
+
+app.use(cors())
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))

@@ -199,7 +199,7 @@ p{
     background-position: 50% 50%;
     background-repeat: none;
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
 	-webkit-backface-visibility: hidden;
     -webkit-animation: imageAnimation 36s linear infinite 0s;
     -moz-animation: imageAnimation 36s linear infinite 0s;
