@@ -21,6 +21,7 @@
     "react-dom": "^15.5.4",
     "react-google-maps": "^6.3.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-iframe": "^1.0.5",
     "request": "^2.81.0"
 =======
@@ -28,6 +29,13 @@
     "request": "^2.81.0",
     "socket.io": "^1.7.3"
 >>>>>>> 0b513f5352bd7d265fb70773316298527bbbdfc2
+=======
+
+    "react-tap-event-plugin": "^2.0.1",
+    "request": "^2.81.0",
+    "socket.io": "^1.7.3"
+
+>>>>>>> ee3a4beb18fa168a348d63c5994ebf43c31aa1d1
   },
   "scripts": {
     "start": "concurrently \"nodemon server\" \"cd client && npm start\""
