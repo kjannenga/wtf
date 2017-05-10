@@ -86,3 +86,21 @@ button {
 	background:transparent;
 	border: 2px solid black;
 }
+
+#groupForm {
+
+}
+
+#groupNameInput {
+	height: 40px;
+}
+
+#groupCodeInput {
+	height: 40px;
+}
+
+#createGroupButton {
+	width: 100px;
+	height: 40px;
+	border-radius: 0px;
+}

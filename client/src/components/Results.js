@@ -18,7 +18,7 @@ getInitialState(){
 
 
 componentWillReceiveProps(props) {
-  console.log(props.info.businesses[this.state.id].id, 'will')
+  //console.log(props.info.businesses[this.state.id].id, 'will')
   this.setState({
     restaurant: [props.info.businesses[this.state.id]]
   })
@@ -35,7 +35,7 @@ handleClick(e) {
 
 
 render(){
-  console.log(this.state.restaurant[0], 'a')
+  //console.log(this.state.restaurant[0], 'a')
     return (
     	<div>
       	<h1> results </h1>
