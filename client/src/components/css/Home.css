@@ -1,12 +1,7 @@
-html {box-sizing: border-box;}
+{box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background:#EBEBEB;
-}
+
 /*HOME.JS*/
 
 
@@ -20,7 +15,7 @@ body {
     left:0px;
     bottom:0px;
     right:0px;
-    opacity: 20%;
+    
 }
 
 
@@ -180,11 +175,12 @@ p{
     height: 100%;
     top: 0px;
     left: 0px;
-    z-index: 0; 
+    z-index: -1; 
 }
 .cb-slideshow:after { 
     content: '';
-    background: transparent url(./pattern.png) repeat top left; 
+    background: black; 
+  
 }
 .cb-slideshow li span { 
     width: 100%;
@@ -335,3 +331,6 @@ p{
     .cb-slideshow li div h3 { font-size: 80px }
 }
 
+ul{
+	margin-top:0px;
+}

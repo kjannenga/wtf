@@ -21,7 +21,7 @@ const Yes = React.createClass({
   console.log(this.props,  'a')
   console.log(this.props.restInfo.coordinates.latitude, this.props.restInfo.coordinates.longitude, 'b')
    return (
-     <div>
+     <div >
 
        <div className="logoContainer">
          <img className="yesLogo" src={logo} alt="logo" />
