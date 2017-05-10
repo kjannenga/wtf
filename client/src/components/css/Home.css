@@ -207,23 +207,6 @@ p{
     animation: imageAnimation 36s linear infinite 0s; 
 }
 
-.cb-slideshow li div { 
-    z-index: 1000;
-    position: absolute;
-    bottom: 30px;
-    left: 0px;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    color: #fff;
-    animation: titleAnimation 36s linear infinite 0s; 
-}
-.cb-slideshow li div h3 { 
-    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
-    font-size: 240px;
-    padding: 0;
-    line-height: 200px; 
-}
 
 .cb-slideshow li:nth-child(1) span { 
     background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfZFPp1ItTndNCiQ-kXFUjtV3JBCCOyBu-Ug6zPNixUTzRApXsxg) 
@@ -271,13 +254,7 @@ p{
     25% { opacity: 0 }
     100% { opacity: 0 }
 }
-@keyframes titleAnimation { 
-    0% { opacity: 0 }
-    8% { opacity: 1 }
-    17% { opacity: 1 }
-    19% { opacity: 0 }
-    100% { opacity: 0 }
-}
+
 @media screen and (max-width: 1140px) { 
     .cb-slideshow li div h3 { font-size: 140px }
 }
@@ -304,25 +281,9 @@ p{
 	}
 	100% { opacity: 0 }
 }
-@keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    transform: translateX(200px);
-	}
-	8% {
-	    opacity: 1;
-	    transform: translateX(0px);
-	}
-	17% {
-	    opacity: 1;
-	    transform: translateX(0px);
-	}
-	19% {
-	    opacity: 0;
-	    transform: translateX(-400px);
-	}
-	25% { opacity: 0 }
-	100% { opacity: 0 }
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
 }
 
 

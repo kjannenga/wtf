@@ -22,7 +22,20 @@ handleClick(e) {
 
  render() {
    return (
-     <div>
+    <div>
+
+          <ul class="cb-slideshow">
+            <li>
+                <span>Image 01</span>
+            </li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+            <li><span>Image 04</span></li>
+            <li><span>Image 05</span></li>
+            <li><span>Image 06</span></li>
+            <li><span>Image 07</span></li>
+          </ul>
+     
          <div className="mainBody">
              <div className="logoHeader">
            <img className="logo" src={logo} alt="logo" />
@@ -44,15 +57,7 @@ handleClick(e) {
            </div>
          </div>
        </div>
-       <ul class="cb-slideshow">
-  <li>
-    <span>Image 01</span>
-    <div>
-    </div>
-  </li>
-  <li>...</li>
-  <li>...</li>
-</ul>
+ 
      </div>
 
    )
