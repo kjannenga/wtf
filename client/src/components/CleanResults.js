@@ -2,9 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {getRestaurant} from '../api/wtf'
-import store from '../store'
+//import store from '../store'
 
-var id = 1
+var id = 0
 
 const Restaurant = React.createClass({
 
@@ -12,35 +12,32 @@ getInitialState(){
   return {
       restaurant: [],
       restId: '',
-      id: 1
+      id: 0
     }
   },
 
 componentWillReceiveProps(props) {
   //console.log(props.info.businesses[this.state.id].id, 'will')
   this.setState({
-    restaurant: [props.info.businesses[this.state.id]]
+    restaurant: [props.info.businesses[id]]
   })
   getRestaurant({
-      restId: props.info.businesses[this.state.id].id
+      restId: props.info.businesses[id].id
    })
   },
 
 handleClick(e) {
-    this.setState({
-      id: id += 1,
-    })
+    if(this.state.id < this.props.info.businesses.length){
+        id = id + 1
+     } else {
+        id = 0
+    }
   },
 
-handleClick(e) {
-    this.setState({
-      id: id += 1,
-    })
-  },
-
-
+  
 render(){
-  //console.log(this.state.id)
+  console.log(id, 'd')
+  console.log(this.props.info.businesses.length, "l")
     return (
     	<div>
       	<h1> results </h1>
