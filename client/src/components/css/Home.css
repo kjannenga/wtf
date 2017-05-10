@@ -10,10 +10,10 @@
 
 
 .logoHeader {
-	height:350px;
-	margin:auto;
-	display:flex;
-	justify-content: center;
+    height:350px;
+    margin:auto;
+    display:flex;
+    justify-content: center;
     top:0px;
     left:0px;
     bottom:0px;
@@ -23,147 +23,147 @@
 
 
 .warningImg {
-	margin: auto;
-	display: flex;
-	justify-content: center;
-	margin-top:-30px;
-	padding-left:10%;
-	padding-right:10%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top:-30px;
+    padding-left:10%;
+    padding-right:10%;
 }
 
 .buttonDiv {
-	display:flex;
-	justify-content: center;
-	margin:auto;
-	padding: 0px 120px;
-	
+    display:flex;
+    justify-content: center;
+    margin:auto;
+    padding: 0px 120px;
+    
 }
 
 .dirty {
-	border:1px black;
-	color:red;
-	margin:auto;
-	display:flex;
-	justify-content: center;
-	font-size:35px;
-	text-decoration:none;
+    border:1px black;
+    color:red;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    font-size:35px;
+    text-decoration:none;
 }
 
 .linkButtons {
-	position: relative;
-	top: 130px;
+    position: relative;
+    top: 130px;
 }
 
 #dirty {
-	color: red;
-	text-align: center;
+    color: red;
+    text-align: center;
 }
 
 #clean {
-	color: white;
-	text-align: center;
+    color: white;
+    text-align: center;
 }
 
 a {
-	text-decoration: none;
-	background-color: black;
-	font-size: 35px;
-	padding: 5px 10px;
-	border-radius: 5px;
-	height: 55px;
-	line-height: 45px;
-	text-align: center;
+    text-decoration: none;
+    background-color: black;
+    font-size: 35px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    height: 55px;
+    line-height: 45px;
+    text-align: center;
 }
 
 a:hover {
-	background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
 }
 
 a:visited {
-	color: inherit;
+    color: inherit;
 }
 
 .dirtyDiv {
-	border:1px black;
-	background:black;
-	width:20%;
-	height:50px;
-	text-decoration:none;
-	border-radius:10%;
-	line-height:50px;
-	margin-left:15%;
-	margin-top:15%;
+    border:1px black;
+    background:black;
+    width:20%;
+    height:50px;
+    text-decoration:none;
+    border-radius:10%;
+    line-height:50px;
+    margin-left:15%;
+    margin-top:15%;
 }
 .clean {
-	border:1px black;
-	color:white;
-	margin:auto;
-	display:flex;
-	justify-content: center;
-	font-size:35px;
-	text-decoration:none;
+    border:1px black;
+    color:white;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    font-size:35px;
+    text-decoration:none;
 
 }
 
 .cleanDiv {
-	border:1px black;
-	background:black;
-	width:15%;
-	height:50px;
-	text-decoration:none;
-	border-radius:10%;
-	line-height:50px;
-	margin-right:15%;
-	margin-top:15%;
+    border:1px black;
+    background:black;
+    width:15%;
+    height:50px;
+    text-decoration:none;
+    border-radius:10%;
+    line-height:50px;
+    margin-right:15%;
+    margin-top:15%;
 }
 
 .expContent {
-	color:white;
-	font-family:sans-serif;
-	font-size:16px;
+    color:white;
+    font-family:sans-serif;
+    font-size:16px;
 }
 
 .warningContent {
-	width: 32%;
-	margin: auto;
-	font-family:sans-serif;
-	align-content: center;
-	background-color: black;
-	border:2px solid red;
-	margin-top:-70px;
+    width: 32%;
+    margin: auto;
+    font-family:sans-serif;
+    align-content: center;
+    background-color: black;
+    border:2px solid red;
+    margin-top:-70px;
 
 }
 
 .bottomContainer {
-	height:auto;
+    height:auto;
 }
 
 .criteriaLogo{
-	height:175px;
+    height:175px;
 }
 
 .wordHilight{
-	color:white;
-	padding: 0 5px;
+    color:white;
+    padding: 0 5px;
 }
 
 .mainContainer{
-	  margin-top: -90px;
+      margin-top: -90px;
     margin-left: 200px;
     border-top: 5px solid rgb(195, 13, 50);
 }
 
 .budgetHeader{
-	display: flex;
-	font-size: 30px;
+    display: flex;
+    font-size: 30px;
 }
 
 p{
-	margin-top:10px;
+    margin-top:10px;
 }
 
 .restImage{
-	height: 60px;
+    height: 60px;
 }
 
 /*slideshow
@@ -199,12 +199,12 @@ p{
     background-position: 50% 50%;
     background-repeat: none;
     opacity: 0;
-    z-index: -1;
-	-webkit-backface-visibility: hidden;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
     -webkit-animation: imageAnimation 36s linear infinite 0s;
     -moz-animation: imageAnimation 36s linear infinite 0s;
     -o-animation: imageAnimation 36s linear infinite 0s;
-	animation: imageAnimation 36s linear infinite 0s; 
+    animation: imageAnimation 36s linear infinite 0s; 
 }
 
 
@@ -327,7 +327,7 @@ p{
 
 /* Show at least something when animations not supported */
 .no-cssanimations .cb-slideshow li span{
-	opacity: 1;
+    opacity: 1;
 }
 
 @media screen and (max-width: 1140px) { 
@@ -338,5 +338,5 @@ p{
 }
 
 ul{
-	margin-top:0px;
+    margin-top:0px;
 }
