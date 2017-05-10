@@ -44,6 +44,15 @@ handleClick(e) {
            </div>
          </div>
        </div>
+       <ul class="cb-slideshow">
+  <li>
+    <span>Image 01</span>
+    <div>
+    </div>
+  </li>
+  <li>...</li>
+  <li>...</li>
+</ul>
      </div>
 
    )
