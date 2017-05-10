@@ -32,11 +32,6 @@ const Yes = React.createClass({
        <hr className="hrstyle"/>
        <div>
 
-
-       
-
-
-
        </div>
 
        <div className="three-parts">
