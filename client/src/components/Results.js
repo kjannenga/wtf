@@ -18,7 +18,7 @@ getInitialState(){
 
 
 componentWillReceiveProps(props) {
-  console.log(props.info.businesses[this.state.id].id, 'will')
+  //console.log(props.info.businesses[this.state.id].id, 'will')
   this.setState({
     restaurant: [props.info.businesses[this.state.id]]
   })
@@ -35,11 +35,18 @@ handleClick(e) {
 
 
 render(){
-  console.log(this.state.restaurant[0], 'a')
+  //console.log(this.state.restaurant[0], 'a')
     return (
     	<div>
       	<h1> results </h1>
-      	<div>google Map</div>
+      	<div><div>
+                <img src="https://maps.googleapis.com/maps/api/staticmap?
+                center=The+Iron+Yard,Las+Vegas,NV
+                &zoom=14&size=400x400
+                &markers=color:blue%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
+                &markers=color:red%7Clabel:B%7CStratosphere+Casino,Las+Vegas+NV
+                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU" />
+           </div></div>
       	<ul>
             {this.state.restaurant.map(function(value){
               return <li key={'id' + value.id}>

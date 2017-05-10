@@ -9,16 +9,24 @@
     "@mapbox/point-geometry": "^0.1.0",
     "body-parser": "^1.17.1",
     "concurrently": "^3.4.0",
+    "cors": "^2.8.3",
     "express": "^4.15.2",
     "google-map-react": "^0.24.0",
     "google-maps-react": "^1.0.19",
+    "material-ui": "^0.18.0",
     "nodemon": "^1.11.0",
     "prop-types": "^15.5.6",
     "rapidapi-connect": "^0.0.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-google-maps": "^6.3.0",
-    "request": "^2.81.0"
+
+  
+
+    "react-tap-event-plugin": "^2.0.1",
+    "request": "^2.81.0",
+    "socket.io": "^1.7.3"
+
   },
   "scripts": {
     "start": "concurrently \"nodemon server\" \"cd client && npm start\""

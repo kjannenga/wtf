@@ -1,9 +1,11 @@
 import React from 'react'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-import Maps from './Map'
+
 import '../components/css/yesresult.css'
 
+
+ 
 
 //main is 75% of page on the right, side is 25% on the left//
 
@@ -16,9 +18,10 @@ const Yes = React.createClass({
    this.props.history.goBack()
  },
  render(){
-  //console.log(this.props,  'a')
+  console.log(this.props,  'b')
    return (
      <div>
+
        <div className="logoContainer">
          <img className="yesLogo" src={logo} alt="logo" />
        </div>
@@ -28,7 +31,7 @@ const Yes = React.createClass({
        </div>
        <hr className="hrstyle"/>
        <div>
-     
+
        </div>
 
        <div className="three-parts">
@@ -36,7 +39,7 @@ const Yes = React.createClass({
            <h3>Menu</h3>
 
            <div>
-             menu populates here
+          
            </div>
 
          </div>
@@ -45,7 +48,12 @@ const Yes = React.createClass({
            <h3>Directions</h3>
 
            <div>
-             directions populate here
+                <img src="https://maps.googleapis.com/maps/api/staticmap?
+                center=The+Iron+Yard,Las+Vegas,NV
+                &zoom=14&size=400x400
+                &markers=color:blue%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
+                &markers=color:red%7Clabel:B%7CStratosphere+Casino,Las+Vegas+NV
+                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU" />
            </div>
 
          </div>

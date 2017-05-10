@@ -2,9 +2,9 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {getRestaurant} from '../api/wtf'
-import store from '../store'
+//import store from '../store'
 
-var id = 1
+var id = 0
 
 const Restaurant = React.createClass({
 
@@ -12,46 +12,43 @@ getInitialState(){
   return {
       restaurant: [],
       restId: '',
-      id: 1
+      id: 0
     }
   },
 
-componentWillMount() {
-
-    store.subscribe(() => {
-
-      
-      const appState = store.getState()
-      //console.log(appState.restaurantReducer.info.businesses[this.state.id].id, 'b')
-      this.setState({
-
-        restaurant: [appState.restaurantReducer.info.businesses[this.state.id]/*appState.restaurantReducer.info.businesses[id]*/],
-      })
-      getRestaurant({
-        restId: appState.restaurantReducer.info.businesses[this.state.id].id
-      })
-    })
-  },
-
-componentWillUnmount(){
-
-    store.unsubscribe
-
+componentWillReceiveProps(props) {
+  //console.log(props.info.businesses[this.state.id].id, 'will')
+  this.setState({
+    restaurant: [props.info.businesses[id]]
+  })
+  getRestaurant({
+      restId: props.info.businesses[id].id
+   })
   },
 
 handleClick(e) {
-    this.setState({
-      id: id += 1,
-    })
+    if(this.state.id < this.props.info.businesses.length){
+        id = id + 1
+     } else {
+        id = 0
+    }
   },
 
-
+  
 render(){
-  //console.log(this.state.id)
+  console.log(id, 'd')
+  console.log(this.props.info.businesses.length, "l")
     return (
     	<div>
       	<h1> results </h1>
-      	<div>google Map</div>
+      	<div><div>
+                <img src="https://maps.googleapis.com/maps/api/staticmap?
+                center=The+Iron+Yard,Las+Vegas,NV
+                &zoom=14&size=400x400
+                &markers=color:blue%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
+                &markers=color:red%7Clabel:B%7CStratosphere+Casino,Las+Vegas+NV
+                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU" />
+           </div></div>
       	<ul>
             {this.state.restaurant.map(function(value){
               return <li key={'id' + value.id}>
