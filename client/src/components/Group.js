@@ -71,7 +71,7 @@ import {connect} from 'react-redux'
              var color = value.complete ? 'red' : 'blue';      
             return<li style={{color:color}}>
               <div>{value.name}</div>
-              <button onClick={() => this.handleComplete(i)}>Fuck this one</button>
+              <button onClick={() => this.handleComplete(i)}>F this one</button>
               <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
 
             </li>
@@ -85,7 +85,7 @@ import {connect} from 'react-redux'
 
              return <li key={i} style={{color:color}}>
              {list.text}
-                     <button onClick={() => this.handleComplete(i)}>Fuck this one</button>
+                     <button onClick={() => this.handleComplete(i)}>F this one</button>
                      <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
                    </li>
            }.bind(this))}

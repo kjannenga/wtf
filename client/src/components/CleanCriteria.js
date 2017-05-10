@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 import './css/criteria.css'
 
 import {getRestaurants} from '../api/wtf'
+import {createGroup} from '../api/userLogin'
 
 
 const Selections = React.createClass ({
@@ -14,7 +15,8 @@ const Selections = React.createClass ({
 			return{
 				term: 'restaurant',
 				location: 'Las Vegas',
-				price: '1'
+				price: '1',
+				groupName: ''
 			}
 		}, 
 
@@ -35,6 +37,25 @@ const Selections = React.createClass ({
 				term: this.state.term + ' ' + e.target.value
 			})
 		},
+
+		handleGroup(e) {
+			e.preventDefault()
+
+	    var text = "";
+	    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+	    for( var i=0; i < 4; i++ ){
+	        text += possible.charAt(Math.floor(Math.random() * possible.length));
+	    }
+	    getRestaurants({
+				term: this.state.term,
+				location: this.state.location,
+				price: this.state.price
+			})
+
+	    this.props.history.push("/Room/" + text)
+},
+
 
 		handleChange(e){
 			this.setState({[e.target.name]: e.target.value})
@@ -87,7 +108,7 @@ const Selections = React.createClass ({
 		      </div>
 		      <div>
 		      	<input type='radio' name="where" id='pickup' defaultChecked={true}/><label htmlFor='pickup'>I'll f'n get it</label><br/>
-		      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>F'n bring it to me</label><br/>
+		      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>F'n bring that shit to me</label><br/>
 
 		      </div>
 		      <div className="zipDiv">
@@ -95,19 +116,19 @@ const Selections = React.createClass ({
 			      	<input className="zipBox" onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
 			      	</div>
 
-		      <Link to='/Clean/results'>
+		      <Link to='/results'>
 		      	<div 
 		      		onClick={this.handleSubmit}>
 		      		Let's Go
 		      	</div>
 		      </Link>
 
-		      <Link to='/Clean/group'>
-		      	<div 
-		      		onClick={this.handleSubmit}>
-		      		Group
+		      	<div>
+	      			<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
+
+	      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>Create Group</button>
+		      		
 		      	</div>
-		      </Link>
 
 		    </div>
 	    </form>
