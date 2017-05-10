@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-
+import {getRestaurants} from '../api/wtf' 
 import '../components/css/yesresult.css'
 
 
@@ -16,10 +16,12 @@ const Yes = React.createClass({
  handleBack(){
 
    this.props.history.goBack()
+   getRestaurants({
+    info:this.props.businesses
+   })
  },
  render(){
-  console.log(this.props,  'a')
-  console.log(this.props.restInfo.coordinates.latitude, this.props.restInfo.coordinates.longitude, 'b')
+  console.log(this.props.info,  'a')
    return (
      <div >
 
