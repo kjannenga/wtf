@@ -20,7 +20,7 @@ const Yes = React.createClass({
  render(){
   console.log(this.props,  'b')
    return (
-     <div>
+     <div >
 
        <div className="logoContainer">
          <img className="yesLogo" src={logo} alt="logo" />
