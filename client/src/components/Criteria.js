@@ -7,6 +7,7 @@ import {connect} from 'react-redux'
 import './css/criteria.css'
 
 import {getRestaurants} from '../api/wtf'
+import {createGroup} from '../api/userLogin'
 
 
 const Selections = React.createClass ({
@@ -14,7 +15,8 @@ const Selections = React.createClass ({
 			return{
 				term: 'restaurant',
 				location: 'Las Vegas',
-				price: '1'
+				price: '1',
+				groupName: ''
 			}
 		}, 
 
@@ -35,6 +37,25 @@ const Selections = React.createClass ({
 				term: this.state.term + ' ' + e.target.value
 			})
 		},
+
+		handleGroup(e) {
+			e.preventDefault()
+
+	    var text = "";
+	    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+	    for( var i=0; i < 4; i++ ){
+	        text += possible.charAt(Math.floor(Math.random() * possible.length));
+	    }
+	    getRestaurants({
+				term: this.state.term,
+				location: this.state.location,
+				price: this.state.price
+			})
+
+	    this.props.history.push("/Room/" + text)
+},
+
 
 		handleChange(e){
 			this.setState({[e.target.name]: e.target.value})
@@ -102,12 +123,12 @@ const Selections = React.createClass ({
 		      	</div>
 		      </Link>
 
-		      <Link to='/group'>
-		      	<div 
-		      		onClick={this.handleSubmit}>
-		      		Group
+		      	<div>
+	      			<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
+
+	      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>Create Group</button>
+		      		
 		      	</div>
-		      </Link>
 
 		    </div>
 	    </form>
