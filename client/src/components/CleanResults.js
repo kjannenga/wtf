@@ -41,7 +41,14 @@ render(){
     return (
     	<div>
       	<h1> results </h1>
-      	<div>google Map</div>
+      	<div><div>
+                <img src="https://maps.googleapis.com/maps/api/staticmap?
+                center=The+Iron+Yard,Las+Vegas,NV
+                &zoom=14&size=400x400
+                &markers=color:blue%7Clabel:A%7C{this.props.restInfo.latitude},{this.props.restInfo.longitude}
+                &markers=color:red%7Clabel:B%7CStratosphere+Casino,Las+Vegas+NV
+                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU" />
+           </div></div>
       	<ul>
             {this.state.restaurant.map(function(value){
               return <li key={'id' + value.id}>
