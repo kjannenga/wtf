@@ -36,7 +36,7 @@ handleClick(e) {
   
 render(){
   //console.log(this.props.info.businesses[id], 'd')
-  //console.log(this.props.info.businesses.length, "l")
+  console.log(this.props.info.businesses.length, "l")
   //console.log(this.props.info.businesses[id], 'b')
     return (
     	<div>

@@ -35,7 +35,8 @@ handleClick(e) {
 
 
 render(){
-  //console.log(this.state.restaurant[0], 'a')
+  console.log(this.state, 'a')
+  console.log(this.props, 'b')
     return (
     	<div>
       	<h1> results </h1>
