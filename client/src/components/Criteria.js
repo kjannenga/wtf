@@ -47,11 +47,11 @@ const Selections = React.createClass ({
 	    for( var i=0; i < 4; i++ ){
 	        text += possible.charAt(Math.floor(Math.random() * possible.length));
 	    }
-
-	    // createGroup({
-	    // 	groupName: this.state.groupName,
-	    // 	groupCode: text
-	    // })
+	    getRestaurants({
+				term: this.state.term,
+				location: this.state.location,
+				price: this.state.price
+			})
 
 	    this.props.history.push("/Room/" + text)
 },
@@ -67,8 +67,6 @@ const Selections = React.createClass ({
 				location: this.state.location,
 				price: this.state.price
 			})
-
-			console.log(this.state)
 		},
 
 	
