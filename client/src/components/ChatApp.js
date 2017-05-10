@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { addMessage } from '../api/chatAPI'
 import { connect } from 'react-redux'
-import moment from 'moment'
+import {moment} from 'moment'
 
 class Chat extends Component {
     constructor(){
