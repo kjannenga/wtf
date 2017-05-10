@@ -22,9 +22,9 @@ handleClick(e) {
 
  render() {
    return (
-    <div>
+    <div >
 
-         <div>
+         <div >
          <ul className="cb-slideshow">
             <li><span>Image 01</span></li>
             <li><span>Image 02</span></li>
