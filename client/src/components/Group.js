@@ -5,11 +5,18 @@ import {connect} from 'react-redux'
 
  const Group = React.createClass({
    getInitialState: function(){
+    console.log(this.props.info, 'props init')
 	    return {
        list: [],
        text: ''
      }
    },
+
+  componentWillReceiveProps(props) {
+  this.setState({
+    list: [props.info.businesses]
+    })
+  },
 
    handleChange: function (e) {
      this.setState({
@@ -40,6 +47,8 @@ import {connect} from 'react-redux'
 
    },
  deleteList: function (index){
+  console.log(this.state, 'state')
+  console.log(this.props, 'props')
    var index = this.state.list.splice(index,1)
 
    var leftSide = this.state.list.splice(0,index);
@@ -55,7 +64,7 @@ import {connect} from 'react-redux'
   
 
    render (){
-     console.log(this.state, 'group')
+     console.log(this.props.info, 'props on render')
      return (
      <div>
      <div className="new">
@@ -68,7 +77,7 @@ import {connect} from 'react-redux'
        <div>
          <ul>
           {this.props.info.businesses.map(function(value, i){
-             var color = value.complete ? 'red' : 'blue';      
+            var color = value.complete ? 'red' : 'blue';      
             return<li style={{color:color}}>
               <div>{value.name}</div>
               <button onClick={() => this.handleComplete(i)}>F this one</button>

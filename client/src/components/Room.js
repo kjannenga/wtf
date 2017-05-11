@@ -7,7 +7,7 @@ import Login from './Login'
 
 class Room extends Component {
 	render() {
-		console.log(this.props, 'props')
+		//console.log(this.props, 'props')
 		return (
 			<div>
 				<div className="roomID">

@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-import {getRestaurants} from '../api/wtf' 
+//import {getRestaurants} from '../api/wtf' 
 import '../components/css/yesresult.css'
 
 
@@ -53,7 +53,7 @@ const Yes = React.createClass({
                 &zoom=12&size=400x400
                 &markers=color:green%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
                 &markers=color:red%7Clabel:B%7C${this.props.restInfo.coordinates.latitude + ',' + this.props.restInfo.coordinates.longitude}
-                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`}/>
+                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`} alt='map'/>
            </div>
 
 
@@ -92,7 +92,7 @@ const Yes = React.createClass({
             {this.props.restInfo.photos.map(function(value){
               //console.log(value, 'test')
               return <li>
-                       <img className='restImage' src={value}/>
+                       <img className='restImage' src={value} alt='restaurant'/>
                      </li>
              })}
           </ul>

@@ -52,10 +52,9 @@ deleteList: function (index){
     })
 },
 
-  
 
   render (){
-    console.log(this.props)
+    console.log
     return (
     <div>
     <div classname="new">
