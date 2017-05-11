@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import React from 'react'
-import Newmember from './newmember'
+//import Newmember from './newmember'
 import {connect} from 'react-redux'
 
 const Group = React.createClass({
@@ -11,26 +11,7 @@ const Group = React.createClass({
     }
   },
 
-  handleChange: function (e) {
-    this.setState({
-      text: e.target.value
-    })
-  },
-  handleSubmit: function (e){
-    e.preventDefault ()
-    var id = Math.random();
-    this.setState({
-      list:[
-      {
-        id:id,
-        text:this.state.text,
-        complete: false,
-      }, 
-        ...this.state.list
-      ],
-      text: ''
-    })
-  },
+  
   handleComplete: function (index){
     var newList = this.props.info.businesses;
     newList[index].complete = !newList[index].complete;
@@ -57,39 +38,29 @@ deleteList: function (index){
     console.log
     return (
     <div>
-    <div classname="new">
-      <Newmember />
-    </div>
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="Enter Restaraunt Names" />
-        </form>
       <div>
         <ul>
           {this.props.info.businesses.map(function(value, i){
-             var color = value.complete ? 'red' : 'blue';      
-            return<li style={{color:color}}>
+                  
+            return<li>
               <div>{value.name}</div>
-              <button onClick={() => this.handleComplete(i)}>F this one</button>
-              <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
+              <button onClick={() => this.deleteList(i)}>EWW!</button>
 
             </li>
           })}
         </ul>
       </div>
-      <div>
+      {/*<div>
         <ul>
             {this.state.list.map(function(list, i){
-              var color = list.complete ? 'red' : 'blue';
-
-            return <li key={i} style={{color:color}}>
+            return <li key={i} >
             {list.text}
-                    <button onClick={() => this.handleComplete(i)}>F this one</button>
                     <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
                   </li>
           }.bind(this))}
         </ul>
-      </div>
+      </div>*/}
       </div>
     
         <Link to='/results'><div>last one links to results page</div></Link>
