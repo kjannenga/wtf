@@ -17,8 +17,6 @@ getInitialState(){
   },
 
 componentWillReceiveProps(props) {
-
-  console.log(props.info.businesses[id])
   this.setState({
     restaurant: [props.info.businesses[id]],
   })
@@ -29,16 +27,15 @@ componentWillReceiveProps(props) {
 
 handleClick(e) {
     if(id < this.props.info.businesses.length - 1){
-      console.log('less than')
         id += 1
-     } else if (id = this.props.info.businesses.length){
-      console.log('greater than')
+     } else {
         id = 0
     }
   },
 
   
 render(){
+  console.log(this.props)
   return (
   	<div>
     	<h1> results </h1>
@@ -59,7 +56,7 @@ render(){
                </li>
            })}
         </ul>
-  		<Link to='/yes'><button>F Yes</button></Link>
+  		<Link to='/Clean/yes'><button>F Yes</button></Link>
   		<button type='submit' onClick={this.handleClick}>F this</button>
     </div>
    )

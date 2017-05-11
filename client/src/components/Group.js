@@ -12,12 +12,6 @@ import {connect} from 'react-redux'
      }
    },
 
-  componentWillReceiveProps(props) {
-  this.setState({
-    list: [props.info.businesses]
-    })
-  },
-
    handleChange: function (e) {
      this.setState({
        text: e.target.value
@@ -67,13 +61,10 @@ import {connect} from 'react-redux'
      console.log(this.props.info, 'props on render')
      return (
      <div>
-     <div className="new">
-     	<Newmember />
-     </div>
-       <div>
-         <form onSubmit={this.handleSubmit}>
-           <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="Enter Restaraunt Names" />
-         </form>
+       <div className="new">
+       	<Newmember />
+       </div>
+      <div>
        <div>
          <ul>
           {this.props.info.businesses.map(function(value, i){
@@ -86,19 +77,6 @@ import {connect} from 'react-redux'
             </li>
           })}
         </ul>
-       </div>
-       <div>
-         <ul>
-             {this.state.list.map(function(list, i){
-               var color = list.complete ? 'red' : 'blue';
-
-             return <li key={i} style={{color:color}}>
-             {list.text}
-                     <button onClick={() => this.handleComplete(i)}>F this one</button>
-                     <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
-                   </li>
-           }.bind(this))}
-         </ul>
        </div>
        </div>
     

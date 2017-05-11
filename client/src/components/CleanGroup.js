@@ -61,9 +61,6 @@ deleteList: function (index){
       <Newmember />
     </div>
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="Enter Restaraunt Names" />
-        </form>
       <div>
         <ul>
           {this.props.info.businesses.map(function(value, i){
@@ -77,19 +74,7 @@ deleteList: function (index){
           })}
         </ul>
       </div>
-      <div>
-        <ul>
-            {this.state.list.map(function(list, i){
-              var color = list.complete ? 'red' : 'blue';
-
-            return <li key={i} style={{color:color}}>
-            {list.text}
-                    <button onClick={() => this.handleComplete(i)}>F this one</button>
-                    <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
-                  </li>
-          }.bind(this))}
-        </ul>
-      </div>
+ 
       </div>
     
         <Link to='/results'><div>last one links to results page</div></Link>

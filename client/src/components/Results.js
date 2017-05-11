@@ -26,10 +26,8 @@ componentWillReceiveProps(props) {
 
 handleClick(e) {
     if(id < this.props.info.businesses.length - 1){
-      console.log('less than')
         id += 1
-     } else if (id = this.props.info.businesses.length){
-      console.log('greater than')
+     } else {
         id = 0
     }
   },
