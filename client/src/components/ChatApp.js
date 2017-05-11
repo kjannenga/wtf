@@ -7,7 +7,7 @@ class Chat extends Component {
     constructor(){
         super()
         this.state = {
-            message: 'mike'
+            message: ''
         }
     }
 

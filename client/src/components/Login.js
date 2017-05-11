@@ -1,5 +1,5 @@
-/*import React, {Component} from 'react'
-import { login } from './api/userLogin.js'
+import React, {Component} from 'react'
+import { login } from '../api/chatAPI.js'
 
 class Login extends Component {
     constructor() {
@@ -22,8 +22,9 @@ class Login extends Component {
             username: ''
         })
 
-        this.props.history.push('/Group')
-    }
+     this.props.history.push('/ChatApp')
+
+ }
 
     render() {
         return (
