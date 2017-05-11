@@ -3,6 +3,7 @@ import Group from './Group'
 import './css/Room.css'
 import ChatApp from './ChatApp'
 import {connect} from 'react-redux'
+import Login from './Login'
 
 class Room extends Component {
 	render() {
@@ -14,7 +15,7 @@ class Room extends Component {
 				{this.props.match.params.roomId}</font></p>
 				</div>
 				<div className="restaurantList">
-				{this.props.username ? <div><Group /><ChatApp /></div> : <h1>Login</h1>}
+				{this.props.username ? <div><Group /><ChatApp /></div> : <h1>Login <Login /></h1>}
 				
 				</div>
 			</div>
