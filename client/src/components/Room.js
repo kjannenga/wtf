@@ -14,9 +14,8 @@ class Room extends Component {
 				Congratulations on having friends. Share this link with them:<p> <font color="red">http://10.68.0.132:3000/Room/
 				{this.props.match.params.roomId}</font></p>
 				</div>
-				<div className="restaurantList">
 				{this.props.username ? <div><Group /><ChatApp /></div> : <h1>Login <Login /></h1>}
-				
+				<div className="restaurantList">
 				</div>
 			</div>
 		)
