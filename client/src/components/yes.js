@@ -16,9 +16,6 @@ const Yes = React.createClass({
  handleBack(){
 
    this.props.history.goBack()
-   getRestaurants({
-    info:this.props.businesses
-   })
  },
  render(){
   console.log(this.props.info,  'a')
