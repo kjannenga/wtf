@@ -2,9 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {getRestaurant} from '../api/wtf'
-import store from '../store'
 
-var id = 1
+const id = 0
 
 const Restaurant = React.createClass({
 
@@ -12,25 +11,27 @@ getInitialState(){
   return {
       restaurant: [],
       restId: '',
-      id: 1
     }
   },
 
 
 componentWillReceiveProps(props) {
-  //console.log(props.info.businesses[this.state.id].id, 'will')
   this.setState({
-    restaurant: [props.info.businesses[this.state.id]]
+    restaurant: [props.info.businesses[id]]
   })
   getRestaurant({
-      restId: props.info.businesses[this.state.id].id
+      restId: props.info.businesses[id].id
    })
   },
 
 handleClick(e) {
-    this.setState({
-      id: id += 1,
-    })
+    if(id < this.props.info.businesses.length - 1){
+      console.log('less than')
+        id += 1
+     } else if (id = this.props.info.businesses.length){
+      console.log('greater than')
+        id = 0
+    }
   },
 
 
@@ -49,12 +50,11 @@ render(){
                                     &zoom=12&size=400x400
                                     &markers=color:green%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
                                     &markers=color:red%7Clabel:B%7C${value.coordinates.latitude + ',' + value.coordinates.longitude}
-                                    &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`}/>
+                                    &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`} alt='map'/>
                        </div>
                        <div>{value.name + ' ' + value.price}</div>
                        <div>{value.rating + '/5'}</div>
-                       <img className='restImage' src={value.image_url} alt='restaurant image' />
-                    
+                       <img className='restImage' src={value.image_url} alt='restaurant' />
                      </li>
              })}
           </ul>
@@ -71,32 +71,3 @@ function mapStateToProps(state){
 }
 
 export default connect(mapStateToProps)(Restaurant)
-
-/*{this.state.businesses.map(function(value){
-            return <li key={value.id}>
-                      <div>{value.name + ' ' + value.price}</div>
-                      <img className='restImage' src={value.image_url} alt='#'></img>
-
-                      <div>{value.rating + '/5'}</div>
-
-                   </li>
-          })}*/
-
-/*<div id="app">
-
-    {
-      this.state.etsyData.map((value, i) => {
-
-        return (
-
-          <div key={'id' + i} className="desc">
-              
-            <img src={value.Images[0].url_170x135} />
-            
-            <p>{value.title}</p> <p>{value.Shop.shop_name + ' $' + value.price }</p>
-          
-          </div>
-/*export default React.createClass ({
-  
-  }
-})*/ 

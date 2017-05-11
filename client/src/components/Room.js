@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 
 class Room extends Component {
 	render() {
-		console.log(this.props, 'props')
+		//console.log(this.props, 'props')
 		return (
 			<div>
 				<div className="roomID">
