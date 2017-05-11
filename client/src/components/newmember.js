@@ -54,9 +54,7 @@ deleteList: function (index){
   render (){
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={this.state.text} placeholder="add members here" />
-        </form>
+       
       <div>
         <ul>
             {this.state.list.map(function(list, i){
