@@ -18,7 +18,7 @@ const Yes = React.createClass({
    this.props.history.goBack()
  },
  render(){
-  console.log(this.props.info,  'a')
+  //console.log(this.props.info,  'a')
    return (
      <div >
 
@@ -48,12 +48,12 @@ const Yes = React.createClass({
            <h3>Directions</h3>
 
            <div>
-                <img src={`https://maps.googleapis.com/maps/api/staticmap?
-                center=The+Iron+Yard,Las+Vegas,NV
-                &zoom=12&size=400x400
-                &markers=color:green%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
-                &markers=color:red%7Clabel:B%7C${this.props.restInfo.coordinates.latitude + ',' + this.props.restInfo.coordinates.longitude}
-                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`} alt='map'/>
+            <iframe
+              width="600"
+              height="450"
+              frameBorder="0"
+              src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${this.props.restInfo.coordinates.latitude + ',' + this.props.restInfo.coordinates.longitude}`} allowFullScreen>
+            </iframe>
            </div>
 
 
