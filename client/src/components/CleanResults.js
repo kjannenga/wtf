@@ -17,8 +17,7 @@ getInitialState(){
   },
 
 componentWillReceiveProps(props) {
-
-  console.log(props.info.businesses[id])
+  //console.log(this.props, 'rec')
   this.setState({
     restaurant: [props.info.businesses[id]],
   })
@@ -29,29 +28,29 @@ componentWillReceiveProps(props) {
 
 handleClick(e) {
     if(id < this.props.info.businesses.length - 1){
-      console.log('less than')
         id += 1
-     } else if (id = this.props.info.businesses.length){
-      console.log('greater than')
+     } else {
         id = 0
     }
   },
 
   
 render(){
+  //console.log(id, 'after id')
+  //console.log(this.props.info.businesses[id], 'after back')
   return (
   	<div>
     	<h1> results </h1>
     	<ul>
           {this.state.restaurant.map(function(value){
-            return <li key={'id' + value.id}>
+            return <li key={'id' + value}>
              <div>
-                 <img src={`https://maps.googleapis.com/maps/api/staticmap?
-                              center=The+Iron+Yard,Las+Vegas,NV
-                              &zoom=12&size=400x400
-                              &markers=color:green%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
-                              &markers=color:red%7Clabel:B%7C${value.coordinates.latitude + ',' + value.coordinates.longitude}
-                              &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`} alt='map'/>
+                 <iframe
+                    width="600"
+                    height="450"
+                    frameBorder="0"
+                    src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${value.coordinates.latitude + ',' + value.coordinates.longitude}`} allowFullScreen>
+                  </iframe>
                  </div>
                  <div>{value.name + ' ' + value.price}</div>
                  <div>{value.rating + '/5'}</div>
@@ -59,7 +58,7 @@ render(){
                </li>
            })}
         </ul>
-  		<Link to='/yes'><button>F Yes</button></Link>
+  		<Link to='/Clean/yes'><button>F Yes</button></Link>
   		<button type='submit' onClick={this.handleClick}>F this</button>
     </div>
    )

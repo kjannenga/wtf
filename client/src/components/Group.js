@@ -18,8 +18,6 @@ import {connect} from 'react-redux'
     })
   },
 
-
-
 deleteList: function (index){
   var index = this.state.list.splice(index,1)
   var leftSide = this.state.list.splice(0,index);
@@ -34,12 +32,8 @@ deleteList: function (index){
   
 
    render (){
-     console.log(this.state.list, 'the thing')
+     //console.log(this.state.list, 'the thing')
      return (
-  
-     
-       
-        
        <div>
          <ul>
           {this.props.info.businesses.map(function(value, i){
@@ -51,10 +45,6 @@ deleteList: function (index){
           })}
         </ul>
        </div>
-       
-    
-      
-	    
      );
    }
  })

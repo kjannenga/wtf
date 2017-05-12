@@ -1,9 +1,11 @@
 import React from 'react'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-import Maps from './Map'
+//import {getRestaurants} from '../api/wtf' 
 import '../components/css/yesresult.css'
 
+
+ //{this.props.restInfo.coordinates.latitude, this.props.restInfo.coordinates.longitude}
 
 //main is 75% of page on the right, side is 25% on the left//
 
@@ -16,9 +18,10 @@ const Yes = React.createClass({
    this.props.history.goBack()
  },
  render(){
-  //console.log(this.props,  'a')
+  //console.log(this.props.info)
    return (
-     <div>
+     <div >
+
        <div className="logoContainer">
          <img className="yesLogo" src={logo} alt="logo" />
        </div>
@@ -28,7 +31,7 @@ const Yes = React.createClass({
        </div>
        <hr className="hrstyle"/>
        <div>
-        <Maps />
+
        </div>
 
        <div className="three-parts">
@@ -36,7 +39,7 @@ const Yes = React.createClass({
            <h3>Menu</h3>
 
            <div>
-             menu populates here
+          
            </div>
 
          </div>
@@ -45,15 +48,15 @@ const Yes = React.createClass({
            <h3>Directions</h3>
 
            <div>
-             <div>
-                <img src={`https://maps.googleapis.com/maps/api/staticmap?
-                center=The+Iron+Yard,Las+Vegas,NV
-                &zoom=12&size=400x400
-                &markers=color:green%7Clabel:A%7CThe+Iron+Yard,Las+Vegas,NV
-                &markers=color:red%7Clabel:B%7C${this.props.restInfo.coordinates.latitude + ',' + this.props.restInfo.coordinates.longitude}
-                &key=AIzaSyDEoIRBJmdHwO2A9R-AvXycFEQvna2E3QU`} alt='map'/>
+              <iframe
+                  width="600"
+                  height="450"
+                  frameBorder="0"
+                  src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${this.props.restInfo.coordinates.latitude + ',' + this.props.restInfo.coordinates.longitude}`} allowFullScreen>
+                </iframe>
            </div>
-           </div>
+
+
 
          </div>
 
@@ -68,9 +71,7 @@ const Yes = React.createClass({
 
      <div className="side">
 
-       <div className="logotop">
-         <img className="logo" src={logo} alt="logo" />
-       </div>
+       
 
        <div>
          <button type="button" onClick={this.handleBack}>Hmmmmmmmm nevermind</button>

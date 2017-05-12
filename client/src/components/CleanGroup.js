@@ -35,7 +35,6 @@ deleteList: function (index){
 
 
   render (){
-    console.log
     return (
     <div>
       <div>
@@ -51,16 +50,6 @@ deleteList: function (index){
           })}
         </ul>
       </div>
-      {/*<div>
-        <ul>
-            {this.state.list.map(function(list, i){
-            return <li key={i} >
-            {list.text}
-                    <button onClick={() => this.deleteList(i)}>Get Outta Here </button>
-                  </li>
-          }.bind(this))}
-        </ul>
-      </div>*/}
       </div>
     
         <Link to='/results'><div>last one links to results page</div></Link>
