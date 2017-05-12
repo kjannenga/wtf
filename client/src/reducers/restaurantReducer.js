@@ -14,7 +14,7 @@ export default function (state=initialState, action) {
 	switch (action.type) {
 		case 'GET_RESTAURANTS':
 			//console.log(action.info, 'restaurants')
-			return {...state, info:action.info}
+			return {...state, info:action.info, groupInfo:[]}
 		case 'GET_RESTAURANT': 
 			//console.log(action.restInfo, 'restaurant')
 		 	return {...state, restInfo:action.restInfo}

@@ -1,7 +1,6 @@
 import axios from 'axios'
 import store from '../store'
 
-
 export function getRestaurants(searchObj) {
 	axios.get(`/yelpstuff?term=${searchObj.term}&location=${searchObj.location}&price=${searchObj.price}`).then(function(response){
 		//console.log(response.data, searchObj, 'api')

@@ -57,40 +57,22 @@ app.get('/yelpstuff', function(req, res){
 }),
 
 io.on('connection', function(socket){
-    
+    var restaurants = []
+
     socket.on('addMessage', function(message){
         io.emit('newMessage', message)
     })
-// //start
-//     socket.on('addUser', function(user) {
-//         var doesExist = false
 
-//         for(var i=0; i<users.length; i++){
-//             if(users[i].id === socket.client.conn.id){
-//                 users[i].username === user.username
-//                 doesExist = true
-//             }
-//         }
+    socket.on('populateRestaurants', function(restaurants){
+    	restaurants = restaurants
+    })
 
-//         if(doesExist === false) {
-//             users.push({
-//                 id: socket.client.conn.id,
-//                 username: user.username
-//             })
-//         }
-
-//         io.emit('new user', {
-//             id: socket.client.conn.id,
-//             username: user.username
-//         })
-
-//     })
-// })
-//end
-
-    // socket.on('login', function(username){
-    //     socket.emit('new user', username)
-    // })
+    socket.on('remove restaurant', function(key){
+    	restaurants = restaurants.filter(restaurant => {
+    		return restaurant.key !== key
+    	})
+    	io.emit('update restaurants', restaurants)
+    })
 
     socket.on('newGroup', function(groupInfo){
     	io.emit('new group', groupInfo)
