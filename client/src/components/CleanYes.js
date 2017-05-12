@@ -15,7 +15,7 @@ const Yes = React.createClass({
 
  handleBack(){
 
-   this.props.history.goBack()
+   this.props.history.push('/Clean/criteria')
  },
  render(){
   //console.log(this.props.info)
@@ -80,7 +80,6 @@ const Yes = React.createClass({
        <div>
          <ul>
             {this.props.restInfo.location.display_address.map(function(value){
-              //console.log(value, 'test')
               return <li>
                        <div>{value}</div>
                      </li>
