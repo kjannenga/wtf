@@ -23,7 +23,7 @@ class Login extends Component {
             username: ''
         })
 
-     this.props.history.push('/ChatApp')
+     //this.props.history.push('/ChatApp')
 
  }
 
