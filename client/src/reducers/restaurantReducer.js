@@ -7,7 +7,7 @@ const initialState = {
 	restInfo:{
 		business:[]
 	},
-	groups: []
+	groups: [],
 } 
 
 export default function (state=initialState, action) {

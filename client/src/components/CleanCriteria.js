@@ -2,10 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-
-
 import './css/criteria.css'
-
 import {getRestaurants} from '../api/wtf'
 //import {createGroup} from '../api/chatAPI'
 
@@ -71,22 +68,22 @@ const Selections = React.createClass ({
 
 	
   render() {
-  	//console.log(this.state.price, this.state.term, this.state.location, 'hello')
-
     return (
     	<div>
+
     		<div className="logoContainer">
 	      	<img className="criteriaLogo" src={logo} alt="logo" />
 	      </div>
+
 	      <form onSubmit={this.handleSubmit} >
+
 		      <div className='mainContainer'>
+
 			      <div className='budgetHeader'>
 			      	<p className='wordHilight'>So, how much you wanna </p> <p className='wordHilight'> f'n </p> <p> spend </p> 
 			      </div>
-			      <div className='budget'>
 
-			   
-		   
+			      <div className='budget'>
 			      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>$<br/>
 			      	<label htmlFor='oneDollar'>Cheap af</label><br/>
 			      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>$$<br/>
@@ -96,25 +93,25 @@ const Selections = React.createClass ({
 			      	<input type="radio" onClick={this.radioPrice} id='fourDollar' name='price' value='4'/>$$$$<br/>
 			      	<label htmlFor='fourDollar'>Money aint a thing</label><br/>
 			      </div>
+
 		      <div>Tell me whatcha want.....Whatcha really really want</div> 
 		      <div>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Just f me up</label><br/>
-
 		      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a f'n diet</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a f'n taco</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>F meat you savages</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>F gluten</label><br/>
-
 		      </div>
+
 		      <div>
 		      	<input type='radio' name="where" id='pickup' defaultChecked={true}/><label htmlFor='pickup'>I'll f'n get it</label><br/>
 		      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>F'n bring that shit to me</label><br/>
-
 		      </div>
+
 		      <div className="zipDiv">
-		      <h3>Now tell us where TF you are</h3>
-			      	<input className="zipBox" onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
-			      	</div>
+			      <h3>Now tell us where TF you are</h3>
+				      	<input className="zipBox" onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
+			     </div>
 
 		      <Link to='/Clean/results'>
 		      	<div 
@@ -125,9 +122,7 @@ const Selections = React.createClass ({
 
 		      	<div>
 	      			<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
-
-	      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>Create Group</button>
-		      		
+	      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>Create Group</button>  		
 		      	</div>
 
 		    </div>

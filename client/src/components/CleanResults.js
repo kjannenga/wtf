@@ -4,20 +4,19 @@ import {Link} from 'react-router-dom'
 import {getRestaurant} from '../api/wtf'
 
 
-var id = 0
+const id = 0
 
 const Restaurant = React.createClass({
 
 getInitialState(){
   return {
-      restaurant: [],
-      restId: '',
-      //restLocation: {},
+      restaurant: {},
+      restId: ''
     }
   },
 
 componentWillReceiveProps(props) {
-  //console.log(this.props, 'rec')
+  console.log(props, 'rec')
   this.setState({
     restaurant: [props.info.businesses[id]],
   })
@@ -36,7 +35,7 @@ handleClick(e) {
 
   
 render(){
-  //console.log(id, 'after id')
+  console.log(this.props, 'after render')
   //console.log(this.props.info.businesses[id], 'after back')
   return (
   	<div>
@@ -45,13 +44,13 @@ render(){
           {this.state.restaurant.map(function(value){
             return <li key={'id' + value}>
              <div>
-                 <iframe
-                    width="600"
-                    height="450"
-                    frameBorder="0"
-                    src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${value.coordinates.latitude + ',' + value.coordinates.longitude}`} allowFullScreen>
-                  </iframe>
-                 </div>
+               <iframe
+                  width="600"
+                  height="450"
+                  frameBorder="0"
+                  src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${value.coordinates.latitude + ',' + value.coordinates.longitude}`} allowFullScreen>
+               </iframe>
+             </div>
                  <div>{value.name + ' ' + value.price}</div>
                  <div>{value.rating + '/5'}</div>
                  <img className='restImage' src={value.image_url} alt='restaurant' />
@@ -65,8 +64,10 @@ render(){
   }
 })
 
-function mapStateToProps(state){
-	return {...state.restaurantReducer}
+function mapStateToProps(appState){
+	return {
+    restaurant: appState.restInfo
+  }
 }
 
 export default connect(mapStateToProps)(Restaurant)
