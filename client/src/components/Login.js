@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { login } from '../api/chatAPI.js'
+import { addUser, login } from '../api/chatAPI.js'
 
 class Login extends Component {
     constructor() {
@@ -17,6 +17,7 @@ class Login extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
+        // addUser(this.state)
         login(this.state.username)
         this.setState({
             username: ''

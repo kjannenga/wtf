@@ -17,6 +17,16 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
 });
 
+const users = [{
+	id: '',
+	username: '',
+	
+}]
+
+var messages = []
+var numUsers = 0
+var username = ''
+
 
 app.get('/yelpstuff', function(req, res){
 	//console.log(res, 'server')
@@ -47,13 +57,40 @@ app.get('/yelpstuff', function(req, res){
 }),
 
 io.on('connection', function(socket){
+    
     socket.on('addMessage', function(message){
         io.emit('newMessage', message)
     })
+// //start
+//     socket.on('addUser', function(user) {
+//         var doesExist = false
 
-    socket.on('login', function(username){
-        io.emit('new user', username)
-    })
+//         for(var i=0; i<users.length; i++){
+//             if(users[i].id === socket.client.conn.id){
+//                 users[i].username === user.username
+//                 doesExist = true
+//             }
+//         }
+
+//         if(doesExist === false) {
+//             users.push({
+//                 id: socket.client.conn.id,
+//                 username: user.username
+//             })
+//         }
+
+//         io.emit('new user', {
+//             id: socket.client.conn.id,
+//             username: user.username
+//         })
+
+//     })
+// })
+//end
+
+    // socket.on('login', function(username){
+    //     socket.emit('new user', username)
+    // })
 
     socket.on('newGroup', function(groupInfo){
     	io.emit('new group', groupInfo)
