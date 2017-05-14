@@ -15,10 +15,10 @@ const Yes = React.createClass({
 
  handleBack(){
 
-   this.props.history.goBack()
+   this.props.history.push('/criteria')
  },
  render(){
-  //console.log(this.props.info,  'a')
+  console.log(this.props.restInfo.photos,  'a')
    return (
      <div >
 

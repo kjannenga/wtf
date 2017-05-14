@@ -16,11 +16,12 @@ getInitialState(){
 
 
 componentWillReceiveProps(props) {
+  console.log(props, 'a')
   this.setState({
     restaurant: [props.info.businesses[id]]
   })
   getRestaurant({
-      restId: props.info.businesses[id].id
+    restId: props.info.businesses[id].id
    })
   },
 
