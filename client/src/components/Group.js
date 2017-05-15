@@ -46,15 +46,12 @@ import {deleteList} from '../api/chatAPI.js'
  })
 
  function mapStateToProps(state){
-<<<<<<< HEAD
+
   console.log(state)
    return {...state.restaurantReducer,
     list:state.chatReducer.list}
  
-=======
-   return {...state.restaurantReducer,
-    list: state.chatReducer.list}
->>>>>>> f394b979a6322a931a8dff8b6a9a258fe72b83df
+
  }
 
  export default connect(mapStateToProps)(Group)
