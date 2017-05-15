@@ -41,19 +41,21 @@ handleClick(e) {
            <img className="logo" src={logo} alt="logo" />
           </div>
 
-          <div>
-            Let us decide lunch on for you
-          </div>
+          
+
+
 
 
           <div className="buttonDiv">
-
-           <div>
-               <Link className="dirtyDiv" onClick={this.handleClick} id="dirty" to='/criteria'>DIRTY</Link>
+          <div className="blurdiv">
+          </div>
+           <div className="dirtyDiv">
+               <Link id="dirty" onClick={this.handleClick}  to='/criteria'>DIRTY</Link>
            </div>
 
             <img className="warningImg" src={warning} alt="explicit-content" height='450'/>
-
+            <div className="blurdiv">
+            </div>
            <div className="cleanDiv">
              <Link id="clean" to='/Clean/criteria'>CLEAN</Link>
            </div>
