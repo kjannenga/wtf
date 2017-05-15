@@ -1,0 +1,39 @@
+{box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+html{
+	background-image: url(./background.jpg);
+	background-repeat: none;
+	background-size: 100%;
+}
+.resultsLogo {
+	width:20%;
+
+}
+.resultsList{
+	list-style: none;
+	text-align: center;
+	float:right;
+	margin-right:30px;
+
+}
+.resultName {
+	color:white;
+	font-size: 100px;
+	padding-top:-100px;
+	margin-top:-100px;
+	text-align: center;
+}
+
+.resultImage {
+	height:200px;
+	width:200px;
+}
+.resultsInfo {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 35px;
+	color:white;
+	vertical-align: 200px;
+}
