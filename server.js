@@ -64,14 +64,16 @@ io.on('connection', function(socket){
     })
 
     socket.on('populateRestaurants', function(restaurants){
-    	restaurants = restaurants
+    	restaurants = restaurants,
+    	io.emit('updateRestaurants', restaurants)
     })
 
-    socket.on('remove restaurant', function(key){
+    socket.on('removeRestaurant', function(key){
+    	console.log('server', restaurants)
     	restaurants = restaurants.filter(restaurant => {
     		return restaurant.key !== key
     	})
-    	io.emit('update restaurants', restaurants)
+    	io.emit('updateRestaurants', restaurants)
     })
 
     socket.on('newGroup', function(groupInfo){

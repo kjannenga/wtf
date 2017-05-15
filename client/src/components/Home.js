@@ -9,7 +9,6 @@ import warning from '../assets/warning.png'
 export default React.createClass ({
 
 handleClick(e) {
-  console.log("test")
   e.preventDefault()
    if (confirm("WARNING: This version contains content that is deemed inappropriate for parents, children, and 3/4 the population of Utah. Viewer discretion is advised.") )
    {window.location='./Criteria'
@@ -50,14 +49,14 @@ handleClick(e) {
           <div className="blurdiv">
           </div>
            <div className="dirtyDiv">
-               <Link id="dirty" onClick={this.handleClick}  to='/criteria'>DIRTY</Link>
+               <Link className='blur' id="dirty" onClick={this.handleClick}  to='/criteria'>DIRTY</Link>
            </div>
 
             <img className="warningImg" src={warning} alt="explicit-content" height='450'/>
             <div className="blurdiv">
             </div>
            <div className="cleanDiv">
-             <Link id="clean" to='/Clean/criteria'>CLEAN</Link>
+             <Link className='blur' id="clean" to='/Clean/criteria'>CLEAN</Link>
            </div>
 
          </div>
