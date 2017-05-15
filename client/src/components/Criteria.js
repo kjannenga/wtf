@@ -2,13 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-
-
 import './css/criteria.css'
-
 import {getRestaurants, populateRestaurants} from '../api/wtf'
-//import {populateRestaurants} from '.../server.js'
-//import {createGroup} from '../api/chatAPI'
 
 
 const Selections = React.createClass ({
@@ -73,8 +68,6 @@ const Selections = React.createClass ({
 
 	
   render() {
-  	//console.log(this.state.price, this.state.term, this.state.location, 'hello')
-
     return (
     	<div>
     		<div className="logoContainer">
@@ -86,9 +79,6 @@ const Selections = React.createClass ({
 			      	<p className='wordHilight'>So, how much you wanna </p> <p className='wordHilight'> fuckin </p> <p> spend </p> 
 			      </div>
 			      <div className='budget'>
-
-			   
-		   
 			      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>$<br/>
 			      	<label htmlFor='oneDollar'>Cheap ass</label><br/>
 			      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>$$<br/>
@@ -101,7 +91,6 @@ const Selections = React.createClass ({
 		      <div>Tell me whatcha want.....Whatcha really really want</div> 
 		      <div>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Just fuck me up</label><br/>
-
 		      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label><br/>
 		      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
