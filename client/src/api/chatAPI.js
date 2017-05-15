@@ -1,23 +1,32 @@
 import io from 'socket.io-client'
 import store from '../store'
-const socket = io.connect('http://10.68.0.132:3001')
-
+const socket = io.connect('http://10.68.0.120:3001')
+//const socket = io.connect('http://:3001')
 
 export function addMessage(message) {
     console.log(message)
     socket.emit('addMessage', message)
 }
+export function deleteList(key){
+    console.log(key)
+    socket.emit('remove restaurant', key)
+}
 export function login(username) {
-    // socket.emit('login', username)
     store.dispatch({
         type: 'LOGIN',
         username
     })
 }
+export function populateServer(businesses) {
+    socket.emit('populateRestaurants', businesses)
+}
 
-// export function addUser(user) {
-//     socket.emit('addUser', user)
-// }
+socket.on('update restaurants', function(restaurants){
+    store.dispatch({
+        type:'UPDATE_RESTAURANTS',
+        list: restaurants
+    })
+})
 
 socket.on('newMessage', function(message){
     store.dispatch({
@@ -26,23 +35,3 @@ socket.on('newMessage', function(message){
     })
 })
 
-// socket.on('new user', function(user){
-//     store.dispatch({
-//         type: 'NEW_USER',
-//         user
-//     })
-// })
-
-// socket.on('login', function(username){
-//     store.dispatch({
-//         type: 'LOGIN',
-//         username
-//     })
-// })
-
-// socket.on('get user', function(user){
-//     store.dispatch({
-//         type: 'GET_USER',
-//         user
-//     })
-// })
