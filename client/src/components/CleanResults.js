@@ -38,6 +38,7 @@ render(){
   	<div>
       <ul>
           {this.state.restaurant.map(function(value){
+            console.log(value)
             return <li key={'id' + value}>
             <h1>{value.name} </h1>
              <div>
