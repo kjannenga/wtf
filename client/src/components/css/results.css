@@ -1,0 +1,13 @@
+{box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+html{
+	background-image: url(./background.jpg);
+}
+.resultsLogo {
+	width:25%;
+}
+.resultslist li img{
+	height:200px;
+	
+}
