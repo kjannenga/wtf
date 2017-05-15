@@ -21,6 +21,7 @@ html {
 	padding: 0 5px;
 }
 
+
 .mainContainer{
 	  margin-top: -90px;
     margin-left: 200px;
@@ -30,6 +31,7 @@ html {
 	display: flex;
 	font-size: 30px;
 }
+
 
 p{
 	margin-top:10px;

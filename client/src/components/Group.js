@@ -10,7 +10,7 @@ import {deleteList} from '../api/chatAPI.js'
       return {
        list: []
      }
-   },
+   }, 
 
   componentWillReceiveProps(props) {
     this.setState({
@@ -46,8 +46,12 @@ import {deleteList} from '../api/chatAPI.js'
  })
 
  function mapStateToProps(state){
+
+  console.log(state)
    return {...state.restaurantReducer,
-    list: state.chatReducer.list}
+    list:state.chatReducer.list}
+ 
+
  }
 
  export default connect(mapStateToProps)(Group)

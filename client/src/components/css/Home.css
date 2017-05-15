@@ -86,25 +86,7 @@
 }
 
 
-.expContent {
-    color:white;
-    font-family:sans-serif;
-    font-size:16px;
-}
 
-
-.bottomContainer {
-    height:auto;
-}
-
-.criteriaLogo{
-    height:175px;
-}
-
-.wordHilight{
-    color:white;
-    padding: 0 5px;
-}
 
 .mainContainer{
       margin-top: -90px;
@@ -123,6 +105,7 @@ p{
 .restImage{
     height: 60px;
 }
+
 
 /*slideshow
 */
