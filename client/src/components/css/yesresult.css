@@ -21,6 +21,18 @@ html {
 	padding: 0 5px;
 }
 
+<<<<<<< HEAD
+=======
+.mainContainer{
+	  margin-top: -90px;
+    margin-left: 200px;
+}
+
+.budgetHeader{
+	display: flex;
+	font-size: 30px;
+}
+>>>>>>> f394b979a6322a931a8dff8b6a9a258fe72b83df
 
 p{
 	margin-top:10px;

@@ -4,7 +4,6 @@ import logoo from '../assets/wtf.png'
 import {connect} from 'react-redux'
 import './css/criteria.css'
 import {getRestaurants} from '../api/wtf'
-//import {createGroup} from '../api/chatAPI'
 
 
 const Selections = React.createClass ({

@@ -16,11 +16,12 @@ getInitialState(){
 
 
 componentWillReceiveProps(props) {
+  console.log(props, 'a')
   this.setState({
     restaurant: [props.info.businesses[id]]
   })
   getRestaurant({
-      restId: props.info.businesses[id].id
+    restId: props.info.businesses[id].id
    })
   },
 
@@ -34,8 +35,6 @@ handleClick(e) {
 
 
 render(){
-  //console.log(this.state, 'a')
-  //console.log(this.props, 'b')
     return (
     	<div>
       	<h1> results </h1>

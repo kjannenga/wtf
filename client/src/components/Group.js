@@ -1,8 +1,10 @@
 import {Link} from 'react-router-dom'
 import React from 'react'
-//import Newmember from './newmember'
+import {populateServer} from '../api/chatAPI.js'
 import {connect} from 'react-redux'
-import {deleteList} from '../api/wtf.js'
+import {deleteList} from '../api/chatAPI.js'
+
+
  const Group = React.createClass({
    getInitialState: function(){
       return {
@@ -17,6 +19,7 @@ import {deleteList} from '../api/wtf.js'
   },
 
   deleteList: function (index){
+    console.log('test', index, this.state.list)
     this.setState({
       list: this.state.list.filter((item, i) => {
         return index !== i
@@ -27,7 +30,6 @@ import {deleteList} from '../api/wtf.js'
   
 
    render (){
-     //console.log(this.state.list, 'the thing')
      return (
        <div>
          <ul>
@@ -44,10 +46,15 @@ import {deleteList} from '../api/wtf.js'
  })
 
  function mapStateToProps(state){
+<<<<<<< HEAD
   console.log(state)
    return {...state.restaurantReducer,
     list:state.chatReducer.list}
  
+=======
+   return {...state.restaurantReducer,
+    list: state.chatReducer.list}
+>>>>>>> f394b979a6322a931a8dff8b6a9a258fe72b83df
  }
 
  export default connect(mapStateToProps)(Group)
