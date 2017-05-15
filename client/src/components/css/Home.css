@@ -86,44 +86,7 @@ a:visited {
 }
 
 
-.expContent {
-    color:white;
-    font-family:sans-serif;
-    font-size:16px;
-}
 
-
-.bottomContainer {
-    height:auto;
-}
-
-.criteriaLogo{
-    height:175px;
-}
-
-.wordHilight{
-    color:white;
-    padding: 0 5px;
-}
-
-.mainContainer{
-      margin-top: -90px;
-    margin-left: 200px;
-    border-top: 5px solid rgb(195, 13, 50);
-}
-
-.budgetHeader{
-    display: flex;
-    font-size: 30px;
-}
-
-p{
-    margin-top:10px;
-}
-
-.restImage{
-    height: 60px;
-}
 
 /*slideshow
 */
