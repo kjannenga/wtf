@@ -51,6 +51,7 @@ render(){
                        </div>
                        <div>{value.name + ' ' + value.price}</div>
                        <div>{value.rating + '/5'}</div>
+                       <div>{value.display_address}</div>
                        <img className='restImage' src={value.image_url} alt='restaurant' />
                      </li>
              })}

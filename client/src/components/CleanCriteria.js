@@ -70,15 +70,15 @@ const Selections = React.createClass ({
     return (
     	<div>
 
-    		<div className="logoContainer">
-	      	<img className="criteriaLogo" src={logoo} alt="logo" />
+    		<div>
+	      	<img src={logoo} alt="logo" />
 	      </div>
 
 	      <form onSubmit={this.handleSubmit} >
 
-		      <div className='mainContainer'>
+		      <div>
 
-			      <div className='budgetHeader'>
+			      <div>
 			      	So... how much you wanna spend  
 			      </div>
 
