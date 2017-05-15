@@ -16,7 +16,6 @@ getInitialState(){
   },
 
 componentWillReceiveProps(props) {
- console.log(props, 'rec')
   this.setState({
     restaurant: [props.info.businesses[id]],
   })
@@ -35,15 +34,10 @@ handleClick(e) {
 
   
 render(){
- console.log(this.props.restInfo, 'after render')
-  console.log(this.state, 'after back')
-
   return (
   	<div>
-
       <ul>
           {this.state.restaurant.map(function(value){
-
             return <li key={'id' + value}>
             <h1>{value.name} </h1>
              <div>

@@ -16,6 +16,7 @@ export default function (state = initialState, action) {
 		case 'LOGIN':
 			return {...state, username: action.username}
 		case 'DELETE_LIST':
+			console.log(action.list, 'reducerList')
 			return {...state, list:[...state.list, action.list]}
 		default:
 			return state

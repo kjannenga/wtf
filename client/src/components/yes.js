@@ -1,24 +1,16 @@
 import React from 'react'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
-//import {getRestaurants} from '../api/wtf' 
 import '../components/css/yesresult.css'
-
-
- //{this.props.restInfo.coordinates.latitude, this.props.restInfo.coordinates.longitude}
-
-//main is 75% of page on the right, side is 25% on the left//
-
 
 const Yes = React.createClass({
  
 
  handleBack(){
-
    this.props.history.push('/criteria')
  },
+
  render(){
-  console.log(this.props.restInfo.photos,  'a')
    return (
      <div >
 
@@ -80,7 +72,6 @@ const Yes = React.createClass({
        <div>
          <ul>
             {this.props.restInfo.location.display_address.map(function(value){
-              //console.log(value, 'test')
               return <li>
                        <div>{value}</div>
                      </li>
@@ -90,7 +81,6 @@ const Yes = React.createClass({
        <div>
         <ul>
             {this.props.restInfo.photos.map(function(value){
-              //console.log(value, 'test')
               return <li>
                        <img className='restImage' src={value} alt='restaurant'/>
                      </li>
