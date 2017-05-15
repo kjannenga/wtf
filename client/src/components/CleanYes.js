@@ -74,7 +74,7 @@ const Yes = React.createClass({
        
 
        <div>
-         <button type="button" onClick={this.handleBack}>Hmmmmmmmm nevermind</button>
+         <button type="button" onClick={this.handleBack}>Nevermind</button>
        </div>
 
        <div>
