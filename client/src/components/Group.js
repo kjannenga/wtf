@@ -2,22 +2,19 @@ import {Link} from 'react-router-dom'
 import React from 'react'
 //import Newmember from './newmember'
 import {connect} from 'react-redux'
-
+import {deleteList} from '../api/wtf.js'
  const Group = React.createClass({
    getInitialState: function(){
-      console.log('businesses', this.props.info.businesses)
-	    return {
-       list: this.props.info.businesses
+      return {
+       list: []
      }
    },
 
-  // componentWillReceiveProps(props) {
-
-  // this.setState({
-  //   list: [props.info.businesses]
-
-  //   })
-  // },
+  componentWillReceiveProps(props) {
+    this.setState({
+      list: props.info.businesses
+    })
+  },
 
   deleteList: function (index){
     this.setState({
@@ -26,6 +23,7 @@ import {connect} from 'react-redux'
       })
     })
   },
+
   
 
    render (){
@@ -46,6 +44,7 @@ import {connect} from 'react-redux'
  })
 
  function mapStateToProps(state){
+  console.log(state)
    return {...state.restaurantReducer}
  }
 

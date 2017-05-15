@@ -3,6 +3,7 @@ const initialState = {
 	username: '',
 	users: [],
 	user: {},
+	list:[]
 
 }
 
@@ -14,6 +15,8 @@ export default function (state = initialState, action) {
 			return {...state, username: action.user}
 		case 'LOGIN':
 			return {...state, username: action.username}
+		case 'DELETE_LIST':
+			return {...state, list:[...state.list, action.list]}
 		default:
 			return state
 	}

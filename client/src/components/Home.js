@@ -36,17 +36,17 @@ handleClick(e) {
         </ul>
         </div>
 
-        <div >
-     
-         
+        <div>
           <div className="logoHeader">
            <img className="logo" src={logo} alt="logo" />
           </div>
-       
+
+          <div>
+            Let us decide lunch on for you
+          </div>
 
 
-       
-         <div className="buttonDiv">
+          <div className="buttonDiv">
 
            <div>
                <Link className="dirtyDiv" onClick={this.handleClick} id="dirty" to='/criteria'>DIRTY</Link>
@@ -61,7 +61,7 @@ handleClick(e) {
          </div>
        
 
-       </div>
+        </div>
  
      </div>
 

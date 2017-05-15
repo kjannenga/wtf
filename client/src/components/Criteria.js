@@ -6,7 +6,8 @@ import {connect} from 'react-redux'
 
 import './css/criteria.css'
 
-import {getRestaurants} from '../api/wtf'
+import {getRestaurants, populateRestaurants} from '../api/wtf'
+//import {populateRestaurants} from '.../server.js'
 //import {createGroup} from '../api/chatAPI'
 
 
@@ -47,6 +48,7 @@ const Selections = React.createClass ({
 	    for( var i=0; i < 4; i++ ){
 	        text += possible.charAt(Math.floor(Math.random() * possible.length));
 	    }
+	    populateRestaurants()
 	    getRestaurants({
 				term: this.state.term,
 				location: this.state.location,
