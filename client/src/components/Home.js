@@ -9,7 +9,6 @@ import warning from '../assets/warning.png'
 export default React.createClass ({
 
 handleClick(e) {
-  console.log("test")
   e.preventDefault()
    if (confirm("WARNING: This version contains content that is deemed inappropriate for parents, children, and 3/4 the population of Utah. Viewer discretion is advised.") )
    {window.location='./Criteria'
