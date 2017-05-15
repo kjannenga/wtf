@@ -2,105 +2,159 @@ html {box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
 
 body {
-  margin: 0;
-  padding: 0;
+  width:100%;
   font-family: sans-serif;
-  background:linear-gradient(rgba(0,0,0,25), rgba(0,0,0,0));
 }
 
-.budgetHeader {
-	background: transparent;
+.bodDiv{
+	width:960px;
+	position:relative;
+	background:black;
+	opacity:0.9;
 }
+
+.head {
+	background: #EEE url(https://previews.123rf.com/images/ensup/ensup1507/ensup150700187/43642794-Grunge-scratched-frame-Stock-Photo-grunge-texture-background.jpg);
+	opacity:0.9;
+	z-index:-1;
+	width:auto;
+	height:250px;
+}
+
+.mainContainer {
+	width:auto;
+}
+
+
+.budgetHeader {
+	margin-top:11%;
+	position:relative;
+	margin-left:-27%;
+	width:auto;
+	height:250px;
+	line-height: 230px;
+	text-transform: uppercase;
+    background: black;
+ 	font-family: 'Metal Mania', cursive;
+    text-align: center;
+    font-size: 170px;
+
+}
+p {
+   margin: 0 auto;
+   width:960px;
+   position: absolute;
+   align-content: center;
+
+}
+.criteriaLogo {
+	margin-top:30px;
+}
+.budget {
+	width:auto%;
+	display:flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	background:black;
+	margin-left:-27%;
+	color:red;
+	font-size:20px;
+	font-family: 'Metal Mania', cursive;
+	padding-bottom:8px;
+
+	}
+#oneDollar {
+	margin-top:10px;
+}
+#twoDollar {
+	margin-top:10px;
+}
+
+
+#threeDollar {
+	margin-top:10px;
+}
+#fourDollar {
+	margin-top:10px;
+}
+
+.tfYouWant {
+	margin-top:11%;
+	position:relative;
+	margin-left:-27%;
+	width:auto;
+	height:250px;
+	line-height: 240px;
+	text-transform: uppercase;
+    background: black;
+ 	font-family: 'Metal Mania', cursive;
+    text-align: center;
+    color:white;
+    font-size:28px;
+
+
+}
+/*
+.budgetTwo {
+	width:auto%;
+	display:flex;
+	justify-content: space-around;
+	margin-left: 20%;
+	
+	background:black;
+	margin-left:-27%;
+	color:white;
+	font-size:20px;
+	font-family: 'Metal Mania', cursive;
+	padding-bottom:8px;
+}*/
+
 .zipDiv {
-	margin-top:10%;
+	margin-top:11%;
+	position:relative;
+	margin-left:-27%;
+	width:auto;
+	height:250px;
+	line-height: 230px;
+	text-transform: uppercase;
+    background: black;
+ 	font-family: 'Metal Mania', cursive;
+    text-align: center;
+    font-size: 28px;
+    color:white;
+
 }
 .zipBox {
-	position: center;
-	right: 0px;
-	width:auto;
-	padding:10px;
-	border-left:transparent;
-	border-right:transparent;
-	border-top:transparent;
-	border-bottom:transparent;
+	width:auto%;
+	height:50px;
+	margin: 0 auto;
+	padding-left:50%;
+	margin-left:-27%;
 	background:#EBEBEB;
 	font-size:14px;
-	background:grey;
 	color:black;
+	background:black;
+	padding-bottom:;
 	       
 }
 
-.zipBox:focus {
-	background:grey;
+.zipBox input {
+	width:70%;
+	height:50px;
+	margin-left:-90px;
+	background:;
 	color:black;
 	outline:none;
-
-}
-
-button {
-	background:black;
-	border:black;
-	color:grey;
-	height:30px;
-	width:40px;
-	border-radius:50%;
-	outline:none;
-}
-
-.budget {
-	margin-top:10%;
-	margin-left:10%;
-	width:50%;
-	display:flex;
-	justify-content: space-around;
-
-
-
-}
-.buttonDiv {
-	width:20px;
-}
-.options {
-	margin-top:10%;
-	width:50%;
-	border: 2px solid black;
+	border:transparent;
 
 
 }
 
-.radios {
-	display:flex;
-	flex-direction:column;
-	width:50%;
-	float:left;
-	border: 2px solid black;
-
-}
-
-.radioOptions {
-	display:flex;
-	flex-direction:column;
-	width:50%;
-	float:right;
-	margin-top:-6%;
-	background:transparent;
-	border: 2px solid black;
-}
-
-#groupForm {
-
-}
-
-#groupNameInput {
-	height: 40px;
-}
-
-#groupCodeInput {
-	height: 40px;
-}
-
-#createGroupButton {
-	width: 100px;
-	height: 40px;
-	border-radius: 0px;
+.aFooter {
+	width:auto%;
+	height:250px;
+	margin: 0 auto;
+	padding-left:50%;
+	margin-left:-27%;
+	background: #EEE url(https://previews.123rf.com/images/ensup/ensup1507/ensup150700187/43642794-Grunge-scratched-frame-Stock-Photo-grunge-texture-background.jpg);
 }
