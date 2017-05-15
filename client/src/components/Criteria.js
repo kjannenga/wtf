@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import logo from '../assets/logo.png'
 import {connect} from 'react-redux'
 import './css/criteria.css'
-import {getRestaurants, populateServer} from '../api/wtf'
+import {getRestaurants} from '../api/wtf'
 
 
 const Selections = React.createClass ({
@@ -43,7 +43,6 @@ const Selections = React.createClass ({
 	    for( var i=0; i < 4; i++ ){
 	        text += possible.charAt(Math.floor(Math.random() * possible.length));
 	    }
-	    populateServer()
 	    getRestaurants({
 				term: this.state.term,
 				location: this.state.location,

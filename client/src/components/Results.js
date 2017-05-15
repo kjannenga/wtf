@@ -38,9 +38,9 @@ render(){
     return (
     	<div>
       	<h1> results </h1>
-      	<ul>
             {this.state.restaurant.map(function(value){
-              return <li key={'id' + value.id}>
+              console.log(value.location)
+              return <div key={'id' + value.id}>
                        <div>
                          <iframe
                             width="600"
@@ -51,11 +51,11 @@ render(){
                        </div>
                        <div>{value.name + ' ' + value.price}</div>
                        <div>{value.rating + '/5'}</div>
-                       <div>{value.display_address}</div>
+                       <div>{value.location.address1}</div>
+                       <div>{value.location.city + ', ' + value.location.state + ' ' + value.location.zip_code}</div>
                        <img className='restImage' src={value.image_url} alt='restaurant' />
-                     </li>
+                     </div>
              })}
-          </ul>
     		<Link to='/yes'><button>Fuck Yes</button></Link>
     		<button type='submit' onClick={this.handleClick}>Fuck this</button>
       </div>
