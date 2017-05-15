@@ -22,18 +22,5 @@ html {
 }
 
 
-.mainContainer{
-	  margin-top: -90px;
-    margin-left: 200px;
-}
 
-.budgetHeader{
-	display: flex;
-	font-size: 30px;
-}
-
-
-p{
-	margin-top:10px;
-}
 
