@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import React from 'react'
-import {populateServer} from '../api/chatAPI.js'
+import {populateRestaurants} from '../api/chatAPI.js'
 import {connect} from 'react-redux'
 import {deleteList} from '../api/chatAPI.js'
 
@@ -8,13 +8,17 @@ import {deleteList} from '../api/chatAPI.js'
  const Group = React.createClass({
    getInitialState: function(){
       return {
-       list: []
+       list: [],
+       businesses:''
      }
    }, 
 
   componentWillReceiveProps(props) {
     this.setState({
       list: props.info.businesses
+    })
+    populateRestaurants({
+      businesses: props.info.businesses
     })
   },
 
@@ -34,7 +38,7 @@ import {deleteList} from '../api/chatAPI.js'
        <div>
          <ul>
           {this.props.info.businesses.map((value, i) => (      
-            <li key={value.name+'key'}>
+            <li>
               <div>{value.name}</div>
               <button onClick={() => this.deleteList(i)}>EWW</button>
             </li>

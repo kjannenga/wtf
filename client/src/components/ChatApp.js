@@ -31,7 +31,7 @@ class Chat extends Component {
     }
 
     render(){
-        console.log('messages', this.props.messages)
+        console.log('messages', this.state)
         return (
             <div>
                 

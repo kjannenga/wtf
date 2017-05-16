@@ -70,7 +70,7 @@ const Selections = React.createClass ({
     return (
     	<div>
 
-    		<div>
+    		<div className='logoContainer'>
 	      	<img src={logoo} alt="logo" />
 	      </div>
 

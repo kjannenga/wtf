@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {getRestaurant} from '../api/wtf'
+//import {populateRestaurants} from '../api/chatAPI'
 import logoo from '../assets/wtf.png'
 import './css/results.css'
 
@@ -12,13 +13,14 @@ const Restaurant = React.createClass({
 getInitialState(){
   return {
       restaurant: [],
+      businesses:'',
       restId: '',
     }
   },
 
 
 componentWillReceiveProps(props) {
-  console.log(props, 'a')
+  //console.log(props.info.businesses)
   this.setState({
     restaurant: [props.info.businesses[id]]
   })
