@@ -116,7 +116,8 @@ const Selections = React.createClass ({
 				      	</Link>
 				    </div>
 			      	<div className="agroupOption">
-		      			<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
+			      		<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
+
 
 		      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>GO</button>
 			      	</div>

@@ -54,10 +54,12 @@ app.get('/yelpstuff', function(req, res){
 		 	error:true
 		 })
 	})
-}),
+})
+
+var restaurants = []
 
 io.on('connection', function(socket){
-    var restaurants = []
+    
 
     socket.on('addMessage', function(message){
         io.emit('newMessage', message)
@@ -82,6 +84,7 @@ io.on('connection', function(socket){
     })
 
     socket.on('join room', function(){
+    	console.log(restaurants.count)
     	io.emit('updateRestaurants', restaurants)
     })
 

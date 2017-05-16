@@ -6,6 +6,7 @@ import './css/criteria.css'
 import {getRestaurants} from '../api/wtf'
 import {populateRestaurants} from '../api/chatAPI'
 
+//<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
 
 const Selections = React.createClass ({
 		getInitialState(){
@@ -111,14 +112,14 @@ const Selections = React.createClass ({
 
 				      	<Link to='/results'>
 					      	<div className="aLetsGo">
-					      		<button className="aLeggo" onClick={this.handleSubmit}>GO</button> 
+					      		<button className="aLeggo" onClick={this.handleSubmit}>Solo</button> 
 					      	</div>
 				      	</Link>
 				    </div>
 			      	<div className="agroupOption">
-		      			<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
+		      			
 
-		      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>GO</button>
+		      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>Group</button>
 			      	</div>
 			      	<div className="aFooter">
 			      	</div>
