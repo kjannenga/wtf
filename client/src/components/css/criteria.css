@@ -1,141 +1,121 @@
 
 html {box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
-
 body {
   width:auto;
   font-family: sans-serif;
-
 }
-
 .bodDiv{
-	width:100%;
-	background:white;
-	opacity:0.9;
+    width:100%;
+    background:white;
+    opacity:0.9;
 }
-
 .head {
-	background: #EEE url(https://previews.123rf.com/images/ensup/ensup1507/ensup150700187/43642794-Grunge-scratched-frame-Stock-Photo-grunge-texture-background.jpg);
-	opacity:0.9;
-	z-index:-1;
-	width:auto;
-	height:250px;
+    background: #EEE url(https://previews.123rf.com/images/ensup/ensup1507/ensup150700187/43642794-Grunge-scratched-frame-Stock-Photo-grunge-texture-background.jpg);
+    opacity:0.9;
+    z-index:-1;
+    width:auto;
+    height:250px;
 }
-
 .mainContainer2 {
-	width: 100%;
+    width: 100%;
 }
-
 .budgetHeader {
-	width:auto;
-	height:250px;
-	line-height: 230px;
-	text-transform: uppercase;
+    width:auto;
+    height:250px;
+    line-height: 230px;
+    text-transform: uppercase;
     background: black;
- 	font-family: 'Metal Mania', cursive;
+    font-family: 'Metal Mania', cursive;
     text-align: center;
     font-size: 30px;
 }
 p {
    margin: auto;
    width:960px;
-
    text-align: center;
-
 }
 .criteriaLogo {
-	margin-top:30px;
+    margin-top:30px;
 }
 .budget {
-	width:auto%;
-	display:flex;
-	justify-content: space-around;
-	background:black;
-	color:blue;
-	font-size:20px;
-	font-family: 'Metal Mania', cursive;
-	padding-left: 50px;
-	padding-bottom:8px;
-	}
-	.budgetTwo {
-	width:auto%;
-	display:flex;
-	justify-content: space-around;
-	margin: 0 auto;
-	background:grey;
-	color:blue;
-	font-size:20px;
-	font-family: 'Metal Mania', cursive;
-	padding-bottom:8px;
-
-	}
+    width:auto%;
+    display:flex;
+    justify-content: space-around;
+    background:black;
+    color:blue;
+    font-size:20px;
+    font-family: 'Metal Mania', cursive;
+    padding-left: 50px;
+    padding-bottom:8px;
+    }
+    .budgetTwo {
+    width:auto%;
+    display:flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    background:grey;
+    color:blue;
+    font-size:20px;
+    font-family: 'Metal Mania', cursive;
+    padding-bottom:8px;
+    }
 #oneDollar {
-	margin-top:10px;
+    margin-top:10px;
 }
-
 #twoDollar {
-	margin-top:10px;
+    margin-top:10px;
 }
-
 #threeDollar {
-	margin-top:10px;
+    margin-top:10px;
 }
 #fourDollar {
-	margin-top:10px;
+    margin-top:10px;
 }
-
 .budget label {
-	position: relative;
-	right: 75px;
+    position: relative;
+    right: 75px;
 }
-
-
 .tfYouWant {
-	position:relative;
-	width:auto;
-	height:250px;
-	line-height: 240px;
-	text-transform: uppercase;
+    position:relative;
+    width:auto;
+    height:250px;
+    line-height: 240px;
+    text-transform: uppercase;
     background: grey;
- 	font-family: 'Metal Mania', cursive;
+    font-family: 'Metal Mania', cursive;
     text-align: center;
     color:white;
     font-size:28px;
-
-
 }
 /*
 .budgetTwo {
-	width:auto%;
-	display:flex;
-	justify-content: space-around;
-	margin-left: 20%;
-	
-	background:black;
-	margin-left:-27%;
-	color:white;
-	font-size:20px;
-	font-family: 'Metal Mania', cursive;
-	padding-bottom:8px;
+    width:auto%;
+    display:flex;
+    justify-content: space-around;
+    margin-left: 20%;
+    
+    background:black;
+    margin-left:-27%;
+    color:white;
+    font-size:20px;
+    font-family: 'Metal Mania', cursive;
+    padding-bottom:8px;
 }*/
-
 .zipDiv {
-
-	position:relative;
-	width:auto;
-	height:250px;
-	line-height: 230px;
-	text-transform: uppercase;
+    position:relative;
+    width:auto;
+    height:250px;
+    line-height: 230px;
+    text-transform: uppercase;
     background: black;
- 	font-family: 'Metal Mania', cursive;
+    font-family: 'Metal Mania', cursive;
     text-align: center;
     font-size: 28px;
     color:white;
-
 }
-
 #letsgo {
-	text-decoration: none;
+    text-decoration: none;
     background-color: black;
     height:50px;
     width:200px;
@@ -146,96 +126,76 @@ p {
     color:white;
     
 }
-
 #letsgo:hover {
     background-color: rgba(0,0,0,0.5);
-
 }
-
 .zipDiv h3 {
-	margin: 0;
+    margin: 0;
 }
-
 .zipBox {
-	width:auto%;
-	height:50px;
-	margin: 0 auto;
-	padding-left:50%;
-
-	background:#EBEBEB;
-	font-size:14px;
-	color:black;
-	background:black;
-	display:flex;
-	       
+    width:auto%;
+    height:50px;
+    margin: 0 auto;
+    padding-left:50%;
+    background:#EBEBEB;
+    font-size:14px;
+    color:black;
+    background:black;
+    display:flex;
+           
 }
-
 .zipBox input {
-	width:70%;
-	height:50px;
-
-	font-size:28px;
-	margin-top:12px;
-	color:black;
-	outline:none;
-	border:transparent;
-
-
+    width:70%;
+    height:50px;
+    font-size:28px;
+    margin-top:12px;
+    color:black;
+    outline:none;
+    border:transparent;
 }
-
 .aFooter {
-	width:auto%;
-	height:250px;
-	margin: 0 auto;
-	padding-left:50%;
-
-	background: #EEE url(https://previews.123rf.com/images/ensup/ensup1507/ensup150700187/43642794-Grunge-scratched-frame-Stock-Photo-grunge-texture-background.jpg);
+    width:auto%;
+    height:250px;
+    margin: 0 auto;
+    padding-left:50%;
+    background: #EEE url(https://previews.123rf.com/images/ensup/ensup1507/ensup150700187/43642794-Grunge-scratched-frame-Stock-Photo-grunge-texture-background.jpg);
 }
-
 .aLeggo {
-	width:40px;
-	height:50px;
-	color:white;
-	background:blue;
-	border:none;
-
-
+    width:40px;
+    height:50px;
+    color:white;
+    background:blue;
+    border:none;
 }
-
 .agroupOption {
-	width:auto%;
-	height:50px;
-	margin: 0 auto;
-	padding-left:50%;
-	margin-left:-27%;
-	margin-top: 20px;
-	background:#EBEBEB;
-	font-size:14px;
-	color:black;
-	background:black;
-	display:flex;
+    width:auto%;
+    height:50px;
+    margin: 0 auto;
+    padding-left:50%;
+    margin-left:-27%;
+    margin-top: 20px;
+    background:#EBEBEB;
+    font-size:14px;
+    color:black;
+    background:black;
+    display:flex;
 }
-
 .agroupOption input {
-	width:70%;
-	height:50px;
-	margin-left:-90px;
-	font-size:28px;
-	margin-top:5px;
-	color:black;
-	outline:none;
-	border:transparent;
+    width:70%;
+    height:50px;
+    margin-left:-90px;
+    font-size:28px;
+    margin-top:5px;
+    color:black;
+    outline:none;
+    border:transparent;
 }
-
 #createGroupButton {
-	width: 100px;
-	height: 40px;
-	border-radius: 0px;
-	color:white;
+    width: 100px;
+    height: 40px;
+    border-radius: 0px;
+    color:white;
 }
-
 #createGroupButton:hover {
     background-color: rgba(0,0,0,0.5);
-
 }
-
