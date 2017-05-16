@@ -49,7 +49,7 @@ render(){
                        <div className="resultName">{value.name}</div>
                        <div>
                          <iframe
-                            width="1200"
+                            width="1000"
                             height="375"
                             frameBorder="0"
                             src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${value.coordinates.latitude + ',' + value.coordinates.longitude}`} allowFullScreen>
