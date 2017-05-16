@@ -2,6 +2,8 @@
 *, *:before, *:after {box-sizing: inherit;}
 
 
+
+
 /*HOME.JS*/
 
 .logo {
@@ -11,7 +13,7 @@
     margin-bottom: 70px;
     padding-top: 0px;
     margin-top:65px;
-    filter:opacity(90%);
+    filter:opacity(80%);
 
 }
 
@@ -39,6 +41,9 @@
     color: black;
     text-align: center;
     font-size: 35px;
+     font-family: adobe-heiti-std, sans-serif;
+font-style: normal;
+font-weight: 200;
     
 }
 
@@ -46,6 +51,9 @@
     color: black;
     text-align: center;
     font-size: 35px;
+     font-family: adobe-heiti-std, sans-serif;
+font-style: normal;
+font-weight: 200;
     
 }
 

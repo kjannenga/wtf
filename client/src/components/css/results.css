@@ -8,6 +8,7 @@ html{
 }
 .resultsLogo {
 	width:20%;
+	filter: opacity(70%);
 
 }
 .resultsList{
