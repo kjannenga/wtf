@@ -12,16 +12,18 @@ const Restaurant = React.createClass({
 getInitialState(){
   return {
       restaurant: [],
-      restId: ''
+      restId: '',
     }
   },
 
+
 componentWillReceiveProps(props) {
+  console.log(props, 'a')
   this.setState({
-    restaurant: [props.info.businesses[id]],
+    restaurant: [props.info.businesses[id]]
   })
   getRestaurant({
-      restId: props.info.businesses[id].id
+    restId: props.info.businesses[id].id
    })
   },
 
@@ -33,7 +35,7 @@ handleClick(e) {
     }
   },
 
-  
+
 render(){
     return (
       <div>
