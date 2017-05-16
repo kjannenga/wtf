@@ -1,13 +1,13 @@
 import io from 'socket.io-client'
 import store from '../store'
-const socket = io.connect('http://192.168.0.29:3001')
-//const socket = io.connect('http://10.68.0.120:3001')
+//const socket = io.connect('http://192.168.0.29:3001')
+const socket = io.connect('http://10.68.0.149:3001')
 //const socket = io.connect('http://:3001')
 
 export function addMessage(message) {
     socket.emit('addMessage', message)
 }
-export function deleteList(key){
+export function removeRestaurant(key){
     console.log(key, 'remove')
     socket.emit('removeRestaurant', key)
 }
@@ -16,6 +16,7 @@ export function login(username) {
         type: 'LOGIN',
         username
     })
+    socket.emit('join room')
 }
 export function populateRestaurants(businesses) {
     console.log('populateRestaurants', businesses)

@@ -63,16 +63,25 @@ io.on('connection', function(socket){
         io.emit('newMessage', message)
     })
 
-    socket.on('populateRestaurants', function(restaurants){
-    	restaurants = restaurants,
+    socket.on('populateRestaurants', function(rest){
+    	restaurants = rest.businesses,
+    	restaurants = restaurants.map(restaurant => {
+    		restaurant.key = Math.random()
+    		return restaurant
+    	})
     	io.emit('updateRestaurants', restaurants)
     })
 
     socket.on('removeRestaurant', function(key){
-    	console.log('server', restaurants)
+    	console.log(key)
     	restaurants = restaurants.filter(restaurant => {
     		return restaurant.key !== key
     	})
+    	console.log(restaurants.length)
+    	io.emit('updateRestaurants', restaurants)
+    })
+
+    socket.on('join room', function(){
     	io.emit('updateRestaurants', restaurants)
     })
 
