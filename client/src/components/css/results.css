@@ -15,7 +15,10 @@ html{
 	list-style: none;
 	text-align: center;
 	float:right;
+	padding-right:30px;
 	margin-right:30px;
+	max-width:1250px;
+	
 
 }
 .resultName {

@@ -104,9 +104,7 @@ const Selections = React.createClass ({
 				      	<label htmlFor='fourDollar'><span className="blue">$$$$</span><br/>Money ain't a thing</label>
 				      	<input type="radio" onClick={this.radioPrice} id='fourDollar' name='price' value='4'/>
 				    </div>
-
-			      	
-			      </div>
+				  </div>
 
 			      
 			      <div className='typeHeader'>Tell me whatcha want.....Whatcha really really want</div> 
