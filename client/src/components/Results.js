@@ -2,6 +2,8 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {getRestaurant} from '../api/wtf'
+import logoo from '../assets/wtf.png'
+import './css/results.css'
 
 const id = 0
 
@@ -37,25 +39,35 @@ handleClick(e) {
 render(){
     return (
     	<div>
-      	<h1> results </h1>
+      	<div>
+          <img className="resultsLogo" src={logoo} alt="logo" />
+        </div>
+        <div >
+      	<ul  className="resultsList">
             {this.state.restaurant.map(function(value){
-              console.log(value.location)
-              return <div key={'id' + value.id}>
+              return <li key={'id' + value.id}>
+                       <div className="resultName">{value.name}</div>
                        <div>
                          <iframe
-                            width="600"
-                            height="450"
+                            width="1200"
+                            height="375"
                             frameBorder="0"
                             src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${value.coordinates.latitude + ',' + value.coordinates.longitude}`} allowFullScreen>
                          </iframe>
                        </div>
-                       <div>{value.name + ' ' + value.price}</div>
-                       <div>{value.rating + '/5'}</div>
-                       <div>{value.location.address1}</div>
-                       <div>{value.location.city + ', ' + value.location.state + ' ' + value.location.zip_code}</div>
-                       <img className='restImage' src={value.image_url} alt='restaurant' />
-                     </div>
+                       <div className="resultsInfo">
+                        
+                         <div>Rating<div>{value.rating + '/5'}</div></div>
+                         
+                         <div>Address<div>{value.location.address1}</div>
+                       <div>{value.location.city + ', ' + value.location.state + ' ' + value.location.zip_code}</div></div>
+
+                         <div>Image<div><img className='resultImage' src={value.image_url} alt='restaurant' /></div></div>
+                        </div>
+                     </li>
              })}
+          </ul>
+          </div>
     		<Link to='/yes'><button>Fuck Yes</button></Link>
     		<button type='submit' onClick={this.handleClick}>Fuck this</button>
       </div>
