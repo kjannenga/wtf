@@ -1,0 +1,27 @@
+{box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+html{
+	background-image: url(./background.jpg);
+	background-repeat: none;
+	background-size: 100%;
+}
+
+.groupName {
+	color:white;
+	font-size: 100px;
+	text-align: center;
+}
+
+.groupImage {
+	height:200px;
+	width:200px;
+}
+.groupInfo {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 35px;
+	color:white;
+	vertical-align: 200px;
+}
