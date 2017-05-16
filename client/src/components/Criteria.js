@@ -76,61 +76,57 @@ const Selections = React.createClass ({
     return (
     	<div className="bodDiv">
     		<div className="head">
-    		<div className="logoContainer">
-	      	<img className="criteriaLogo" src={logo} alt="logo" />
-	      </div>
-	      </div>
-	      <form onSubmit={this.handleSubmit} >
-		      <div className='mainContainer'>
-			      <div className='budgetHeader'>
-			   
-			      	<p className='wordHilight'>how much you wanna fuckin spend? </p> 
-			      </div>
-			      <div className='budget'>
-			      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>$
-			      	<label htmlFor='oneDollar'>Cheap ass</label><br/>
-			      	
-			      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>$$
-			      	<label htmlFor='twoDollar'>Ballin on a budget</label><br/>
-			      	<input type="radio" onClick={this.radioPrice} id="threeDollar" name='price' value='3'/>$$$
-			      	<label htmlFor='threeDollar'>Big spenda</label><br/>
-			      	<input type="radio" onClick={this.radioPrice} id='fourDollar' name='price' value='4'/>$$$$
-			      	<label htmlFor='fourDollar'>Money aint a thing</label><br/>
-			      </div>
-		      <div className="tfYouWant">Tell me whatcha want.....Whatcha really really want</div> 
-		      <div className="budget">
-		      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Just fuck me up</label><br/>
-		      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
-		      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label><br/>
-		      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
-		      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>Fuck gluten</label><br/>
-		      </div>
-		      <div className="zipDiv">
-		      <h3>Now tell us where TF you are</h3>
-		      </div>
-		      	<div className="zipBox">
-			      	<input onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
+    			<div className="logoContainer">
+	      			<img className="criteriaLogo" src={logo} alt="logo" />
+	      		</div>
+	      	</div>
+	      	<form onSubmit={this.handleSubmit} >
+		      	<div className='mainContainer2'>
+				    <div className='budgetHeader'>
+				      	<p className='wordHilight'>how much you wanna fuckin spend? </p> 
+				    </div>
+				    <div className='budget'>
+				      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>
+				      	<label htmlFor='oneDollar'>$ Cheap ass</label>
+				      	
+				      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>
+				      	<label htmlFor='twoDollar'>$$ Ballin on a budget</label>
+				      	<input type="radio" onClick={this.radioPrice} id="threeDollar" name='price' value='3'/>
+				      	<label htmlFor='threeDollar'>$$$ Big spenda</label>
+				      	<input type="radio" onClick={this.radioPrice} id='fourDollar' name='price' value='4'/>
+				      	<label htmlFor='fourDollar'>$$$$ Money aint a thing</label>
+				    </div>
+			      	<div className="tfYouWant">Tell me whatcha want.....Whatcha really really want</div> 
+			      	<div className="budgetTwo">
+				      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Just fuck me up</label><br/>
+				      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
+				      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I need a fuckin taco</label><br/>
+				      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Fuck meat you savages</label><br/>
+				      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>Fuck gluten</label><br/>
+			      	</div>
+			      	<div className="zipDiv">
+			      		<h3>Now tell us where TF you are</h3>
+			      	</div>
+			      	<div className="zipBox">
+				      	<input onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?'/>
+
+				      	<Link to='/results'>
+					      	<div className="aLetsGo">
+					      		<button className="aLeggo" onClick={this.handleSubmit}>GO</button> 
+					      	</div>
+				      	</Link>
+				    </div>
+			      	<div className="agroupOption">
+		      			<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
+
+		      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>GO</button>
+			      	</div>
+			      	<div className="aFooter">
 			      	</div>
 
-		      <Link to='/results'>
-		      	<div 
-		      		onClick={this.handleSubmit}>
-		      		Let's Go
-		      	</div>
-		      </Link>
-
-		      	<div>
-	      			<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
-
-	      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>Create Group</button>
-		      		
-		      	</div>
-		      	<div className="aFooter">
-		      	</div>
-
-		    </div>
-	    </form>
-	   </div>
+		    	</div>
+	    	</form>
+	  	</div>
     )
   }
 }) 

@@ -2,14 +2,13 @@ html {box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
 
 body {
-  width:100%;
+  width:auto;
   font-family: sans-serif;
 }
 
 .bodDiv{
-	width:960px;
-	position:relative;
-	background:black;
+	width:100%;
+	background:white;
 	opacity:0.9;
 }
 
@@ -21,15 +20,11 @@ body {
 	height:250px;
 }
 
-.mainContainer {
-	width:auto;
+.mainContainer2 {
+	width: 100%;
 }
 
-
 .budgetHeader {
-	margin-top:11%;
-	position:relative;
-	margin-left:-27%;
 	width:auto;
 	height:250px;
 	line-height: 230px;
@@ -37,14 +32,14 @@ body {
     background: black;
  	font-family: 'Metal Mania', cursive;
     text-align: center;
-    font-size: 170px;
+    font-size: 30px;
 
 }
 p {
-   margin: 0 auto;
+   margin: auto;
    width:960px;
-   position: absolute;
-   align-content: center;
+
+   text-align: center;
 
 }
 .criteriaLogo {
@@ -54,10 +49,20 @@ p {
 	width:auto%;
 	display:flex;
 	justify-content: space-around;
-	margin: 0 auto;
 	background:black;
-	margin-left:-27%;
-	color:red;
+	color:blue;
+	font-size:20px;
+	font-family: 'Metal Mania', cursive;
+	padding-left: 50px;
+	padding-bottom:8px;
+	}
+	.budgetTwo {
+	width:auto%;
+	display:flex;
+	justify-content: space-around;
+	margin: 0 auto;
+	background:grey;
+	color:blue;
 	font-size:20px;
 	font-family: 'Metal Mania', cursive;
 	padding-bottom:8px;
@@ -66,10 +71,10 @@ p {
 #oneDollar {
 	margin-top:10px;
 }
+
 #twoDollar {
 	margin-top:10px;
 }
-
 
 #threeDollar {
 	margin-top:10px;
@@ -78,15 +83,19 @@ p {
 	margin-top:10px;
 }
 
+.budget label {
+	position: relative;
+	right: 75px;
+}
+
+
 .tfYouWant {
-	margin-top:11%;
 	position:relative;
-	margin-left:-27%;
 	width:auto;
 	height:250px;
 	line-height: 240px;
 	text-transform: uppercase;
-    background: black;
+    background: grey;
  	font-family: 'Metal Mania', cursive;
     text-align: center;
     color:white;
@@ -110,9 +119,8 @@ p {
 }*/
 
 .zipDiv {
-	margin-top:11%;
+
 	position:relative;
-	margin-left:-27%;
 	width:auto;
 	height:250px;
 	line-height: 230px;
@@ -124,25 +132,31 @@ p {
     color:white;
 
 }
+
+.zipDiv h3 {
+	margin: 0;
+}
+
 .zipBox {
 	width:auto%;
 	height:50px;
 	margin: 0 auto;
 	padding-left:50%;
-	margin-left:-27%;
+
 	background:#EBEBEB;
 	font-size:14px;
 	color:black;
 	background:black;
-	padding-bottom:;
+	display:flex;
 	       
 }
 
 .zipBox input {
 	width:70%;
 	height:50px;
-	margin-left:-90px;
-	background:;
+
+	font-size:28px;
+	margin-top:12px;
 	color:black;
 	outline:none;
 	border:transparent;
@@ -155,6 +169,52 @@ p {
 	height:250px;
 	margin: 0 auto;
 	padding-left:50%;
-	margin-left:-27%;
+
 	background: #EEE url(https://previews.123rf.com/images/ensup/ensup1507/ensup150700187/43642794-Grunge-scratched-frame-Stock-Photo-grunge-texture-background.jpg);
 }
+
+.aLeggo {
+	width:40px;
+	height:50px;
+	color:white;
+	background:blue;
+	border:none;
+
+
+}
+
+.agroupOption {
+	width:auto%;
+	height:50px;
+	margin: 0 auto;
+	padding-left:50%;
+	margin-left:-27%;
+	margin-top: 20px;
+	background:#EBEBEB;
+	font-size:14px;
+	color:black;
+	background:black;
+	display:flex;
+}
+
+.agroupOption input {
+	width:70%;
+	height:50px;
+	margin-left:-90px;
+	font-size:28px;
+	margin-top:5px;
+	color:black;
+	outline:none;
+	border:transparent;
+}
+
+#createGroupButton {
+	width:40px;
+	height:50px;
+	color:white;
+	background:blue;
+	border:none;
+	margin-left: 10px;
+	margin-top:4px; 
+}
+
