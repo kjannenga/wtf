@@ -5,7 +5,6 @@ import {connect} from 'react-redux'
 
  const Group = React.createClass({
   remove: function (key){
-    console.log('key', key)
 
     removeRestaurant(key)
   },

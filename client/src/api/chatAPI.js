@@ -8,7 +8,6 @@ export function addMessage(message) {
     socket.emit('addMessage', message)
 }
 export function removeRestaurant(key){
-    console.log(key, 'remove')
     socket.emit('removeRestaurant', key)
 }
 export function login(username) {
@@ -19,12 +18,10 @@ export function login(username) {
     socket.emit('join room')
 }
 export function populateRestaurants(businesses) {
-    console.log('populateRestaurants', businesses)
     socket.emit('populateRestaurants', businesses)
 }
 
 socket.on('updateRestaurants', function(restaurants){
-    console.log('UPDATE_RESTAURANTS', restaurants)
     store.dispatch({
         type:'UPDATE_RESTAURANTS',
         restaurants

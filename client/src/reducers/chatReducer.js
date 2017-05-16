@@ -8,7 +8,6 @@ const initialState = {
 }
 
 export default function (state = initialState, action) {
-	console.log(action.list, 'reducer')
 	switch (action.type) {
 		case 'ADD_MESSAGE':
 			return {...state, messages: [...state.messages, action.message]}
