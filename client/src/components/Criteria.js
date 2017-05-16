@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import './css/criteria.css'
 import {getRestaurants} from '../api/wtf'
 
+//<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
 
 const Selections = React.createClass ({
 		getInitialState(){
@@ -68,6 +69,7 @@ const Selections = React.createClass ({
 	
   render() {
     return (
+
     	<div>
 
     		<div>
@@ -127,6 +129,7 @@ const Selections = React.createClass ({
 		    </div>
 	    </form>
 	   </div>
+
     )
   }
 }) 
