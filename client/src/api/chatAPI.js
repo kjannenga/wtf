@@ -15,6 +15,7 @@ export function login(username) {
         type: 'LOGIN',
         username
     })
+    console.log('login function')
     socket.emit('join room')
 }
 export function populateRestaurants(businesses) {

@@ -4,9 +4,19 @@ import {populateRestaurants, removeRestaurant} from '../api/chatAPI.js'
 import {connect} from 'react-redux'
 
  const Group = React.createClass({
+
   remove: function (key){
 
     removeRestaurant(key)
+
+  },
+
+    handleComplete: function (index){
+    var newList = this.props.info.businesses;
+    newList[index].complete = !newList[index].complete;
+    this.setState({
+      list: newList
+    })
   },
 
    render (){
@@ -17,7 +27,11 @@ import {connect} from 'react-redux'
           {this.props.list.map((value, i) => (      
             <li key={'rest-delete-' + i}>
               <div>{value.name}</div>
-              <button onClick={() => this.remove(value.key)}>EWW</button>
+              {this.props.list.length > 1 ?
+                <button onClick={() => this.remove(value.key)}>EWW</button> :
+                <Link to="/results">Results</Link>
+              }
+              
             </li>
           ))}
         </ul>
