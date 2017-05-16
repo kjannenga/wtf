@@ -1,46 +1,23 @@
 import {Link} from 'react-router-dom'
 import React from 'react'
-import {populateRestaurants} from '../api/chatAPI.js'
+import {populateRestaurants, removeRestaurant} from '../api/chatAPI.js'
 import {connect} from 'react-redux'
-import {deleteList} from '../api/chatAPI.js'
-
 
  const Group = React.createClass({
-   getInitialState: function(){
-      return {
-       list: [],
-       businesses:''
-     }
-   }, 
+  remove: function (key){
 
-  componentWillReceiveProps(props) {
-    this.setState({
-      list: props.info.businesses
-    })
-    populateRestaurants({
-      businesses: props.info.businesses
-    })
+    removeRestaurant(key)
   },
-
-  deleteList: function (index){
-    console.log('test', index, this.state.list)
-    this.setState({
-      list: this.state.list.filter((item, i) => {
-        return index !== i
-      })
-    })
-  },
-
-  
 
    render (){
+    console.log('this.props.list', this.props.list)
      return (
        <div>
          <ul>
-          {this.props.info.businesses.map((value, i) => (      
-            <li>
+          {this.props.list.map((value, i) => (      
+            <li key={'rest-delete-' + i}>
               <div>{value.name}</div>
-              <button onClick={() => this.deleteList(i)}>EWW</button>
+              <button onClick={() => this.remove(value.key)}>EWW</button>
             </li>
           ))}
         </ul>
@@ -50,12 +27,9 @@ import {deleteList} from '../api/chatAPI.js'
  })
 
  function mapStateToProps(state){
-
-  console.log(state)
-   return {...state.restaurantReducer,
-    list:state.chatReducer.list}
- 
-
+   return {
+    list: state.chatReducer.list
+   }
  }
 
  export default connect(mapStateToProps)(Group)
