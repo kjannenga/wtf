@@ -4,6 +4,7 @@ import logoo from '../assets/wtf.png'
 import {connect} from 'react-redux'
 import './css/criteria.css'
 import {getRestaurants} from '../api/wtf'
+import {populateRestaurants} from '../api/chatAPI'
 
 
 const Selections = React.createClass ({
@@ -47,7 +48,11 @@ const Selections = React.createClass ({
 				term: this.state.term,
 				location: this.state.location,
 				price: this.state.price
+			}, function(rest){
+				populateRestaurants(rest)
 			})
+
+
 
 	    this.props.history.push("/Room/" + text)
 },
