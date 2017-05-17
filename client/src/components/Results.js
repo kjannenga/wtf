@@ -35,9 +35,9 @@ handleClick(e) {
     }
   },
 
-      handleAlert(e) {
-      e.preventDefault()
-       alert("CONGRATS! You decided. Now go get some effing food.") 
+handleAlert(e) {
+e.preventDefault()
+ alert("CONGRATS! You decided. Now go get some effing food.") 
 
 },
 
@@ -50,8 +50,8 @@ render(){
         </div>
 
         <div className="resultsButton">
-          <button onClick={this.handleAlert}>Sounds Good</button><br/>
-          <button type='submit' onClick={this.handleClick}>Eww Gross</button>
+          <button onClick={this.handleAlert}>Shit Sounds Good</button><br/>
+          <button type='submit' onClick={this.handleClick}>Eww That's Fuckin Gross</button>
         </div>
 
         <div>
