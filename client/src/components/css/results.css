@@ -16,11 +16,8 @@ html{
 	text-align: center;
 	margin:auto;
 	max-width:1100px;
-
-
-	
-
 }
+
 .resultName {
 	color:white;
 	font-size: 100px;
@@ -29,8 +26,8 @@ html{
 	margin-bottom:20px;
 	text-align: center;
 	font-family: adobe-heiti-std, sans-serif;
-    font-style: normal;
-    font-weight: 300;
+  font-style: normal;
+  font-weight: 300;
 
 }
 
@@ -46,9 +43,9 @@ html{
 	color:#95989A;
 	vertical-align: 200px;
 	font-family: adobe-heiti-std, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    padding-top:15px;
+  font-style: normal;
+  font-weight: 300;
+  padding-top:15px;
 }
 
 .resultsInfo div {
@@ -68,16 +65,16 @@ html{
 }
 
 .resultsButton button{
-	height:60px;
-	width:140px;
+	height:40px;
+	width:80px;
 	background-color:#E5E5E5;
 	border:1px solid #95989A;
 	color:#345375;
 	font-size: 20px;
 	font-family: adobe-heiti-std, sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    border-radius: 7px;
+  font-style: normal;
+  font-weight: 300;
+  border-radius: 7px;
 }
 .resultheading{
 	font-size:40px;
