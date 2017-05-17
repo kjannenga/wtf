@@ -12,6 +12,7 @@
     font-style: normal;
     font-weight: 200;
     margin-top:20px;
+
 }
 .criteriaSelectors{
     display:flex;
@@ -22,7 +23,7 @@
     font-family: adobe-heiti-std, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size:25px;
+    font-size:20px;
     padding:5px;
 }
 .blue {

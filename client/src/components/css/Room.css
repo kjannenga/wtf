@@ -15,3 +15,23 @@ html {box-sizing: border-box;}
 	font-family: 'Playfair Display SC', helvetica;
 	
 }
+
+.userID{
+	height:75px;
+	width:300px;
+	font-size: 50px;
+	text-align: center;
+	margin:0 auto;
+}
+
+.roomLogin {
+	font-size:60px;
+	color:white;
+	font-family: adobe-heiti-std, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+   
+
+}
