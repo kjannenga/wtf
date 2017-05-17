@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {login } from '../api/chatAPI.js'
+import {login} from '../api/chatAPI.js'
+import "./css/Room.css"
 
 class Login extends Component {
     constructor() {
@@ -28,7 +29,7 @@ class Login extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input className="userID" onChange={this.handleChange} type="text" name="username" value={this.state.username} placeholder="WTF is your name?" autoComplete="off" />
+                    <input className="userID" onChange={this.handleChange} type="text" name="username" value={this.state.username} placeholder="Username" autoComplete="off" />
                 </form>
             </div>
         )
