@@ -86,12 +86,12 @@ const Selections = React.createClass ({
 		      <div className="criteriaForm">
 
 			      <div className="budgetHeader">
-			      	So... how much you wanna spend  
+			      	So... how much you wanna fuckin spend  
 			      </div>
 
 			      <div className='radiobox'>
 			      	<div className='budget'>
-				      	<label htmlFor='oneDollar'><span className="blue">$</span><br/>Cheap Cheap</label>
+				      	<label htmlFor='oneDollar'><span className="blue">$</span><br/>Cheap as fuck</label>
 				      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>
 				    </div>
 				    <div className='budget'>
@@ -103,7 +103,7 @@ const Selections = React.createClass ({
 				      	<input type="radio" onClick={this.radioPrice} id="threeDollar" name='price' value='3'/>
 				    </div>
 				    <div className='budget'>
-				      	<label htmlFor='fourDollar'><span className="blue">$$$$</span><br/>Money ain't a thing</label>
+				      	<label htmlFor='fourDollar'><span className="blue">$$$$</span><br/>Money ain't a fuckin thing</label>
 				      	<input type="radio" onClick={this.radioPrice} id='fourDollar' name='price' value='4'/>
 				    </div>
 				  </div>
@@ -112,22 +112,22 @@ const Selections = React.createClass ({
 			      <div className='typeHeader'>Tell me whatcha want.....Whatcha really really want</div> 
 			      <div className="criteriaSelectors">
 			      <div>
-			      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Surprise me</label><br/>
-			      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a diet</label><br/>
-			      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I just need a TACO</label><br/>
-			      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Rabbit Food <small>(vegeterian)</small></label><br/>
-			      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>Excuse me, I'm GLUTEN FREE!</label><br/>
+			      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Fuckin surprise me</label><br/>
+			      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a fuckin diet</label><br/>
+			      	<input onClick={this.radioChange} type='radio' name="type" id='taco'value='taco'/><label htmlFor='taco'>I just need a fuckin TACO</label><br/>
+			      	<input onClick={this.radioChange} type='radio' name="type" id='vegetarian' value='vegetarian'/><label htmlFor='vegetarian'>Rabbit Food <small>(fuckin vegeterian)</small></label><br/>
+			      	<input onClick={this.radioChange} type='radio' name="type" id='gluten' value='gluten free'/><label htmlFor='gluten'>Excuse me, I'm GLUTEN FUCKIN FREE!</label><br/>
 			      </div>
 		      
 
 			      <div>
-			      	<input type='radio' name="where" id='pickup' defaultChecked={true}/><label htmlFor='pickup'>I'll go get it</label><br/>
-			      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>Bring it to me!!</label><br/>
+			      	<input type='radio' name="where" id='pickup' defaultChecked={true}/><label htmlFor='pickup'>I'll fuckin get it</label><br/>
+			      	<input onClick={this.radioDelivery} type='radio' name="where" id='deliver' value='delivery'/><label htmlFor='deliver'>Bring that shit to me!!</label><br/>
 			      </div>
 
 		      </div>
 		      <div className="zipDiv">
-			      <div className="locHeader">Now, tell us where you're at</div>
+			      <div className="locHeader">Now, tell us where the fuck you're at</div>
 				      	<input className="zipBox" onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
 			  </div>
 
