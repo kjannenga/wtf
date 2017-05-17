@@ -1,241 +1,108 @@
-html {box-sizing: border-box;}
-*, *:before, *:after {box-sizing: inherit;}
-
-body {
-  width:auto;
-  font-family: sans-serif;
-
-}
-
-.bodDiv{
-	width:100%;
-	background:transparent;
-	opacity:0.9;
-}
-
-.head {
-	
-	opacity:0.9;
-	z-index:-1;
-	width:auto;
-	height:250px;
-}
-
-.mainContainer2 {
-	width: 100%;
-}
-
-.budgetHeader {
-	width:auto;
-	height:250px;
-	line-height: 230px;
-	text-transform: uppercase;
-    background: black;
- 	font-family: 'Metal Mania', cursive;
-    text-align: center;
-    font-size: 30px;
-}
-p {
-   margin: auto;
-   width:960px;
-
-   text-align: center;
-
-}
 .criteriaLogo {
-	margin-top:30px;
+    width:20%;
+    filter: opacity(70%);
+}
+.criteriaForm {
+    background-color: white;
+    width:75%;
+    margin: auto;
+    text-align: center;
+    padding:20px;
+    font-family: adobe-heiti-std, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    margin-top:20px;
+}
+.criteriaSelectors{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding:20px 116px;
+    text-align: justify;
+    font-family: adobe-heiti-std, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size:25px;
+    padding:5px;
+}
+.blue {
+    color:#345375;
+    font-size:50px;
+}
+.budgetHeader, .typeHeader, .locHeader {
+    font-size: 40px;
+    font-family: adobe-heiti-std, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+}
+.zipBox {
+    position: center;
+    right: 0px;
+    width:auto;
+    padding:10px;
+    border:transparent;
+    background:#EBEBEB;
+    font-size:14px;
+    background:grey;
+    color:black; 
+}
+.zipDiv{
+    margin-bottom:20px;
+    margin-top:10px;
+}
+.zipBox:focus {
+    background:grey;
+    color:black;
+    outline:none;
 }
 .budget {
-	width:auto%;
-	display:flex;
-	justify-content: space-around;
-	background:black;
-	color:blue;
-	font-size:20px;
-	font-family: 'Metal Mania', cursive;
-	padding-left: 50px;
-	padding-bottom:8px;
-	}
-	.budgetTwo {
-	width:auto%;
-	display:flex;
-	justify-content: space-around;
-	margin: 0 auto;
-	background:grey;
-	color:blue;
-	font-size:20px;
-	font-family: 'Metal Mania', cursive;
-	padding-bottom:8px;
-
-	}
-#oneDollar {
-	margin-top:10px;
+  display: inline-block;
+  text-align: center;
+  padding:20px;
 }
-
-#twoDollar {
-	margin-top:10px;
-}
-
-#threeDollar {
-	margin-top:10px;
-}
-#fourDollar {
-	margin-top:10px;
-}
-
 .budget label {
-	position: relative;
-	right: 75px;
-	margin-top:5px
+  display: block;
+  font-size:25px;
 }
-
-
-.tfYouWant {
-	position:relative;
-	width:auto;
-	height:250px;
-	line-height: 240px;
-	text-transform: uppercase;
-    background: grey;
- 	font-family: 'Metal Mania', cursive;
-    text-align: center;
-    color:white;
-    font-size:28px;
-
-
+.goButtons{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
-/*
-.budgetTwo {
-	width:auto%;
-	display:flex;
-	justify-content: space-around;
-	margin-left: 20%;
-	
-	background:black;
-	margin-left:-27%;
-	color:white;
-	font-size:20px;
-	font-family: 'Metal Mania', cursive;
-	padding-bottom:8px;
-}*/
-
-.zipDiv {
-
-	position:relative;
-	width:auto;
-	height:250px;
-	line-height: 230px;
-	text-transform: uppercase;
-    background: black;
- 	font-family: 'Metal Mania', cursive;
-    text-align: center;
-    font-size: 28px;
-    color:white;
-
-}
-
 #letsgo {
-	text-decoration: none;
-    background-color: black;
+    text-decoration: none;
+    background-color: #345375;
     height:50px;
     width:200px;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 7px;
     line-height: 45px;
     text-align: center;
     color:white;
+    border:0px;
     
 }
-
 #letsgo:hover {
     background-color: rgba(0,0,0,0.5);
-
 }
-
-.zipDiv h3 {
-	margin: 0;
+#groupForm {
 }
-
-.zipBox {
-	width:auto%;
-	height:50px;
-	margin: 0 auto;
-	padding-left:50%;
-
-	background:#EBEBEB;
-	font-size:14px;
-	color:black;
-	background:black;
-	display:flex;
-	       
+#groupNameInput {
+    height: 40px;
+    border-radius:7px;
+    border:1px solid #345375;
 }
-
-.zipBox input {
-	width:70%;
-	height:50px;
-
-	font-size:28px;
-	margin-top:12px;
-	color:black;
-	outline:none;
-	border:transparent;
-
-
+#groupCodeInput {
+    height: 40px;
 }
-
-.aFooter {
-	width:auto%;
-	height:250px;
-	margin: 0 auto;
-	padding-left:50%;
-
-	background: transparent
-}
-
-.aLeggo {
-	width:40px;
-	height:50px;
-	color:white;
-	background:blue;
-	border:none;
-
-
-}
-
-.agroupOption {
-	width:auto%;
-	height:50px;
-	margin: 0 auto;
-	padding-left:50%;
-	margin-left:-27%;
-	margin-top: 20px;
-	background:#EBEBEB;
-	font-size:14px;
-	color:black;
-	background:black;
-	display:flex;
-}
-
-.agroupOption input {
-	width:70%;
-	height:50px;
-	margin-left:-90px;
-	font-size:28px;
-	margin-top:5px;
-	color:black;
-	outline:none;
-	border:transparent;
-}
-
 #createGroupButton {
-	width: 100px;
-	height: 40px;
-	border-radius: 0px;
-	color:white;
+    width: 100px;
+    height: 40px;
+    border:0px;
+    color:white;
+    border-radius:7px;
+    background-color:#345375; 
 }
-
 #createGroupButton:hover {
     background-color: rgba(0,0,0,0.5);
-
 }
-
