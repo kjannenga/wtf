@@ -44,7 +44,7 @@ class Chat extends Component {
             var node = this.refs.messages
             node.scrollTop = node.scrollHeight
         }
-    }
+    } 
 
     render(){
         

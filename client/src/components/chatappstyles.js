@@ -22,7 +22,8 @@ const styles = {
         top:0,
         bottom:100,
         padding:20,
-        overflow:'auto',
+        overflow:'scroll',
+        height:600,
         width:'100%'
     },
     formContainer: {
