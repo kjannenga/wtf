@@ -7,11 +7,10 @@ html {box-sizing: border-box;}
 	font-size: 30px;
 	display:block;
 	border:1px solid black;
-	background: ;
 	text-align: center;
 	vertical-align: middle;
 	color:black;
-	margin-top:10px;
+	
 	font-family: 'Playfair Display SC', helvetica;
 	
 }
@@ -34,4 +33,18 @@ html {box-sizing: border-box;}
     padding: 20px;
    
 
+}
+.roomDiv {
+	background-color: white;
+	width:80%;
+	margin:auto;
+	height:700px;
+	display:flex;
+	flex-direction: row;
+}
+.listRoom{
+	width:50%;
+}
+.chatRoom{
+	width:50%;
 }
