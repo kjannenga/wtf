@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+
 import logoo from '../assets/wtf.png'
+
 import {connect} from 'react-redux'
 import './css/criteria.css'
 import {getRestaurants} from '../api/wtf'

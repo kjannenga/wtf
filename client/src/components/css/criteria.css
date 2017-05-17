@@ -1,9 +1,7 @@
-
 .criteriaLogo {
     width:20%;
     filter: opacity(70%);
 }
-
 .criteriaForm {
     background-color: white;
     width:75%;
@@ -16,7 +14,6 @@
     margin-top:20px;
 
 }
-
 .criteriaSelectors{
     display:flex;
     flex-direction: row;
@@ -26,25 +23,19 @@
     font-family: adobe-heiti-std, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size:25px;
+    font-size:20px;
     padding:5px;
 }
-
 .blue {
     color:#345375;
     font-size:50px;
 }
-
-
-
-
 .budgetHeader, .typeHeader, .locHeader {
     font-size: 40px;
     font-family: adobe-heiti-std, sans-serif;
     font-style: normal;
     font-weight: 200;
 }
-
 .zipBox {
     position: center;
     right: 0px;
@@ -55,22 +46,16 @@
     font-size:14px;
     background:grey;
     color:black; 
-
 }
-
 .zipDiv{
     margin-bottom:20px;
     margin-top:10px;
 }
-
 .zipBox:focus {
     background:grey;
     color:black;
     outline:none;
-
 }
-
-
 .budget {
   display: inline-block;
   text-align: center;
@@ -79,15 +64,12 @@
 .budget label {
   display: block;
   font-size:25px;
-
 }
-
 .goButtons{
     display:flex;
     justify-content: space-around;
     flex-direction: row;
 }
-
 #letsgo {
     text-decoration: none;
     background-color: #345375;
@@ -101,28 +83,19 @@
     border:0px;
     
 }
-
 #letsgo:hover {
     background-color: rgba(0,0,0,0.5);
-
 }
-
-
-
 #groupForm {
-
 }
-
 #groupNameInput {
     height: 40px;
     border-radius:7px;
     border:1px solid #345375;
 }
-
 #groupCodeInput {
     height: 40px;
 }
-
 #createGroupButton {
     width: 100px;
     height: 40px;
@@ -131,9 +104,6 @@
     border-radius:7px;
     background-color:#345375; 
 }
-
 #createGroupButton:hover {
     background-color: rgba(0,0,0,0.5);
-
 }
-
