@@ -6,7 +6,6 @@ import './css/criteria.css'
 import {getRestaurants} from '../api/wtf'
 import {populateRestaurants} from '../api/chatAPI'
 
-//<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
 
 const Selections = React.createClass ({
 		getInitialState(){
@@ -74,35 +73,42 @@ const Selections = React.createClass ({
 	
   render() {
     return (
-
     	<div>
 
     		<div>
-	      	<img src={logoo} alt="logo" />
+	      	<img className="criteriaLogo" src={logoo} alt="logo" />
 	      </div>
 
 	      <form onSubmit={this.handleSubmit} >
 
-		      <div>
+		      <div className="criteriaForm">
 
-			      <div className="cashHeader">
+			      <div className="budgetHeader">
 			      	So... how much you wanna spend  
 			      </div>
 
-			      <div className='budget'>
-			      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>$<br/>
-			      	<label htmlFor='oneDollar'>Cheap Cheap</label><br/>
-			      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>$$<br/>
-			      	<label htmlFor='twoDollar'>Ballin' on a budget</label><br/>
-			      	<input type="radio" onClick={this.radioPrice} id="threeDollar" name='price' value='3'/>$$$<br/>
-			      	<label htmlFor='threeDollar'>Big spenda</label><br/>
-			      	<input type="radio" onClick={this.radioPrice} id='fourDollar' name='price' value='4'/>$$$$<br/>
-			      	<label htmlFor='fourDollar'>Money ain't a thing</label><br/>
-			      </div>
+			      <div className='radiobox'>
+			      	<div className='budget'>
+				      	<label htmlFor='oneDollar'><span className="blue">$</span><br/>Cheap Cheap</label>
+				      	<input type="radio" onClick={this.radioPrice} id='oneDollar' name='price' value='1' defaultChecked={true}/>
+				    </div>
+				    <div className='budget'>
+				      	<label htmlFor='twoDollar'><span className="blue">$$</span><br/>Ballin' on a budget</label>
+				      	<input type="radio" onClick={this.radioPrice} id='twoDollar' name='price' value='2'/>
+				    </div>
+				    <div className='budget'>
+				      	<label htmlFor='threeDollar'><span className="blue">$$$</span><br/>Big spenda</label>
+				      	<input type="radio" onClick={this.radioPrice} id="threeDollar" name='price' value='3'/>
+				    </div>
+				    <div className='budget'>
+				      	<label htmlFor='fourDollar'><span className="blue">$$$$</span><br/>Money ain't a thing</label>
+				      	<input type="radio" onClick={this.radioPrice} id='fourDollar' name='price' value='4'/>
+				    </div>
+				  </div>
 
 			      
 			      <div className='typeHeader'>Tell me whatcha want.....Whatcha really really want</div> 
-			      <div className="criteriaSelectors">>
+			      <div className="criteriaSelectors">
 			      <div>
 			      	<input onClick={this.radioChange} type='radio' name="type" id='random' value='restaurant' defaultChecked={true}/><label htmlFor='random'>Surprise me</label><br/>
 			      	<input onClick={this.radioChange} type='radio' name="type" id='diet' value='healthy'/><label htmlFor='diet'>I'm on a diet</label><br/>
@@ -119,10 +125,12 @@ const Selections = React.createClass ({
 
 		      </div>
 		      <div className="zipDiv">
-			      <h3>Now, tell us where you're at</h3>
+			      <div className="locHeader">Now, tell us where you're at</div>
 				      	<input className="zipBox" onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
-			     </div>
-		      <Link to='/Clean/results'>
+			  </div>
+
+			  <div className="goButtons">
+		      <Link to='/results'>
 		      	<button onClick={this.handleSubmit} id="letsgo">Let's Go</button>
 		      </Link>
 
@@ -130,6 +138,7 @@ const Selections = React.createClass ({
 	      			<input id="groupNameInput" onChange={this.handleChange} type="text" name="groupName" placeholder="Group Name" value={this.state.groupName} />
 	      			<button id="createGroupButton" type="submit" onClick={this.handleGroup}>Create Group</button>  		
 		      	</div>
+		     </div>
 
 		    </div>
 	    </form>
