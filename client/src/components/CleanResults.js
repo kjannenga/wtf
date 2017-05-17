@@ -42,7 +42,13 @@ render(){
         <div>
           <img className="resultsLogo" src={logoo} alt="logo" />
         </div>
-        <div >
+
+        <div className="resultsButton">
+          <Link to='/yes'><button>Sounds Good</button></Link><br/>
+          <button type='submit' onClick={this.handleClick}>Eww Gross</button>
+        </div>
+
+        <div>
         <ul  className="resultsList">
             {this.state.restaurant.map(function(value){
               return <li key={'id' + value.id}>
@@ -57,19 +63,18 @@ render(){
                        </div>
                        <div className="resultsInfo">
                         
-                         <div>Rating<div>{value.rating + '/5'}</div></div>
+                         <div><span className="resultheading">Rating</span><div>{value.rating + '/5'}</div></div>
                          
-                         <div>Address<div>{value.location.address1}</div>
+                         <div><span className="resultheading">Address</span><div>{value.location.address1}</div>
                        <div>{value.location.city + ', ' + value.location.state + ' ' + value.location.zip_code}</div></div>
 
-                         <div>Image<div><img className='resultImage' src={value.image_url} alt='restaurant' /></div></div>
+                         <div><div><span className="resultheading">Image</span><div><img className='resultImage' src={value.image_url} alt='restaurant' /></div></div></div>
                         </div>
                      </li>
              })}
           </ul>
           </div>
-        <Link to='/yes'><button>F Yes</button></Link>
-        <button type='submit' onClick={this.handleClick}>F this</button>
+         
       </div>
     )
     
