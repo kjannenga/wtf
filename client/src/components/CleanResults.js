@@ -35,6 +35,11 @@ handleClick(e) {
     }
   },
 
+handleAlert(e) {
+e.preventDefault()
+ alert("CONGRATS! You decided. Now go get some effing food.") 
+
+},
 
 render(){
     return (
@@ -44,7 +49,7 @@ render(){
         </div>
 
         <div className="resultsButton">
-          <Link to='/yes'><button>Sounds Good</button></Link><br/>
+          <button onClick={this.handleAlert}>Sounds Good</button><br/>
           <button type='submit' onClick={this.handleClick}>Eww Gross</button>
         </div>
 
