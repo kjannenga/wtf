@@ -32,8 +32,8 @@ import './css/group.css'
             <li key={'rest-delete-' + i}>
               {this.props.list.length > 1 ?
                 <div>
-                  <div className='groupListName'>{value.name}</div>
-                    <button className="groupButton" onClick={() => this.remove(value.key)}>EWW</button>
+                  <div className='groupListName'><button className="groupButton" onClick={() => this.remove(value.key)}>EWW</button> {value.name}</div>
+                    
                 </div>
                 :
                 <div className='groupAlign'>

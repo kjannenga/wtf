@@ -44,7 +44,9 @@ html {box-sizing: border-box;}
 }
 .listRoom{
 	width:50%;
+	overflow:scroll;
+
 }
 .chatRoom{
 	width:50%;
-}
+	}

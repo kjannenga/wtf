@@ -29,9 +29,6 @@ class Chat extends Component {
             username: this.props.username,
             message: this.state.message,
             time: moment().format('LTS'),
-            color: this.state.color || '#333',
-            font: this.state.font || 'Arial',
-            fontSize: this.state.fontSize || 14
         })
         
         this.setState({
