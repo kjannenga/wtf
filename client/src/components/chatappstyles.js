@@ -17,7 +17,7 @@ const styles = {
         height:'100%'
     },
     messagesContainer: {
-        position:'absolute',
+        position:'relative',
         top:0,
         bottom:100,
         padding:20,
@@ -25,7 +25,7 @@ const styles = {
         width:'100%'
     },
     formContainer: {
-        position:'absolute',
+        position:'relative',
         textAlign:'center',
         bottom:0,
         height:100,
@@ -43,7 +43,7 @@ const styles = {
         padding:5,
         marginTop:23
     },
-    timestamp: {
+    time: {
         fontSize:12,
         color:'#ccc'
     },
