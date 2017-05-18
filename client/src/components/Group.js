@@ -23,12 +23,10 @@ import './css/group.css'
   },
 
    render (){
-    console.log('this.props.list', this.props.list)
      return (
        <div>
          <ul className='groupList'>
-          {this.props.list.map((value, i) => (  
-          console.log(value, 'map'),    
+          {this.props.list.map((value, i) => (      
             <li key={'rest-delete-' + i}>
               {this.props.list.length > 1 ?
                 <div>
@@ -42,7 +40,6 @@ import './css/group.css'
                          <iframe
 
                             width="1000"
-
                             height="375"
                             frameBorder="0"
                             src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${value.coordinates.latitude + ',' + value.coordinates.longitude}`} allowFullScreen>

@@ -26,8 +26,8 @@ html{
 	margin-bottom:20px;
 	text-align: center;
 	font-family: adobe-heiti-std, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+	font-style: normal;
+	font-weight: 300;
 
 }
 
@@ -43,9 +43,9 @@ html{
 	color:#95989A;
 	vertical-align: 200px;
 	font-family: adobe-heiti-std, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  padding-top:15px;
+  	font-style: normal;
+  	font-weight: 300;
+  	padding-top:15px;
 }
 
 .resultsInfo div {
@@ -72,9 +72,9 @@ html{
 	color:#345375;
 	font-size: 20px;
 	font-family: adobe-heiti-std, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  border-radius: 7px;
+	font-style: normal;
+	font-weight: 300;
+	border-radius: 7px;
 }
 .resultheading{
 	font-size:40px;
