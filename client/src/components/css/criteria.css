@@ -44,7 +44,7 @@
     border:transparent;
     background:#EBEBEB;
     font-size:14px;
-    background:grey;
+    background:silver;
     color:black; 
 }
 .zipDiv{
@@ -52,7 +52,7 @@
     margin-top:10px;
 }
 .zipBox:focus {
-    background:grey;
+    background:#ccc;
     color:black;
     outline:none;
 }

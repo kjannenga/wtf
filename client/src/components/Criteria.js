@@ -127,7 +127,7 @@ const Selections = React.createClass ({
 
 		      </div>
 		      <div className="zipDiv">
-			      <div className="locHeader">Now, tell us where the fuck you're at</div>
+			     
 				      	<input className="zipBox" onChange={this.handleChange} type='text' name='location' value={this.state.location} placeholder='Where TF are you?' />
 			  </div>
 
