@@ -39,15 +39,15 @@ import './css/group.css'
                        <div>
                          <iframe
 
-                            width="1000"
-                            height="375"
+                            width="100%"
+                            height="275px"
                             frameBorder="0"
                             src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyDiZLjRIWsbb_SPwIXRxPGWyW-ILTBIqEo&origin=The+Iron+Yard,Las+Vegas&destination=${value.coordinates.latitude + ',' + value.coordinates.longitude}`} allowFullScreen>
                          </iframe>
                        </div>
                        <div className="groupInfo">
                         
-                         <div><span className="groupheading">Rating</span><div>{value.rating + '/5'}</div></div>
+                        
                          
                          <div><span className="groupheading">Address</span><div>{value.location.address1}</div>
                        <div>{value.location.city + ', ' + value.location.state + ' ' + value.location.zip_code}</div></div>
