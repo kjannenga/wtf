@@ -18,7 +18,6 @@ getInitialState(){
 
 
 componentWillReceiveProps(props) {
-  //console.log(props, 'a')
   this.setState({
     restaurant: [props.info.businesses[id]]
   })
@@ -37,7 +36,7 @@ handleClick(e) {
 
 handleAlert(e) {
 e.preventDefault()
- alert("CONGRATS! You decided. Now go get some effing food.") 
+ alert("CONGRATS! You decided. Now go get some food.") 
 
 },
 
