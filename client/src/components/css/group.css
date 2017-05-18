@@ -49,9 +49,9 @@ html{
 	color:#345375;
 	font-size: 20px;
 	font-family: adobe-heiti-std, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  border-radius: 7px;
+	font-style: normal;
+	font-weight: 300;
+	border-radius: 7px;
 }
 
 .groupInfo div {
@@ -67,12 +67,16 @@ html{
 	background-color: transparent;
 }
 
+
+
 .groupListName{
-	color:white;
+	color:#345375;
 	font-size: 25px;
 	font-family: adobe-heiti-std, sans-serif;
   font-style: normal;
   font-weight: 300;
+  padding-top:10px;
+  
 
 }
 

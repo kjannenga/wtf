@@ -10,7 +10,7 @@ class Room extends Component {
 		return (
 			<div>
 				<div className="roomID">
-				Congratulations on having friends. Share this link with them: http://10.68.0.132:3000/Room/{this.props.match.params.roomId}
+				Congratulations on having friends. Share this link with them to get started. <br/> http://10.68.0.132:3000/Room/{this.props.match.params.roomId}
 				</div>
 				{this.props.username ? <div className="roomDiv"><div className="listRoom"><Group /></div><div className="chatRoom"><ChatApp /></div></div> : <h1 className="roomLogin">Login <Login /></h1>}
 				<div className="restaurantList">

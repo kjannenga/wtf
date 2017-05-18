@@ -4,7 +4,8 @@ const styles = {
     },
     message: {
         display:'flex',
-        marginBottom:20
+        marginBottom:20,
+        flexWrap:'wrap',
     },
     messages: {
         paddingLeft:0
@@ -21,11 +22,12 @@ const styles = {
         top:0,
         bottom:100,
         padding:20,
-        overflow:'auto',
+        overflow:'scroll',
+        height:600,
         width:'100%'
     },
     formContainer: {
-        position:'relative',
+        position:'absolute',
         textAlign:'center',
         bottom:0,
         height:100,
@@ -33,7 +35,7 @@ const styles = {
         background:'#ddd'
     },
     input: {
-        width:'95%',
+        width:'90%',
         height:40,
         lineHeight:40,
         borderRadius: 10,

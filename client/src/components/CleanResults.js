@@ -37,7 +37,7 @@ handleClick(e) {
 
 handleAlert(e) {
 e.preventDefault()
- alert("CONGRATS! You decided. Now go get some effing food.") 
+ alert("CONGRATS! You decided. Now go get some food.") 
 
 },
 
